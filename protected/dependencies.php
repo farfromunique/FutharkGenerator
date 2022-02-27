@@ -1,6 +1,15 @@
 <?php
 
+error_reporting(E_ALL);
+
 use Slim\App;
+use \Slim\Views\PhpRenderer;
+use \Kreait\Firebase\Factory;
+use \Kreait\Firebase\ServiceAccount;
+use \Monolog\Handler\StreamHandler;
+use Aws\Sdk as AWS;
+use Aws\DynamoDb\DynamoDbClient;
+use Aws\Exception\AwsException;
 
 return function (App $app) {
     $container = $app->getContainer();
@@ -8,7 +17,7 @@ return function (App $app) {
     // view renderer
     $container['renderer'] = function ($c) {
         $settings = $c->get('settings')['renderer'];
-        return new \Slim\Views\PhpRenderer($settings['template_path']);
+        return new PhpRenderer($settings['template_path']);
     };
 
     // monolog
@@ -16,19 +25,52 @@ return function (App $app) {
         $settings = $c->get('settings')['logger'];
         $logger = new \Monolog\Logger($settings['name']);
         //$logger->pushProcessor(new \Monolog\Processor\IntrospectionProcessor());
-        $logger->pushHandler(new \Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
+        $logger->pushHandler(
+            new StreamHandler(
+                $settings['path'],
+                $settings['level']
+            )
+        );
         return $logger;
     };
 
     // firebase
     $container['firebase'] = function ($c) {
         $settings = $c->get('settings')['firebase'];
-        $serviceAccount = \Kreait\Firebase\ServiceAccount::fromJson($settings['ServiceAccount']);
-        $firebase = (new \Kreait\Firebase\Factory)
+        $log = $c->get('logger');
+        //$serviceAccount = ServiceAccount::fromValue($settings['sa_data']);
+        $c->get('logger')->info($settings['ServiceAccount']);
+        $serviceAccount = ServiceAccount::fromValue($settings['ServiceAccount']);
+
+        $firebase = (new Factory)
             ->withServiceAccount($serviceAccount)
             ->withDatabaseUri($settings['DatabaseURL'])
-            ->create();
+            ->createDatabase();
         return $firebase;
+    };
+
+    $container['aws'] = function ($c) {
+        $settings = $c->get('settings')['AWS'];
+        $sdk = new AWS([
+            'region'   => $settings['region'],
+            'version'  => 'latest',
+            'DynamoDb' => [
+                'region' => 'eu-central-1'
+            ]
+        ]);
+        return $sdk;
+    };
+
+    $container['dynamoDB'] = function ($c) {
+        $settings = $c->get('settings')['AWS'];
+        $db = new DynamoDbClient([
+            'region'   => $settings['region'],
+            'version'  => 'latest',
+            'DynamoDb' => [
+                'region' => $settings['region']
+            ]
+        ]);
+        return $db;
     };
 
     // 403 handler
@@ -61,13 +103,18 @@ return function (App $app) {
                 ->write('Method must be one of: ' . implode(', ', $methods));
         };
     };
+
     // 500 handler
     $container['errorHandler'] = function ($c) {
-        return function ($request, $response, $exception) use ($c) {
+        return function ($request, $response, Exception $exception) use ($c) {
             $c->get('logger')->error('500, somehow...');
+            $stack = $exception->getTraceAsString();
+            $stack = str_replace("\n", '<br />', $stack);
             return $response->withStatus(500)
                 ->withHeader('Content-Type', 'text/html')
-                ->write('Something went wrong! <br /> I\'m impressed! Something broke in a way that SOME of the page still works.');
+                ->write('Something went wrong! <br /> I\'m impressed! Something broke in a way that SOME of the page still works.')
+                ->write($exception->getMessage() . '<br /')
+                ->write($stack);
         };
     };
 };

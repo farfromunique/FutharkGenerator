@@ -19,20 +19,18 @@ return [
         /**************************************************************************
          * General App config.
          **************************************************************************/
-        'APP_VERSION' => 'v2.0beta',
+        'APP_VERSION' => 'v2.1beta',
         'APP_TITLE' => 'Futhark Power Generator ',
-
-        /**************************************************************************
-         * Firebase database config.
-         * Firebase database connection provided in kreait/firebase-php
-         **************************************************************************/
-        'firebase' => [
-            'DatabaseURL' => 'https://futharkgenerator.firebaseio.com',
-            'ServiceAccount' => $_ENV['FB_SERVICEACCOUNT']
-        ],
 
         'powersDB' => [
             'location' => __DIR__ . '/../sourceData/firebase.english.json'
-        ]
+        ],
+
+        'AWS' => [
+            'region' => 'eu-central-1',
+            'dynamoDB' => [
+                'tableName' => 'futhark_save_data'
+            ]
+        ],
     ],
 ];
