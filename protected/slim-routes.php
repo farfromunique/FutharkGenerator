@@ -59,33 +59,67 @@ return function (App $app) {
   })->setName('loadDirect');
 
   $app->get('/load/{id_}', function (Request $request, Response $response, array $args) use ($container, $meta) {
-    $db = $container->get('firebase')->createDatabase();
-    $ref = $db->getReference('saved/' . $args['id_']);
-    $data = $ref->getValue();
-    if (is_null($data)) {
-      $container->get('logger')->error('Save ID ' . $args['id_'] . ' not found.');
-      throw new \Exception('Save ID ' . $args['id_'] . ' not found.', 1);
-    }
+    $db = $container->get('dynamoDB');
+    $save_name = $args['id_'];
+    $logger = $container->get('logger');
+    $logger->info('Power Load requested! Input:' . $save_name);
 
-    foreach ($data as $key => $value) {
-      if (substr($key, 0, 6) == 'power_') {
-        $power_data[explode('_', $key)[1]][] = $value;
-      }
-    }
+    $final = [
+      'save_name' => ['S' => ''],
+      'notes' => [
+        'M' => [
+          'flavor' => ['S' => ''],
+          'type' => ['S' => ''],
+          'twist' => ['S' => '']
+        ]
+      ],
+      'power' => [
+        'M' => [
+          'flavor' => [
+            'L' => [
+              ['S' => '']
+            ]
+          ],
+          'type' => [
+            'L' => [
+              ['S' => '']
+            ]
+          ],
+          'twist' => [
+            'L' => [
+              ['S' => '']
+            ]
+          ]
+        ]
+      ]
+    ];
+    $result = $db->getItem([
+      'Key' => [
+        'save_name' => ['S' => $save_name],
+      ],
+      'TableName' => $container->get('settings')['AWS']['dynamoDB']['tableName']
+    ]);
+
+    $result_data = $result['Item'];
+    $power_data = [
+      'flavor' => $result_data['power']['M']['flavor']['L'],
+      'type'   => $result_data['power']['M']['type']['L'],
+      'twist'  => $result_data['power']['M']['twist']['L']
+    ];
 
     $power = new Power($container);
     $power->loadPowersDB();
 
     foreach ($power_data['type'] as $key => $value) {
-      $power->withType($value);
+      $power->withType($value['S']);
     }
 
     foreach ($power_data['flavor'] as $key => $value) {
-      $power->withFlavor($value);
+      $power->withFlavor($value['S']);
     }
 
     foreach ($power_data['twist'] as $key => $value) {
-      $power->withTwist($value);
+      $power->withTwist($value['S']);
     }
 
     $details = $power->getPowerData();
@@ -157,11 +191,11 @@ return function (App $app) {
             break;
 
           case 'twist':
-            $final['power']['M']['twists']['L'][] = ['S' => $value];
+            $final['power']['M']['twist']['L'][] = ['S' => $value];
             break;
 
           case 'type':
-            $final['power']['M']['types']['L'][] = ['S' => $value];
+            $final['power']['M']['type']['L'][] = ['S' => $value];
             break;
         }
       }
