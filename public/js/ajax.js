@@ -58,4 +58,17 @@ $(document).ready(function(){
 		prepareForSave();
 		$("#data").submit();
 	});
+
+	if (localStorage['type_notes'].length > 0) {
+		$("#type-notes-button").click();
+	}
+
+	if (localStorage['flavor_notes'].length > 0) {
+		$("#flavor-notes-button").click();
+	}
+
+	if (localStorage['twist_notes'].length > 0) {
+		$("#twist-notes-button").click();
+	}
+
 });

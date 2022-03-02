@@ -64,35 +64,6 @@ return function (App $app) {
     $logger = $container->get('logger');
     $logger->info('Power Load requested! Input:' . $save_name);
 
-    $final = [
-      'save_name' => ['S' => ''],
-      'notes' => [
-        'M' => [
-          'flavor' => ['S' => ''],
-          'type' => ['S' => ''],
-          'twist' => ['S' => '']
-        ]
-      ],
-      'power' => [
-        'M' => [
-          'flavor' => [
-            'L' => [
-              ['S' => '']
-            ]
-          ],
-          'type' => [
-            'L' => [
-              ['S' => '']
-            ]
-          ],
-          'twist' => [
-            'L' => [
-              ['S' => '']
-            ]
-          ]
-        ]
-      ]
-    ];
     $result = $db->getItem([
       'Key' => [
         'save_name' => ['S' => $save_name],
@@ -122,9 +93,14 @@ return function (App $app) {
       $power->withTwist($value['S']);
     }
 
-    $details = $power->getPowerData();
+    $power->withNotes('type', $result_data['notes']['M']['type']['S'])
+      ->withNotes('flavor', $result_data['notes']['M']['flavor']['S'])
+      ->withNotes('twist', $result_data['notes']['M']['twist']['S']);
 
-    $args = array_merge($args, $meta, $details);
+    $details = $power->getPowerData();
+    $localVars = $power->getDataForLocalStorage();
+
+    $args = array_merge($args, $meta, $details, $localVars);
 
     return $container->get('renderer')->render($response, 'FullPageBigImages.phtml', $args);
   })->setName('loadSaved');
@@ -185,17 +161,24 @@ return function (App $app) {
 
     foreach ($inputs as $key => $value) {
       if (substr($key, 0, 6) == 'power_') {
+        $logger->info(\explode('_', $key)[1], [$value]);
         switch (\explode('_', $key)[1]) {
           case 'flavor':
-            $final['power']['M']['flavor']['L'][] = ['S' => $value];
+            if (\strlen($value) > 1) {
+              $final['power']['M']['flavor']['L'][] = ['S' => $value];
+            }
             break;
 
           case 'twist':
-            $final['power']['M']['twist']['L'][] = ['S' => $value];
+            if (\strlen($value) > 1) {
+              $final['power']['M']['twist']['L'][] = ['S' => $value];
+            }
             break;
 
           case 'type':
-            $final['power']['M']['type']['L'][] = ['S' => $value];
+            if (\strlen($value) > 1) {
+              $final['power']['M']['type']['L'][] = ['S' => $value];
+            }
             break;
         }
       }
@@ -207,7 +190,7 @@ return function (App $app) {
       'TableName' => $container->get('settings')['AWS']['dynamoDB']['tableName']
     ]);
 
-    $logger->info('Result: ' . $result);
+    $logger->info('Result: ' . $result['Attributes']);
 
     $path = $container
       ->get('router')

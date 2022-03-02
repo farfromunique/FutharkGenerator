@@ -16,23 +16,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-
-  <script>
-    ! function(f, u, t, h, a, r, k) {
-      f.GoogleAnalyticsObject = t;
-      f[t] || (f[t] = function() {
-        (f[t].q = f[t].q || []).push(arguments)
-      });
-      f[t].l = +new Date;
-      r = u.createElement(h);
-      k = u.getElementsByTagName(h)[0];
-      r.src = a;
-      k.parentNode.insertBefore(r, k)
-    }
-    (window, document, 'ga', 'script', '//www.google-analytics.com/analytics.js');
-  </script>
-
-  <script src="/js/analytics.js"></script>
 </head>
 
 <body class="dark-background light-text">
@@ -135,14 +118,14 @@
               <i id="type-load" class="lds-dual-ring"></i>
             </button>
 
-            <button type="button" class="btn btn-md btn-primary mr-0 ml-1 mt-2 mb-1 toggler" ic-target="#type-notes-holder" ic-action="toggleClass:d-none">
+            <button id="type-notes-button" type="button" class="btn btn-md btn-primary mr-0 ml-1 mt-2 mb-1 toggler" ic-target="#type-notes-holder" ic-action="toggleClass:d-none">
               <svg width="20" height="20">
                 <use href="#icon-notes" width="20" height="20" />
               </svg>
               Add Type Notes
             </button>
             <div id="type-notes-holder" class="notes d-none">
-              <textarea name="type-notes" rows=5 cols=40 form="data" maxlength=4000 id="type-notes" class="notes"></textarea>
+              <textarea name="type-notes" rows=5 cols=40 form="data" maxlength=4000 id="type-notes" class="notes"><?= $notes['type']; ?></textarea>
               <div class="notes-length">Characters remaining: <span class="count">4000</span></div>
             </div>
           </div>
@@ -190,14 +173,14 @@
               <i id="flavor-load" class="lds-dual-ring"></i>
             </button>
 
-            <button type="button" class="btn btn-md btn-primary mr-0 ml-1 mt-2 mb-1 toggler" ic-target="#flavor-notes-holder" ic-action="toggleClass:d-none">
+            <button id="flavor-notes-button" type="button" class="btn btn-md btn-primary mr-0 ml-1 mt-2 mb-1 toggler" ic-target="#flavor-notes-holder" ic-action="toggleClass:d-none">
               <svg width="20" height="20">
                 <use href="#icon-notes" width="20" height="20" />
               </svg>
               Add Flavor Notes
             </button>
             <div id="flavor-notes-holder" class="notes d-none">
-              <textarea name="flavor-notes" rows=5 cols=40 form="data" maxlength=4000 id="flavor-notes" class="notes"></textarea>
+              <textarea name="flavor-notes" rows=5 cols=40 form="data" maxlength=4000 id="flavor-notes" class="notes"><?= $notes['flavor']; ?></textarea>
               <div class="notes-length">Characters remaining: <span class="count">4000</span></div>
             </div>
           </div>
@@ -207,9 +190,7 @@
           <img class="mr-3 ml-1 <?= $twist[0]['class']; ?>" />
           <div class="media-body">
             <h5 class="mt-0"><?= $twist[0]['cardname']; ?></h5>
-            <p>
-              <?= $twist[0]['description']; ?>
-            </p>
+            <p><?= $twist[0]['description']; ?></p>
             <?php if (count($twist) > 1) : ?>
               <?php for ($i = 1; $i < count($twist) - 1; $i++) : ?>
                 <div class="media mt-1 pt-1">
@@ -237,14 +218,14 @@
               <i id="twist-load" class="lds-dual-ring"></i>
             </button>
 
-            <button type="button" class="btn btn-md btn-primary mr-0 ml-1 mt-2 mb-1 toggler" ic-target="#twist-notes-holder" ic-action="toggleClass:d-none">
+            <button id="twist-notes-button" type="button" class="btn btn-md btn-primary mr-0 ml-1 mt-2 mb-1 toggler" ic-target="#twist-notes-holder" ic-action="toggleClass:d-none">
               <svg width="20" height="20">
                 <use href="#icon-notes" width="20" height="20" />
               </svg>
               Add Twist Notes
             </button>
             <div id="twist-notes-holder" class="notes d-none">
-              <textarea name="twist-notes" rows=5 cols=40 form="data" maxlength=4000 id="twist-notes" class="notes"></textarea>
+              <textarea name="twist-notes" rows=5 cols=40 form="data" maxlength=4000 id="twist-notes" class="notes"><?= $notes['twist']; ?></textarea>
               <div class="notes-length">Characters remaining: <span class="count">4000</span></div>
             </div>
           </div>
@@ -274,37 +255,39 @@
 
   <form id="data" class="d-none" ic-post-to="/save" ic-target="#debug">
     <input type="hidden" class="p_gen" name="default" value="probably valid" />
+
+    <input name="power_flavor_0" type="hidden" value="<?= $flavor[0]['name']; ?>">
+    <?php if (count($flavor) > 1) : ?>
+      <?php for ($i = 1; $i < count($flavor) - 1; $i++) : ?>
+        <input name="power_flavor_<?= $i; ?>" type="hidden" value="<?= $flavor[$i]['name']; ?>">
+      <?php endfor; ?>
+    <?php endif; ?>
+
+    <input name="power_type_0" type="hidden" value="<?= $type[0]['name']; ?>">
+    <?php if (count($type) > 1) : ?>
+      <?php for ($i = 1; $i < count($type) - 1; $i++) : ?>
+        <input name="power_type_<?= $i; ?>" type="hidden" value="<?= $type[$i]['name']; ?>">
+      <?php endfor; ?>
+    <?php endif; ?>
+
+    <input name="power_twist_0" type="hidden" value="<?= $twist[0]['cardname']; ?>">
+    <?php if (count($twist) > 1) : ?>
+      <?php for ($i = 1; $i < count($twist) - 1; $i++) : ?>
+        <input name="power_twist_<?= $i; ?>" type="hidden" value="<?= $twist[$i]['cardname']; ?>">
+      <?php endfor; ?>
+    <?php endif; ?>
+
+    <input name="type_notes" type="hidden" value="<?= $type_notes; ?>">
+    <input name="flavor_notes" type="hidden" value="<?= $flavor_notes; ?>">
+    <input name="twist_notes" type="hidden" value="<?= $twist_notes; ?>">
+
   </form>
 
-  <div class="d-none" id="debug"></div>
+  <div class="d-none" id="debug">
+    <?= var_export(get_defined_vars()); ?>
+  </div>
 </body>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import {
-    initializeApp
-  } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
-  import {
-    getAnalytics
-  } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyDXTyqjm70igbLcxDDyZap8SenIrm3cmos",
-    authDomain: "futharkgenerator.firebaseapp.com",
-    databaseURL: "https://futharkgenerator.firebaseio.com",
-    projectId: "futharkgenerator",
-    storageBucket: "futharkgenerator.appspot.com",
-    messagingSenderId: "717801788685",
-    appId: "1:717801788685:web:61e8c585cf8dcc07b30c44",
-    measurementId: "G-9QLFNQ1KXZ"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
 <script src="/js/jquery-3.2.0.js"></script>
 <script src="/js/intercooler-1.1.1.min.js"></script>
 <script src="/js/ajax.js"></script>
