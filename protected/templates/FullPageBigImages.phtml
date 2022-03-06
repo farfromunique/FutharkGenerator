@@ -84,7 +84,7 @@
               <strong><?= $type[0]['class']; ?>s</strong> have <?= $type[0]['description']; ?>.
             </p>
             <?php if (count($type) > 1) : ?>
-              <?php for ($i = 1; $i < count($type) - 1; $i++) : ?>
+              <?php for ($i = 1; $i < count($type); $i++) : ?>
                 <div class="media mt-1 pt-1">
                   <img class="mr-3 ml-1 my-1 <?= $type[$i]['short']; ?>" />
                   <div class="media-body">
@@ -137,7 +137,7 @@
               Optionally, if your power requires an element in order to manifest, the element associated with this rune is <strong><?= $flavor[0]['elementname']; ?></strong>, which roughly correlates to <?= $flavor[0]['element']; ?> (but you can ignore this if it doesn't fit!).
             </p>
             <?php if (count($flavor) > 1) : ?>
-              <?php for ($i = 1; $i < count($flavor) - 1; $i++) : ?>
+              <?php for ($i = 1; $i < count($flavor); $i++) : ?>
                 <div class="media mt-1 pt-1">
                   <img class="mr-3 ml-1 my-1 <?= $flavor[$i]['short']; ?>" />
                   <div class="media-body">
@@ -186,7 +186,7 @@
             <h5 class="mt-0"><?= $twist[0]['cardname']; ?></h5>
             <p><?= $twist[0]['description']; ?></p>
             <?php if (count($twist) > 1) : ?>
-              <?php for ($i = 1; $i < count($twist) - 1; $i++) : ?>
+              <?php for ($i = 1; $i < count($twist); $i++) : ?>
                 <div class="media mt-1 pt-1">
                   <img class="mr-3 ml-1 my-1 <?= $twist[$i]['class']; ?>" />
                   <div class="media-body">
