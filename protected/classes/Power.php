@@ -10,9 +10,9 @@ use Psr\Container\NotFoundExceptionInterface;
 class Power {
   protected ContainerInterface $container;
   const validSelectors = ['type', 'flavor', 'twist'];
-  protected array $type;
-  protected array $flavor;
-  protected array $twist;
+  protected array $type = [];
+  protected array $flavor = [];
+  protected array $twist = [];
   protected string $type_notes = '';
   protected string $flavor_notes = '';
   protected string $twist_notes = '';
@@ -220,6 +220,29 @@ class Power {
     $this->flavor = $this->powersDB['flavor'];
     $this->twist = $this->powersDB['twist'];
     return $this;
+  }
+
+  public function getJSONforLocalStorage(): string {
+    $out = [];
+    if (is_array($this->type)) {
+      foreach ($this->type as $i => $type) {
+        $out['power_type_' . $i] = $type['short'];
+      }
+    }
+
+    if (is_array($this->flavor)) {
+      foreach ($this->flavor as $i => $flavor) {
+        $out['power_flavor_' . $i] = $flavor['short'];
+      }
+    }
+
+    if (is_array($this->twist)) {
+      foreach ($this->twist as $i => $twist) {
+        $out['power_twist_' . $i] = $twist['short'];
+      }
+    }
+
+    return json_encode($out);
   }
 
   public function getDataForLocalStorage(): array {
