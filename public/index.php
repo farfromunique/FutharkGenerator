@@ -9,10 +9,7 @@ if (PHP_SAPI == 'cli-server') {
     }
 }
 
-session_start();
-
 require __DIR__ . '/../protected/vendor/autoload.php';
-
 
 // Load environment variables (if in dev)
 if (!isset($_ENV['environment']) || $_ENV['environment'] == 'dev') {

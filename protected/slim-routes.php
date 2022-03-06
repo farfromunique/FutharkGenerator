@@ -14,6 +14,7 @@ return function (App $app) {
 
   $app->get('/', function (Request $request, Response $response) use ($container, $meta) {
     $container->get('logger')->info('Full Power requested');
+    $consent = $request->getAttribute('CookieConsent', false);
     $power = new Power($container);
     $power->loadPowersDB();
     $data = $power->withRandomType()
@@ -21,7 +22,7 @@ return function (App $app) {
       ->withRandomTwist()
       ->getPowerData();
     $localVars = $power->getDataForLocalStorage();
-    $args = array_merge($data, $meta, ['localVars' => $localVars]);
+    $args = array_merge($data, $meta, ['localVars' => $localVars], ['cookie_consent' => $consent]);
 
     $container->get('logger')->info('Power returned: ' . $power->getPowerString());
 
@@ -31,18 +32,21 @@ return function (App $app) {
   })->setName('home');
 
   $app->get('/list', function (Request $request, Response $response) use ($container, $meta) {
+    $consent = $request->getAttribute('CookieConsent', false);
     $power = new Power($container);
     $power->loadPowersDB();
     $data = $power->withAllData()
       ->getPowerData();
-    $args = array_merge($data, $meta);
+    $args = array_merge($data, $meta, ['cookie_consent' => $consent]);
 
     return $container->get('renderer')->render($response, 'List.phtml', $args);
   })->setName('list');
 
   $app->get('/credits', function (Request $request, Response $response) use ($container, $meta) {
     $container->get('logger')->info('Credits page requested');
-    return $container->get('renderer')->render($response, 'Credits.phtml', $meta);
+    $consent = $request->getAttribute('CookieConsent', false);
+    $args = array_merge($meta, ['cookie_consent' => $consent]);
+    return $container->get('renderer')->render($response, 'Credits.phtml', $args);
   })->setName('credits');
 
   $app->get('/load/{type_}/{flavor_}/{twist_}', function (Request $request, Response $response, array $args) use ($container, $meta) {
@@ -53,12 +57,14 @@ return function (App $app) {
       ->withTwist($args['twist_'])
       ->getPowerData();
     $localVars = $power->getDataForLocalStorage();
-    $args = array_merge($data, $meta, ['localVars' => $localVars]);
+    $args = array_merge($data, $meta, ['localVars' => $localVars], ['cookie_consent' => $consent]);
 
     return $container->get('renderer')->render($response, 'FullPageBigImages.phtml', $args);
   })->setName('loadDirect');
 
   $app->get('/load/{id_}', function (Request $request, Response $response, array $args) use ($container, $meta) {
+    $consent = $request->getAttribute('CookieConsent', false);
+    $logger->info('Consent value: ', ['consent' => $consent]);
     $db = $container->get('dynamoDB');
     $save_name = $args['id_'];
     $logger = $container->get('logger');
@@ -100,7 +106,7 @@ return function (App $app) {
     $details = $power->getPowerData();
     $localVars = $power->getDataForLocalStorage();
 
-    $args = array_merge($args, $meta, $details, $localVars);
+    $args = array_merge($args, $meta, $details, $localVars, ['cookie_consent' => $consent]);
 
     return $container->get('renderer')->render($response, 'FullPageBigImages.phtml', $args);
   })->setName('loadSaved');
@@ -287,5 +293,28 @@ return function (App $app) {
 
       return $container->get('renderer')->render($response, 'BigImages.phtml', $args);
     })->setName('ajax_load');
+
+    $app->post('/consent', function (Request $request, Response $response, array $args) use ($logger, $container) {
+      $logger->info('/a/consent posted');
+      $host = $request->getUri()->getHost();
+      $exp_domain = \explode('.', $host);
+      $domain = implode('.', [$exp_domain[1], $exp_domain[2]]);
+      $secure = $request->getUri()->getScheme() === 'https';
+      setcookie(
+        'FutharkConsent',
+        'granted',
+        [
+          'expires' => (2 ** 31) - 1 /* Set to the 'Epochaylpse' */,
+          'path' => '/',
+          'domain' => $domain,
+          'samesite' => 'Strict',
+          'secure' => $secure,
+          'httponly' => true,
+
+        ]
+      );
+
+      return $response;
+    });
   });
 };
