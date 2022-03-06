@@ -73,3 +73,24 @@ $(document).ready(function(){
   }
 
 });
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  document.querySelector('#legal-button').addEventListener('click', legal_button_click);
+});
+
+function legal_button_click() {
+  let L_text    = document.querySelector('#legal-text');
+  let L_hold    = document.querySelector('#legal-holder');
+  let S_hold    = document.querySelector('#save-holder');
+  let less_icon = document.querySelector('#less_icon');
+  let more_icon = document.querySelector('#more_icon');
+  
+  is_transparent =  L_text.classList.toggle('transparent');
+  is_col_2 =        L_hold.classList.toggle('col-md-2');
+  is_col_6 =        L_hold.classList.toggle('col-md-6');
+  is_offset_4 =     S_hold.classList.toggle('offset-md-8');
+  is_offset_4 =     S_hold.classList.toggle('offset-md-4');
+  is_d_none =       L_text.classList.toggle('d-none');
+  less_is_gone = less_icon.classList.toggle('d-none');
+  more_is_gone = more_icon.classList.toggle('d-none');
+}

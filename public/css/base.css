@@ -150,26 +150,31 @@ footer {
   margin: 10px auto;
 }
 
-@media (min-width: 576px) {
-	footer {
-		position: -webkit-sticky;
-		position: sticky;
-	}
+#legal-button {
+  right: 5px;
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
+}
 
-	.sticky-bottom {
-		position: -webkit-sticky;
-		position: sticky;
-		bottom: 206px;
-		height: 0;
-	}
+.col-md-2, .col-md-6 {
+    transition: all 500ms;
+}
 
-	.no-height {
-		height: 0;
-	}
+#legal-text {
+  transition: all 500ms 150ms;
+}
 
-	.save-text {
-		position: relative;
-		bottom: 140px;
-	}
+.transparent {
+  opacity: 0;
+  overflow: scroll;
+}
+
+.small-bottom {
+  bottom: 1rem;
+}
+
+.z-500 {
+  z-index: 500;
 }
 

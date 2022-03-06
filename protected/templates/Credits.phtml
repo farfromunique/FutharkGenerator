@@ -14,7 +14,29 @@
 </head>
 
 <body class="dark-background light-text">
-	<div class="container-fluid">
+	<div class="d-none" id="svg_repository">
+		<svg id="icon-less" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+			<path d="M24 0v24H0V0h24z" fill="none" opacity=".87" />
+			<path d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z" />
+		</svg>
+		<svg id="icon-more" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+			<path d="M0 0h24v24H0V0z" fill="none" />
+			<path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z" />
+		</svg>
+		<svg id="icon-delete" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path fill="none" d="M0 0h24v24H0V0z" />
+			<path d="M14.12 10.47L12 12.59l-2.13-2.12-1.41 1.41L10.59 14l-2.12 2.12 1.41 1.41L12 15.41l2.12 2.12 1.41-1.41L13.41 14l2.12-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z" />
+		</svg>
+		<svg id="icon-add" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path fill="none" d="M0 0h24v24H0V0z" />
+			<path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zm-7-1h2v-4h4V9h-4V5h-2v4H9v2h4z" />
+		</svg>
+		<svg id="icon-notes" width="24" height="24" viewBox="0 0 24 24">
+			<path fill="none" d="M0 0h24v24H0V0z" />
+			<path d="M13 11h-2v3H8v2h3v3h2v-3h3v-2h-3zm1-9H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" />
+		</svg>
+	</div>
+	<div class="container">
 		<div class="row">
 			<div class="col-md-8 offset-md-2">
 				<h1 class="text-center">Futhark Generator</h1>
@@ -115,18 +137,29 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<footer class="footer">
-		<div class="card text-center">
-			<div class="card-footer text-muted small">
-				<strong>Legal Stuff</strong>:
-				<br />The Futhark Generator is used to create powers that would be fitting to Wildbow's web serial <a href="https://parahumans.wordpress.com/">Worm</a>.
-				<br />Classifications, story, characters, and other elements are his by right, we're just playing in his sandbox. For more information, <a href="/credits">click here</a>.
-				<br />This site uses tracking technologies to find out how many people have visited, and what they did, etc.
-				<br />It also saves what you input in the fields, when you hit save.
+		<div class="row position-sticky small-bottom z-500 align-items-end">
+			<div id="legal-holder" class="<?= ($cookie_consent) ? 'col-md-2' : 'col-md-6'; ?>">
+				<div class="card">
+					<div class="card-footer text-muted small">
+						<strong>Legal Stuff</strong>:<div id="legal-button" class="d-inline-block" style="right: 2px;" ic-post-to='/a/consent'>
+							<svg width="20" height="20" class="text-right">
+								<use id="less_icon" href="#icon-less" class="<?= ($cookie_consent) ? 'd-none' : ''; ?>" width="20" height="20"></use>
+								<use id="more_icon" href="#icon-more" class="<?= ($cookie_consent) ? '' : 'd-none'; ?>" width="20" height="20"></use>
+							</svg>
+						</div>
+
+						<span id="legal-text" class="<?= ($cookie_consent) ? 'd-none transparent' : ''; ?>"><br>The Futhark Generator is used to create powers that would be fitting to Wildbow's web serial <a href="https://parahumans.wordpress.com/">Worm</a>.
+							<br>Classifications, story, characters, and other elements are his by right, we're just playing in his sandbox. For more information, <a href="/credits">click here</a>.
+							<br>This site uses cookies for quality-of-life. Collapsing this box will set a cookie, so you don't have to close it every time.
+							<br>It also saves what you input in the fields, when you hit save.</span>
+					</div>
+				</div>
+			</div>
+			<div id="save-holder">
+				<!-- This space intentionally left blank /-->
 			</div>
 		</div>
-	</footer>
+	</div>
 
 </body>
 <script src="/js/jquery-3.2.0.js"></script>
