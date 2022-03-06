@@ -1,19 +1,19 @@
 .dark-background { 
-	background-color: #0f0f0f;
+  background-color: #0f0f0f;
 }
 
 .light-text {
-	color: #efefef;
+  color: #efefef;
 }
 
 .subdued-text {
-	color: #a5a5a5;
-	font-size: 1.5rem;
-	margin-top: -8px;
+  color: #a5a5a5;
+  font-size: 1.5rem;
+  margin-top: -8px;
 }
 
 .dark-text {
-	color: #0f0f0f;
+  color: #0f0f0f;
 }
 
 .card-body img { height: 200px; }
@@ -23,131 +23,131 @@
 .py-3 { padding-bottom: 1rem!important; }
 
 div.media img {
-	height: 160px;
-	width: 100px;
-	background-position: center;
-	background-size: contain;
-	background-repeat: repeat;
+  height: 160px;
+  width: 100px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
 }
 
 .media { 
-	background-color: #efefef;
-	min-height: 150px;
+  background-color: #efefef;
+  min-height: 150px;
 }
 
 .media.type img ~ button,
 .media.flavor img ~ button,
 .media.twist img ~ button
 { 
-	position: relative;
-	top: 100px;
-	left: -115px;
-	width: 100px;
+  position: relative;
+  top: 100px;
+  left: -115px;
+  width: 100px;
 }
 
 .media .media {
-	background-color: #B7AC80;
-	border-width: 1px;
-	border-color: #F0F0F0;
-	border-style: inset;
+  background-color: #B7AC80;
+  border-width: 1px;
+  border-color: #F0F0F0;
+  border-style: inset;
 }
 
 .btn-primary {
-	color: #efefef;
+  color: #efefef;
 }
 
 .icon {
-	margin: auto;
+  margin: auto;
 }
 
 button.btn svg {
-	fill: #efefef;
+  fill: #efefef;
 }
 
 button.btn div {
-	display: inline-block;
-	margin-right: 5px;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 div .media {
-	margin: 15px 0;
-	border-radius: 6px;
+  margin: 15px 0;
+  border-radius: 6px;
 }
 
 div .media-body {
-	padding: 16px 24px 16px 16px;
+  padding: 16px 24px 16px 16px;
 }
 
 div .icon {
-	margin-right: 30px;
+  margin-right: 30px;
 }
 
 button {
-	margin: 10px;
+  margin: 10px;
 }
 
 img {
-	position: relative;
-	left: 12px;
-	top: 16px;
-	padding: 50px;
-	border-radius: 6px;
+  position: relative;
+  left: 12px;
+  top: 16px;
+  padding: 50px;
+  border-radius: 6px;
 }
 
 body {
-	max-width: 1400px;
-	margin: auto;
+  max-width: 1400px;
+  margin: auto;
 }
 
 h5 {
-	font-weight: bold;
-	padding-bottom: 10px;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
 
 .btn {
-	padding: 12px 20px;
+  padding: 12px 20px;
 }
 
 .btn svg {
-	position: relative;
-	left: -4px;
-	top: -2px;
+  position: relative;
+  left: -4px;
+  top: -2px;
 }
 
 .new-power {
-	margin: 0px;
-	text-transform: uppercase;
-	background-color: darkgreen;
-	padding: 20px;
+  margin: 0px;
+  text-transform: uppercase;
+  background-color: darkgreen;
+  padding: 20px;
 }
 
 .result-text {
-	display: none;
+  display: none;
 }
 
 .media .media {
-	background-color: lightgrey;
-	border-style: none;
-	position: relative;
-	top: 12px;
+  background-color: lightgrey;
+  border-style: none;
+  position: relative;
+  top: 12px;
 }
 
 .media:last-of-type {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 footer {
-	max-width: 900px;
-	margin: auto;
-	bottom: 0;
-	z-index: 100;
-	-webkit-box-shadow: 0px -5px 5px -1px rgba(15,15,15,1);
-	-moz-box-shadow: 0px -5px 5px -1px rgba(15,15,15,1);
-	box-shadow: 0px -5px 5px -1px rgba(15,15,15,1);
+  max-width: 900px;
+  margin: auto;
+  bottom: 0;
+  z-index: 100;
+  -webkit-box-shadow: 0px -5px 5px -1px rgba(15,15,15,1);
+  -moz-box-shadow: 0px -5px 5px -1px rgba(15,15,15,1);
+  box-shadow: 0px -5px 5px -1px rgba(15,15,15,1);
 }
 
 .col-md-8 {
-	margin: 10px auto;
+  margin: 10px auto;
 }
 
 @media (min-width: 576px) {

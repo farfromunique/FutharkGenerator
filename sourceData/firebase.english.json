@@ -2507,7 +2507,7 @@
   }
  ],
   "type" : [
-	  {
+    {
       "class" : "Thinker",
       "description" : "augmented minds, or sensory abilities beyond any reasonable human limit, such as x-ray vision",
       "image" : "aquarius.png",

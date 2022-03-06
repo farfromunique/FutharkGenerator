@@ -19,7 +19,7 @@
 </head>
 
 <body class="dark-background light-text">
-  <div class="hidden" id="svg_repository">
+  <div class="d-none" id="svg_repository">
     <svg id="icon-delete" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
       <path fill="none" d="M0 0h24v24H0V0z" />
       <path d="M14.12 10.47L12 12.59l-2.13-2.12-1.41 1.41L10.59 14l-2.12 2.12 1.41 1.41L12 15.41l2.12 2.12 1.41-1.41L13.41 14l2.12-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z" />
@@ -235,11 +235,11 @@
       <div class="no-height save-text">
         After clicking the 'Save' button, the URL of this page will change to the perma-link for your power.
       </div>
-      <button id="saveButton" type="button" class="btn btn-md btn-block btn-primary mt-3 mb-sm-0 mx-0" type="button">
-        Save
-      </button>
+        <button id="saveButton" type="button" class="btn btn-md btn-block btn-primary mt-3 mb-sm-0 mx-0">
+          Save
+        </button>
+      </div>
     </div>
-  </div>
   <footer class="footer">
     <div class="card text-center">
       <div class="card-footer text-muted small">
@@ -252,39 +252,39 @@
     </div>
   </footer>
 
-  <form id="data" class="d-none" ic-post-to="/save" ic-target="#debug">
-    <input type="hidden" class="p_gen" name="default" value="probably valid" />
+    <form id="data" class="d-none" ic-post-to="/save" ic-target="#debug">
+      <input type="hidden" class="p_gen" name="default" value="probably valid" />
 
-    <input name="power_flavor_0" type="hidden" value="<?= $flavor[0]['name']; ?>">
-    <?php if (count($flavor) > 1) : ?>
-      <?php for ($i = 1; $i < count($flavor) - 1; $i++) : ?>
-        <input name="power_flavor_<?= $i; ?>" type="hidden" value="<?= $flavor[$i]['name']; ?>">
-      <?php endfor; ?>
-    <?php endif; ?>
+      <input name="power_flavor_0" type="hidden" value="<?= $flavor[0]['name']; ?>">
+      <?php if (count($flavor) > 1) : ?>
+        <?php for ($i = 1; $i < count($flavor) - 1; $i++) : ?>
+          <input name="power_flavor_<?= $i; ?>" type="hidden" value="<?= $flavor[$i]['name']; ?>">
+        <?php endfor; ?>
+      <?php endif; ?>
 
-    <input name="power_type_0" type="hidden" value="<?= $type[0]['name']; ?>">
-    <?php if (count($type) > 1) : ?>
-      <?php for ($i = 1; $i < count($type) - 1; $i++) : ?>
-        <input name="power_type_<?= $i; ?>" type="hidden" value="<?= $type[$i]['name']; ?>">
-      <?php endfor; ?>
-    <?php endif; ?>
+      <input name="power_type_0" type="hidden" value="<?= $type[0]['name']; ?>">
+      <?php if (count($type) > 1) : ?>
+        <?php for ($i = 1; $i < count($type) - 1; $i++) : ?>
+          <input name="power_type_<?= $i; ?>" type="hidden" value="<?= $type[$i]['name']; ?>">
+        <?php endfor; ?>
+      <?php endif; ?>
 
-    <input name="power_twist_0" type="hidden" value="<?= $twist[0]['cardname']; ?>">
-    <?php if (count($twist) > 1) : ?>
-      <?php for ($i = 1; $i < count($twist) - 1; $i++) : ?>
-        <input name="power_twist_<?= $i; ?>" type="hidden" value="<?= $twist[$i]['cardname']; ?>">
-      <?php endfor; ?>
-    <?php endif; ?>
+      <input name="power_twist_0" type="hidden" value="<?= $twist[0]['cardname']; ?>">
+      <?php if (count($twist) > 1) : ?>
+        <?php for ($i = 1; $i < count($twist) - 1; $i++) : ?>
+          <input name="power_twist_<?= $i; ?>" type="hidden" value="<?= $twist[$i]['cardname']; ?>">
+        <?php endfor; ?>
+      <?php endif; ?>
 
-    <input name="type_notes" type="hidden" value="<?= $type_notes; ?>">
-    <input name="flavor_notes" type="hidden" value="<?= $flavor_notes; ?>">
-    <input name="twist_notes" type="hidden" value="<?= $twist_notes; ?>">
+      <input name="type_notes" type="hidden" value="<?= $type_notes; ?>">
+      <input name="flavor_notes" type="hidden" value="<?= $flavor_notes; ?>">
+      <input name="twist_notes" type="hidden" value="<?= $twist_notes; ?>">
 
-  </form>
+    </form>
 
-  <div class="d-none" id="debug">
-    <?= var_export(get_defined_vars()); ?>
-  </div>
+    <div class="d-none" id="debug">
+      <?= var_export(get_defined_vars()); ?>
+    </div>
 </body>
 
 <script src="/js/jquery-3.2.0.js"></script>

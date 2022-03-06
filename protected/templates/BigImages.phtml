@@ -1,88 +1,64 @@
 <p>Your Roll: <button href="#" id="reroll" ic-get-from="/a/roll/" ic-target="#content">Start Over</button></p>
-			<div id="bigImages" class="bigImages">
-<?php for ($i=0; $i < max(count($type),count($flavor),count($twist)); $i++): ?>
-				<div class="Type">
-					<div title="Type: <?= $type[$i]['name']; ?>" class="Image" style="background-image:url(/img/zodiac/<?= $type[$i]['image']; ?>);"></div>
-					<div class="Name"><?= $type[$i]['name']; ?></div>
-					<div class="Button">
-<?php if ($i == 0): ?>
-						<button
-						id="rollType" 
-						ic-get-from="/a/roll/type" 
-						ic-target="#bigImages" 
-						ic-swap-style="append" 
-						ic-indicator="#type-load" 
-						ic-src="/a/roll/type" 
-						ic-trigger-on="default" 
-						ic-deps="ignore">
-							Roll Another
-						</button>
-<?php endif; ?>
-						<i id="type-load" class="lds-dual-ring"></i>
-					</div>
-					<input type="hidden" class="p_gen" name="type_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $type[$i]['short']; ?>" />
-				</div>
-
-				<div class="Flavor">
-					<div title="Flavor: <?= $flavor[$i]['name']; ?>" class="Image" style="background-image:url(/img/runes/<?= $flavor[$i]['image']; ?>);"></div>
-					<div class="Name"><?= $flavor[$i]['name']; ?></div>
-					<div class="Button">
-<?php if ($i == 0): ?>
-						<button 
-						id="rollFlavor" 
-						ic-get-from="/a/roll/flavor" 
-						ic-target="#bigImages" 
-						ic-swap-style="append" 
-						ic-indicator="#flavor-load" 
-						ic-src="/a/roll/flavor" 
-						ic-trigger-on="default" 
-						ic-deps="ignore"> 
-							Roll Another
-						</button>
-<?php endif; ?>
-						<i id="flavor-load" class="lds-dual-ring"></i>
-					</div>
-					<input type="hidden" class="p_gen" name="flavor_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $flavor[$i]['short']; ?>" />
-				</div>
-				
-				<div class="Twist">
-					<div  title="Twist: <?= $twist[$i]['cardname']; ?>" class="Image<?= ($twist[$i]['orientation'] == 'Merkstave') ? ' reversed' : '' ?>" style="background-image:url(/img/cards/<?= $twist[$i]['image']; ?>);"></div>
-					<div class="Name"><?= $twist[$i]['cardname']; ?></div>
-					<div class="Button">
-<?php if ($i == 0): ?>
-						<button 
-						id="rollTwist" 
-						ic-get-from="/a/roll/twist" 
-						ic-target="#bigImages" 
-						ic-swap-style="append" 
-						ic-indicator="#twist-load" 
-						ic-src="/a/roll/twist" 
-						ic-trigger-on="default" 
-						ic-deps="ignore">
-							Draw Again
-						</button>
-<?php endif; ?>
-						<i id="twist-load" class="lds-dual-ring"></i>
-					</div>
-					<input type="hidden" class="p_gen" name="twist_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $twist[$i]['short']; ?>" />
-				</div>
-<?php endfor; ?>
+<div id="bigImages" class="bigImages">
+	<?php for ($i = 0; $i < max(count($type), count($flavor), count($twist)); $i++) : ?>
+		<div class="Type">
+			<div title="Type: <?= $type[$i]['name']; ?>" class="Image" style="background-image:url(/img/zodiac/<?= $type[$i]['image']; ?>);"></div>
+			<div class="Name"><?= $type[$i]['name']; ?></div>
+			<div class="Button">
+				<?php if ($i == 0) : ?>
+					<button id="rollType" ic-get-from="/a/roll/type" ic-target="#bigImages" ic-swap-style="append" ic-indicator="#type-load" ic-src="/a/roll/type" ic-trigger-on="default" ic-deps="ignore">
+						Roll Another
+					</button>
+				<?php endif; ?>
+				<i id="type-load" class="lds-dual-ring"></i>
 			</div>
+			<input type="hidden" class="p_gen" name="type_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $type[$i]['short']; ?>" />
+		</div>
 
-
-			<div class="verboseDescription" id="Description">
-<?php for ($i=0; $i < max(count($type),count($flavor),count($twist)); $i++): ?>
-<?php if ($i > 0): ?>
-				<hr />
-<?php endif; ?>
-<?php if (isset($type[$i])): ?>
-				<p>You rolled the <strong><?= $type[$i]['name']; ?></strong> sign! This results in a <strong><?= $type[$i]['class']; ?></strong>-class power. <strong><?= $type[$i]['class']; ?>s</strong> have <?= $type[$i]['description']; ?></p>
-<?php endif; ?>
-<?php if (isset($flavor[$i])): ?>
-				<p>You also rolled the <strong><?= $flavor[$i]['name']; ?></strong> rune! This results in the flavor <strong><?= $flavor[$i]['flavor']; ?></strong>, which gives a power that <?= $flavor[$i]['description']; ?>. Optionally, if your power requires an element in order to manifest, the element associated with this rune is <strong><?= $flavor[$i]['element']; ?></strong>, which roughly correlates to <?= $flavor[$i]['elementname']; ?> (but you can ignore this if it doesn't fit!).</p>
-<?php endif; ?>
-<?php if (isset($twist[$i])): ?>
-				<p>Finally, you drew the <strong><?= $twist[$i]['cardname']; ?></strong>. <?= $twist[$i]['description']; ?></p>
-<?php endif; ?>
-<?php endfor; ?>
+		<div class="Flavor">
+			<div title="Flavor: <?= $flavor[$i]['name']; ?>" class="Image" style="background-image:url(/img/runes/<?= $flavor[$i]['image']; ?>);"></div>
+			<div class="Name"><?= $flavor[$i]['name']; ?></div>
+			<div class="Button">
+				<?php if ($i == 0) : ?>
+					<button id="rollFlavor" ic-get-from="/a/roll/flavor" ic-target="#bigImages" ic-swap-style="append" ic-indicator="#flavor-load" ic-src="/a/roll/flavor" ic-trigger-on="default" ic-deps="ignore">
+						Roll Another
+					</button>
+				<?php endif; ?>
+				<i id="flavor-load" class="lds-dual-ring"></i>
 			</div>
+			<input type="hidden" class="p_gen" name="flavor_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $flavor[$i]['short']; ?>" />
+		</div>
+
+		<div class="Twist">
+			<div title="Twist: <?= $twist[$i]['cardname']; ?>" class="Image<?= ($twist[$i]['orientation'] == 'Merkstave') ? ' reversed' : '' ?>" style="background-image:url(/img/cards/<?= $twist[$i]['image']; ?>);"></div>
+			<div class="Name"><?= $twist[$i]['cardname']; ?></div>
+			<div class="Button">
+				<?php if ($i == 0) : ?>
+					<button id="rollTwist" ic-get-from="/a/roll/twist" ic-target="#bigImages" ic-swap-style="append" ic-indicator="#twist-load" ic-src="/a/roll/twist" ic-trigger-on="default" ic-deps="ignore">
+						Draw Again
+					</button>
+				<?php endif; ?>
+				<i id="twist-load" class="lds-dual-ring"></i>
+			</div>
+			<input type="hidden" class="p_gen" name="twist_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $twist[$i]['short']; ?>" />
+		</div>
+	<?php endfor; ?>
+</div>
+
+
+<div class="verboseDescription" id="Description">
+	<?php for ($i = 0; $i < max(count($type), count($flavor), count($twist)); $i++) : ?>
+		<?php if ($i > 0) : ?>
+			<hr />
+		<?php endif; ?>
+		<?php if (isset($type[$i])) : ?>
+			<p>You rolled the <strong><?= $type[$i]['name']; ?></strong> sign! This results in a <strong><?= $type[$i]['class']; ?></strong>-class power. <strong><?= $type[$i]['class']; ?>s</strong> have <?= $type[$i]['description']; ?></p>
+		<?php endif; ?>
+		<?php if (isset($flavor[$i])) : ?>
+			<p>You also rolled the <strong><?= $flavor[$i]['name']; ?></strong> rune! This results in the flavor <strong><?= $flavor[$i]['flavor']; ?></strong>, which gives a power that <?= $flavor[$i]['description']; ?>. Optionally, if your power requires an element in order to manifest, the element associated with this rune is <strong><?= $flavor[$i]['element']; ?></strong>, which roughly correlates to <?= $flavor[$i]['elementname']; ?> (but you can ignore this if it doesn't fit!).</p>
+		<?php endif; ?>
+		<?php if (isset($twist[$i])) : ?>
+			<p>Finally, you drew the <strong><?= $twist[$i]['cardname']; ?></strong>. <?= $twist[$i]['description']; ?></p>
+		<?php endif; ?>
+	<?php endfor; ?>
+</div>
