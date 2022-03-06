@@ -11,9 +11,10 @@ return function (App $app) {
     'title' => $container->get('settings')['APP_TITLE'] . $container->get('settings')['APP_VERSION'],
     'version' => $container->get('settings')['APP_VERSION'],
   ];
+  $logger = $container->get('logger');
 
-  $app->get('/', function (Request $request, Response $response) use ($container, $meta) {
-    $container->get('logger')->info('Full Power requested');
+  $app->get('/', function (Request $request, Response $response) use ($logger, $container, $meta) {
+    $logger->info('Full Power requested');
     $consent = $request->getAttribute('CookieConsent', false);
     $power = new Power($container);
     $power->loadPowersDB();
@@ -24,14 +25,15 @@ return function (App $app) {
     $localVars = $power->getDataForLocalStorage();
     $args = array_merge($data, $meta, ['localVars' => $localVars], ['cookie_consent' => $consent]);
 
-    $container->get('logger')->info('Power returned: ' . $power->getPowerString());
+    $logger->info('Power returned: ' . $power->getPowerString());
 
     return $container
       ->get('renderer')
       ->render($response, 'FullPageBigImages.phtml', $args);
   })->setName('home');
 
-  $app->get('/list', function (Request $request, Response $response) use ($container, $meta) {
+  $app->get('/list', function (Request $request, Response $response) use ($logger, $container, $meta) {
+    $logger->info('Full listing requested');
     $consent = $request->getAttribute('CookieConsent', false);
     $power = new Power($container);
     $power->loadPowersDB();
@@ -42,14 +44,16 @@ return function (App $app) {
     return $container->get('renderer')->render($response, 'List.phtml', $args);
   })->setName('list');
 
-  $app->get('/credits', function (Request $request, Response $response) use ($container, $meta) {
-    $container->get('logger')->info('Credits page requested');
+  $app->get('/credits', function (Request $request, Response $response) use ($logger, $container, $meta) {
+    $logger->info('Credits page requested');
     $consent = $request->getAttribute('CookieConsent', false);
     $args = array_merge($meta, ['cookie_consent' => $consent]);
     return $container->get('renderer')->render($response, 'Credits.phtml', $args);
   })->setName('credits');
 
-  $app->get('/load/{type_}/{flavor_}/{twist_}', function (Request $request, Response $response, array $args) use ($container, $meta) {
+  $app->get('/load/{type_}/{flavor_}/{twist_}', function (Request $request, Response $response, array $args) use ($logger, $container, $meta) {
+    $logger->info('Static power load requested (' . $args['type_'] . ', ' . $args['flavor_'] . ', ' . $args['twist_'] . ')');
+    $consent = $request->getAttribute('CookieConsent', false);
     $power = new Power($container);
     $power->loadPowersDB();
     $data = $power->withType($args['type_'])
@@ -62,12 +66,11 @@ return function (App $app) {
     return $container->get('renderer')->render($response, 'FullPageBigImages.phtml', $args);
   })->setName('loadDirect');
 
-  $app->get('/load/{id_}', function (Request $request, Response $response, array $args) use ($container, $meta) {
+  $app->get('/load/{id_}', function (Request $request, Response $response, array $args) use ($logger, $container, $meta) {
     $consent = $request->getAttribute('CookieConsent', false);
     $logger->info('Consent value: ', ['consent' => $consent]);
     $db = $container->get('dynamoDB');
     $save_name = $args['id_'];
-    $logger = $container->get('logger');
     $logger->info('Power Load requested! Input:' . $save_name);
 
     $result = $db->getItem([
@@ -111,10 +114,9 @@ return function (App $app) {
     return $container->get('renderer')->render($response, 'FullPageBigImages.phtml', $args);
   })->setName('loadSaved');
 
-  $app->post('/save', function (Request $request, Response $response) use ($container) {
+  $app->post('/save', function (Request $request, Response $response) use ($logger, $container) {
     $db = $container->get('dynamoDB');
     $inputs = $request->getParsedBody();
-    $logger = $container->get('logger');
     $logger->info('Power Save requested! Input:', $inputs);
 
     $current_url = $inputs['ic-current-url'] ?? $request->getUri();
@@ -209,9 +211,9 @@ return function (App $app) {
     return $container->get('renderer')->render($response, 'blank.phtml', ['savekey' => $key]);
   })->setName('save');
 
-  $app->group('/a', function (App $app) use ($container) {
-    $app->group('/roll', function (App $app) use ($container) {
-      $app->get('/', function (Request $request, Response $response) use ($container) {
+  $app->group('/a', function (App $app) use ($logger, $container) {
+    $app->group('/roll', function (App $app) use ($logger, $container) {
+      $app->get('/', function (Request $request, Response $response) use ($logger, $container) {
         $power = new Power($container);
         $power->loadPowersDB();
         $data = $power->withRandomType()
@@ -221,13 +223,13 @@ return function (App $app) {
         $localVars = $power->getJSONforLocalStorage();
         $args = array_merge($data, ['localVars' => $localVars]);
 
-        $container->get('logger')->info('Power returned: ' . $power->getPowerString());
+        $logger->info('Power returned: ' . $power->getPowerString());
 
         return $container->get('renderer')->render($response, 'BigImages.phtml', $args);
       })->setName('ajax_full');
 
-      $app->get('/type', function (Request $request, Response $response) use ($container) {
-        $container->get('logger')->info('/a/roll/type requested');
+      $app->get('/type', function (Request $request, Response $response) use ($logger, $container) {
+        $logger->info('/a/roll/type requested');
         $power = new Power($container);
         $power->loadPowersDB();
         $data = $power->withRandomType()
@@ -244,7 +246,7 @@ return function (App $app) {
         return $out;
       })->setName('ajax_type');
 
-      $app->get('/flavor', function (Request $request, Response $response) use ($container) {
+      $app->get('/flavor', function (Request $request, Response $response) use ($logger, $container) {
         $power = new Power($container);
         $power->loadPowersDB();
         $data = $power->withRandomFlavor()
@@ -257,12 +259,12 @@ return function (App $app) {
           ->render($response, 'OnlyFlavor.phtml', $args)
           ->withHeader('X-IC-Set-Local-Vars', $localVars);
 
-        $container->get('logger')->info('Power Flavor returned: ' . $power->getPowerData()['flavor'][0]['name']);
+        $logger->info('Power Flavor returned: ' . $power->getPowerData()['flavor'][0]['name']);
         return $out;
       })->setName('ajax_flavor');
 
-      $app->get('/twist', function (Request $request, Response $response) use ($container) {
-        $container->get('logger')->info('/a/roll/twist requested');
+      $app->get('/twist', function (Request $request, Response $response) use ($logger, $container) {
+        $logger->info('/a/roll/twist requested');
         $power = new Power($container);
         $power->loadPowersDB();
         $data = $power
@@ -277,12 +279,13 @@ return function (App $app) {
           ->render($response, 'OnlyTwist.phtml', $args)
           ->withHeader('X-IC-Set-Local-Vars', $localVars);
 
-        $container->get('logger')->info('Power Twist returned: ' . $power->getPowerData()['twist'][0]['cardname']);
+        $logger->info('Power Twist returned: ' . $power->getPowerData()['twist'][0]['cardname']);
         return $out;
       })->setName('ajax_twist');
     });
 
-    $app->get('/load/{type_}/{flavor_}/{twist_}', function (Request $request, Response $response, array $args) use ($container) {
+    $app->get('/load/{type_}/{flavor_}/{twist_}', function (Request $request, Response $response, array $args) use ($logger, $container) {
+      $logger->info('Static power load requested (' . $args['type_'] . ', ' . $args['flavor_'] . ', ' . $args['twist_'] . ')');
       $power = new Power($container);
       $power->loadPowersDB();
       $data = $power->withType($args['type_'])
