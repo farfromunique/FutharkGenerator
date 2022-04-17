@@ -1,317 +1,33 @@
 <?php
 
-use ACWPD\Futhark\Power;
+use ACWPD\Futhark\FutharkRouter;
 use Slim\App;
-use Slim\Http\Request;
-use Slim\Http\Response;
 
 return function (App $app) {
-  $container = $app->getContainer();
-  $meta = [
-    'title' => $container->get('settings')['APP_TITLE'] . $container->get('settings')['APP_VERSION'],
-    'version' => $container->get('settings')['APP_VERSION'],
-  ];
-  $logger = $container->get('logger');
+  $router = new FutharkRouter($app->getContainer());
+  $app->get('/', $router::class . ':getRoot')->setName('home');
 
-  $app->get('/', function (Request $request, Response $response) use ($logger, $container, $meta) {
-    $logger->info('Full Power requested');
-    $consent = $request->getAttribute('CookieConsent', false);
-    $power = new Power($container);
-    $power->loadPowersDB();
-    $data = $power->withRandomType()
-      ->withRandomFlavor()
-      ->withRandomTwist()
-      ->getPowerData();
-    $localVars = $power->getDataForLocalStorage();
-    $args = array_merge($data, $meta, ['localVars' => $localVars], ['cookie_consent' => $consent]);
+  $app->get('/list', $router::class . ':getList')->setName('list');
 
-    $logger->info('Power returned: ' . $power->getPowerString());
+  $app->get('/credits', $router::class . ':getCredits')->setName('credits');
 
-    return $container
-      ->get('renderer')
-      ->render($response, 'FullPageBigImages.phtml', $args);
-  })->setName('home');
+  $app->get('/load/{id_}', $router::class . ':getByID')->setName('loadSaved');
 
-  $app->get('/list', function (Request $request, Response $response) use ($logger, $container, $meta) {
-    $logger->info('Full listing requested');
-    $consent = $request->getAttribute('CookieConsent', false);
-    $power = new Power($container);
-    $power->loadPowersDB();
-    $data = $power->withAllData()
-      ->getPowerData();
-    $args = array_merge($data, $meta, ['cookie_consent' => $consent]);
+  $app->get('/load/{type_}/{flavor_}/{twist_}', $router::class . ':getByContent')->setName('loadDirect');
 
-    return $container->get('renderer')->render($response, 'List.phtml', $args);
-  })->setName('list');
+  $app->post('/save', $router::class . ':postSave')->setName('save');
 
-  $app->get('/credits', function (Request $request, Response $response) use ($logger, $container, $meta) {
-    $logger->info('Credits page requested');
-    $consent = $request->getAttribute('CookieConsent', false);
-    $args = array_merge($meta, ['cookie_consent' => $consent]);
-    return $container->get('renderer')->render($response, 'Credits.phtml', $args);
-  })->setName('credits');
+  $app->group('/a', function (App $app) use ($router) {
+    $app->group('/roll', function (App $app) use ($router) {
+      $app->get('/', $router::class . ':getAjaxRoot')->setName('ajax_full');
 
-  $app->get('/load/{type_}/{flavor_}/{twist_}', function (Request $request, Response $response, array $args) use ($logger, $container, $meta) {
-    $logger->info('Static power load requested (' . $args['type_'] . ', ' . $args['flavor_'] . ', ' . $args['twist_'] . ')');
-    $consent = $request->getAttribute('CookieConsent', false);
-    $power = new Power($container);
-    $power->loadPowersDB();
-    $data = $power->withType($args['type_'])
-      ->withFlavor($args['flavor_'])
-      ->withTwist($args['twist_'])
-      ->getPowerData();
-    $localVars = $power->getDataForLocalStorage();
-    $args = array_merge($data, $meta, ['localVars' => $localVars], ['cookie_consent' => $consent]);
+      $app->get('/type', $router::class . ':getAjaxType')->setName('ajax_type');
 
-    return $container->get('renderer')->render($response, 'FullPageBigImages.phtml', $args);
-  })->setName('loadDirect');
+      $app->get('/flavor', $router::class . ':getAjaxFlavor')->setName('ajax_flavor');
 
-  $app->get('/load/{id_}', function (Request $request, Response $response, array $args) use ($logger, $container, $meta) {
-    $consent = $request->getAttribute('CookieConsent', false);
-    $logger->info('Consent value: ', ['consent' => $consent]);
-    $db = $container->get('dynamoDB');
-    $save_name = $args['id_'];
-    $logger->info('Power Load requested! Input:' . $save_name);
-
-    $result = $db->getItem([
-      'Key' => [
-        'save_name' => ['S' => $save_name],
-      ],
-      'TableName' => $container->get('settings')['AWS']['dynamoDB']['tableName']
-    ]);
-
-    $result_data = $result['Item'];
-    $power_data = [
-      'flavor' => $result_data['power']['M']['flavor']['L'],
-      'type'   => $result_data['power']['M']['type']['L'],
-      'twist'  => $result_data['power']['M']['twist']['L']
-    ];
-
-    $power = new Power($container);
-    $power->loadPowersDB();
-
-    foreach ($power_data['type'] as $key => $value) {
-      $power->withType($value['S']);
-    }
-
-    foreach ($power_data['flavor'] as $key => $value) {
-      $power->withFlavor($value['S']);
-    }
-
-    foreach ($power_data['twist'] as $key => $value) {
-      $power->withTwist($value['S']);
-    }
-
-    $power->withNotes('type', $result_data['notes']['M']['type']['S'])
-      ->withNotes('flavor', $result_data['notes']['M']['flavor']['S'])
-      ->withNotes('twist', $result_data['notes']['M']['twist']['S']);
-
-    $details = $power->getPowerData();
-    $localVars = $power->getDataForLocalStorage();
-
-    $args = array_merge($args, $meta, $details, $localVars, ['cookie_consent' => $consent]);
-
-    return $container->get('renderer')->render($response, 'FullPageBigImages.phtml', $args);
-  })->setName('loadSaved');
-
-  $app->post('/save', function (Request $request, Response $response) use ($logger, $container) {
-    $db = $container->get('dynamoDB');
-    $inputs = $request->getParsedBody();
-    $logger->info('Power Save requested! Input:', $inputs);
-
-    $current_url = $inputs['ic-current-url'] ?? $request->getUri();
-
-    $matches = [];
-
-    if (preg_match('/\/load\/([A-Za-z0-9\-\_\=]+)$/', $current_url, $matches) == 1) {
-      $save_name = $matches[1];
-    } else {
-      $save_name = \ACWPD\Helpers\SequentialKey::generate();
-    }
-
-    $logger->info('Save name: ' . $save_name);
-
-    $final = [
-      'save_name' => ['S' => ''],
-      'notes' => [
-        'M' => [
-          'flavor' => ['S' => ''],
-          'type' => ['S' => ''],
-          'twist' => ['S' => '']
-        ]
-      ],
-      'power' => [
-        'M' => [
-          'flavor' => [
-            'L' => []
-          ],
-          'type' => [
-            'L' => []
-          ],
-          'twist' => [
-            'L' => []
-          ]
-        ]
-      ]
-    ];
-
-    $final['save_name']['S'] = $save_name;
-
-    $final['notes']['M']['flavor']['S'] = $inputs['notes_flavor'] ?? '';
-    $final['notes']['M']['twist']['S']  = $inputs['notes_twist']  ?? '';
-    $final['notes']['M']['type']['S']   = $inputs['notes_type']   ?? '';
-
-    foreach ($inputs as $key => $value) {
-      if (substr($key, 0, 6) == 'power_') {
-        $logger->info(\explode('_', $key)[1], [$value]);
-        switch (\explode('_', $key)[1]) {
-          case 'flavor':
-            if (\strlen($value) > 1) {
-              $final['power']['M']['flavor']['L'][] = ['S' => $value];
-            }
-            break;
-
-          case 'twist':
-            if (\strlen($value) > 1) {
-              $final['power']['M']['twist']['L'][] = ['S' => $value];
-            }
-            break;
-
-          case 'type':
-            if (\strlen($value) > 1) {
-              $final['power']['M']['type']['L'][] = ['S' => $value];
-            }
-            break;
-        }
-      }
-    }
-
-    $result = $db->putItem([
-      'Item' => $final,
-      'ReturnValues' => 'ALL_OLD',
-      'TableName' => $container->get('settings')['AWS']['dynamoDB']['tableName']
-    ]);
-
-    $logger->info('Result: ' . $result['Attributes']);
-
-    $path = $container
-      ->get('router')
-      ->pathFor(
-        'loadSaved',
-        ['id_' => $save_name]
-      );
-
-    $response = $response->withHeader('X-IC-PushURL', $path);
-    return $container->get('renderer')->render($response, 'blank.phtml', ['savekey' => $key]);
-  })->setName('save');
-
-  $app->group('/a', function (App $app) use ($logger, $container) {
-    $app->group('/roll', function (App $app) use ($logger, $container) {
-      $app->get('/', function (Request $request, Response $response) use ($logger, $container) {
-        $power = new Power($container);
-        $power->loadPowersDB();
-        $data = $power->withRandomType()
-          ->withRandomFlavor()
-          ->withRandomTwist()
-          ->getPowerData();
-        $localVars = $power->getJSONforLocalStorage();
-        $args = array_merge($data, ['localVars' => $localVars]);
-
-        $logger->info('Power returned: ' . $power->getPowerString());
-
-        return $container->get('renderer')->render($response, 'BigImages.phtml', $args);
-      })->setName('ajax_full');
-
-      $app->get('/type', function (Request $request, Response $response) use ($logger, $container) {
-        $logger->info('/a/roll/type requested');
-        $power = new Power($container);
-        $power->loadPowersDB();
-        $data = $power->withRandomType()
-          ->getPowerData();
-        $localVars = $power->getJSONforLocalStorage();
-        $args = array_merge($data);
-
-        $out = $container
-          ->get('renderer')
-          ->render($response, 'OnlyType.phtml', $args)
-          ->withHeader('X-IC-Set-Local-Vars', $localVars);
-
-        $container->get('logger')->info('Power Type returned: ' . $power->getPowerData()['type'][0]['name']);
-        return $out;
-      })->setName('ajax_type');
-
-      $app->get('/flavor', function (Request $request, Response $response) use ($logger, $container) {
-        $power = new Power($container);
-        $power->loadPowersDB();
-        $data = $power->withRandomFlavor()
-          ->getPowerData();
-        $localVars = $power->getJSONforLocalStorage();
-        $args = array_merge($data);
-
-        $out = $container
-          ->get('renderer')
-          ->render($response, 'OnlyFlavor.phtml', $args)
-          ->withHeader('X-IC-Set-Local-Vars', $localVars);
-
-        $logger->info('Power Flavor returned: ' . $power->getPowerData()['flavor'][0]['name']);
-        return $out;
-      })->setName('ajax_flavor');
-
-      $app->get('/twist', function (Request $request, Response $response) use ($logger, $container) {
-        $logger->info('/a/roll/twist requested');
-        $power = new Power($container);
-        $power->loadPowersDB();
-        $data = $power
-          ->withRandomTwist()
-          ->getPowerData();
-        $localVars = $power
-          ->getJSONforLocalStorage();
-        $args = array_merge($data);
-
-        $out = $container
-          ->get('renderer')
-          ->render($response, 'OnlyTwist.phtml', $args)
-          ->withHeader('X-IC-Set-Local-Vars', $localVars);
-
-        $logger->info('Power Twist returned: ' . $power->getPowerData()['twist'][0]['cardname']);
-        return $out;
-      })->setName('ajax_twist');
+      $app->get('/twist', $router::class . ':getAjaxTwist')->setName('ajax_twist');
     });
 
-    $app->get('/load/{type_}/{flavor_}/{twist_}', function (Request $request, Response $response, array $args) use ($logger, $container) {
-      $logger->info('Static power load requested (' . $args['type_'] . ', ' . $args['flavor_'] . ', ' . $args['twist_'] . ')');
-      $power = new Power($container);
-      $power->loadPowersDB();
-      $data = $power->withType($args['type_'])
-        ->withFlavor($args['flavor_'])
-        ->withTwist($args['twist_'])
-        ->getPowerData();
-      $args = array_merge($data);
-
-      return $container->get('renderer')->render($response, 'BigImages.phtml', $args);
-    })->setName('ajax_load');
-
-    $app->post('/consent', function (Request $request, Response $response, array $args) use ($logger, $container) {
-      $logger->info('/a/consent posted');
-      $host = $request->getUri()->getHost();
-      $exp_domain = \explode('.', $host);
-      $domain = implode('.', [$exp_domain[1], $exp_domain[2]]);
-      $secure = $request->getUri()->getScheme() === 'https';
-      setcookie(
-        'FutharkConsent',
-        'granted',
-        [
-          'expires' => (2 ** 31) - 1 /* Set to the 'Epochaylpse' */,
-          'path' => '/',
-          'domain' => $domain,
-          'samesite' => 'Strict',
-          'secure' => $secure,
-          'httponly' => true,
-
-        ]
-      );
-
-      return $response;
-    });
+    $app->post('/consent', $router::class . ':postConsent');
   });
 };

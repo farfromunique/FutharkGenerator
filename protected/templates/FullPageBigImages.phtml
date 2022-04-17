@@ -82,7 +82,7 @@
       </div>
     </div>
     <div class="row mb-3">
-      <div class="col-md-8 offset-md-2 my-0">
+      <div class="col-md-8 offset-md-2 my-0 z-500">
         <div class="media mt-3 pt-2 px-2 pb-1 type dark-text">
           <img class="mr-3 ml-1 <?= $type[0]['short']; ?>" />
           <div class="media-body">
@@ -234,7 +234,7 @@
         </div>
       </div>
     </div>
-    <div class="row position-sticky small-bottom z-500 align-items-end">
+    <div class="row position-sticky small-bottom z-400 align-items-end">
       <div id="legal-holder" class="<?= ($cookie_consent) ? 'col-md-2' : 'col-md-6'; ?>">
         <div class="card">
           <div class="card-footer text-muted small">
@@ -262,35 +262,7 @@
       </div>
     </div>
 
-    <form id="data" class="d-none" ic-post-to="/save" ic-target="#debug">
-      <input type="hidden" class="p_gen" name="default" value="probably valid" />
-
-      <input name="power_flavor_0" type="hidden" value="<?= $flavor[0]['name']; ?>">
-      <?php if (count($flavor) > 1) : ?>
-        <?php for ($i = 1; $i < count($flavor) - 1; $i++) : ?>
-          <input name="power_flavor_<?= $i; ?>" type="hidden" value="<?= $flavor[$i]['name']; ?>">
-        <?php endfor; ?>
-      <?php endif; ?>
-
-      <input name="power_type_0" type="hidden" value="<?= $type[0]['name']; ?>">
-      <?php if (count($type) > 1) : ?>
-        <?php for ($i = 1; $i < count($type) - 1; $i++) : ?>
-          <input name="power_type_<?= $i; ?>" type="hidden" value="<?= $type[$i]['name']; ?>">
-        <?php endfor; ?>
-      <?php endif; ?>
-
-      <input name="power_twist_0" type="hidden" value="<?= $twist[0]['cardname']; ?>">
-      <?php if (count($twist) > 1) : ?>
-        <?php for ($i = 1; $i < count($twist) - 1; $i++) : ?>
-          <input name="power_twist_<?= $i; ?>" type="hidden" value="<?= $twist[$i]['cardname']; ?>">
-        <?php endfor; ?>
-      <?php endif; ?>
-
-      <input name="type_notes" type="hidden" value="<?= $type_notes; ?>">
-      <input name="flavor_notes" type="hidden" value="<?= $flavor_notes; ?>">
-      <input name="twist_notes" type="hidden" value="<?= $twist_notes; ?>">
-
-    </form>
+    <form id="data" class="d-none" ic-post-to="/save" ic-target="#debug"></form>
 
     <div class="d-none" id="debug">
       <?= var_export(get_defined_vars()); ?>
@@ -301,7 +273,7 @@
 <script src="/js/intercooler-1.1.1.min.js"></script>
 <script src="/js/ajax.js"></script>
 <script>
-  /* Set up localstorage for initially generated power */
+  /* Set up localstorage for this power */
   let store = window.localStorage;
   store.clear();
   <?php foreach ($localVars as $key => $value) : ?>

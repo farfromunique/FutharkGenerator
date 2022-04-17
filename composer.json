@@ -34,26 +34,8 @@
     },
     "scripts": {
         "serve": "php -S localhost:8000 -t public/",
-        "nfsn-install": [
-            "# Note: the repo should be downloaded to /home/tmp/{something}",
-            "ls -d /home/protected/* | xargs rm -rf",
-            "ls -d /home/public/* | xargs rm -rf",
-            "@composer install --no-dev",
-            "cd protected/",
-            "mv protected/*.* /home/protected/",
-            "mv protected/classes /home/protected/",
-            "mv protected/templates /home/protected/",
-            "mv protected/vendor /home/protected/",
-            "mv public/*.* /home/public",
-            "mv public/css /home/public",
-            "mv public/img /home/public",
-            "mv public/js /home/public",
-            "cd /home/tmp",
-            "rm -rf *",
-            "cd /home/private/",
-            "cp /home/private/config.php /home/protected/",
-            "cp /home/private/futharkGenerator.serviceAccount.json /home/protected/",
-            "cp /home/private/analytics.js /home/public/js/"
-        ]
+        "check-test": "aws dynamodb get-item --table-name futhark_save_data --key file://testsavekey.json",
+        "reset-test": "aws dynamodb put-item --table-name futhark_save_data --item file://testsave_reset.json",
+        "nginx-serve-80": "sudo service php8.0-fpm start && sudo service nginx start"
     }
 }
