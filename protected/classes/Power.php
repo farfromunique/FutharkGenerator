@@ -2,6 +2,7 @@
 
 namespace ACWPD\Futhark;
 
+use ErrorException;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Aws\DynamoDb\Marshaler;
@@ -28,7 +29,7 @@ class Power {
     if (\file_exists($location)) {
       $this->powersDB = \json_decode(\file_get_contents($location), true);
     } else {
-      throw new NotFoundExceptionInterface('Powers DB Not found!', 1);
+      throw new ErrorException('Powers DB Not found!', 1);
     }
   }
 
