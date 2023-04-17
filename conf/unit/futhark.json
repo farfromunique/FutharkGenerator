@@ -1,0 +1,53 @@
+{
+    "listeners": {
+        "*:8080": {
+            "pass": "routes"
+        }
+    },
+    "routes": [
+        {
+            "match": {
+                "uri": [
+                    "favicon.ico",
+                    "*.css",
+                    "*.js",
+                    "*.png",
+                    "*.svg"
+                ]
+            },
+            "action": {
+                "share": "/www/app/public/$uri"
+            }
+        },
+        {
+            "action": {
+                "pass": "applications/futhark"
+            }
+        }
+    ],
+    "applications": {
+        "futhark": {
+            "type": "php",
+            "processes": 20,
+            "root": "/www/app/public/",
+            "index": "",
+            "script": "index.php",
+            "user": "futhark",
+            "group": "futhark",
+            "options": {
+                "file": "/etc/php.ini",
+                "admin": {
+                    "memory_limit": "256M",
+                    "variables_order": "EGPCS"
+                },
+                "user": {
+                    "display_errors": "0"
+                }
+            }
+        }
+    },
+    "access_log": {
+        "path": "/dev/stdout",
+        "format": "\"$request_line\" $status $uri $body_bytes_sent"
+    }
+}
