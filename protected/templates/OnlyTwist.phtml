@@ -1,6 +1,14 @@
-<div class="Twist">
-	<div  title="Twist: <?= $twist[$i]['cardname']; ?>" class="Image<?= ($twist[$i]['orientation'] == 'Merkstave') ? ' reversed' : '' ?>" style="background-image:url(/img/cards/<?= $twist[$i]['image']; ?>);"></div>
-	<div class="Name"><?= $twist[$i]['cardname']; ?></div>
-	<div class="Button"></div>
-	<input type="hidden" class="p_gen" name="twist_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $twist[$i]['short']; ?>" />
+<div class="media mt-1 pt-1 twist">
+	<img class="mr-3 ml-1 my-1 <?= $twist[0]['class']; ?>" />
+	<div class="media-body">
+		<h5 class="mt-0"><?= $twist[0]['cardname']; ?></h5>
+		<p>
+			<?= $twist[0]['description']; ?>
+		</p>
+	</div>
+	<div class="icon remove" ic-action-target="closest .media" ic-action="remove">
+		<svg width="20" height="20">
+			<use href="#icon-delete" width="20" height="20" />
+		</svg>
+	</div>
 </div>

@@ -1,6 +1,18 @@
-<div class="Flavor">
-	<div title="Flavor: <?= $flavor[$i]['name']; ?>" class="Image" style="background-image:url(/img/runes/<?= $flavor[$i]['image']; ?>);"></div>
-	<div class="Name"><?= $flavor[$i]['name']; ?></div>
-	<div class="Button"></div>
-	<input type="hidden" class="p_gen" name="flavor_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $flavor[$i]['short']; ?>" />
+<div class="media mt-1 pt-1 flavor">
+	<img class="mr-3 ml-1 my-1 <?= $flavor[0]['short']; ?>" />
+	<div class="media-body">
+		<h5 class="mt-0"><?= $flavor[0]['name']; ?></h5>
+		<p>
+			You threw the <strong><?= $flavor[0]['name']; ?></strong> rune!
+			This results in the flavor <strong><?= $flavor[0]['flavor']; ?></strong>, which gives a power that <?= $flavor[0]['description']; ?>
+			<br />
+			<br />
+			Optionally, if your power requires an element in order to manifest, the element associated with this rune is <strong><?= $flavor[0]['elementname']; ?></strong>, which roughly correlates to <?= $flavor[0]['element']; ?> (but you can ignore this if it doesn't fit!).
+		</p>
+	</div>
+	<div class="icon remove" ic-action-target="closest .media" ic-action="remove">
+		<svg width="20" height="20">
+			<use href="#icon-delete" width="20" height="20" />
+		</svg>
+	</div>
 </div>

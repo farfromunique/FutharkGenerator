@@ -9,36 +9,53 @@
  * This code is copyright (C) 2019 Aaron Coquet / ACWPD
  */
 
-function updateFormWithPowerData(e) {
-	/* 
-		Updates a form field with data parsed from the current DOM, detailing the power.
-		
-	*/
-	let a = document.querySelectorAll('.bigImages input.p_gen');
-	let input_ = document.createElement('input');
-	input_.name = 'power';
-	input_.type = 'hidden';
-
-	a.forEach(function (e) {
-		let e_type = e.name.slice(0,e.name.indexOf('_'));
-		input_.value += e_type+':'+e.value+';';
-	});
-	while (keys.children[1]) {
-		keys.children[1].remove();
+function prepareForSave() {
+	for (let index = 0; index < localStorage.length; index++) {
+		const element = localStorage.key(index);
+		let form = document.querySelector('#data');
+		let input = document.createElement("input");
+		input.name = localStorage.key(index);
+		input.value = localStorage[element];
+		input.type = 'hidden';
+		console.table('name',localStorage.key(index),'value',input.value)
+		form.appendChild(input);
 	}
-	keys.appendChild(input_);
-	console.log('done!');
 }
 
-document.addEventListener('load',updateFormWithPowerData());
+$(document).ready(function(){
+	$('button.toggler').click(function(ev){
+		let tar = ev.target;
+		html = $(tar).html();
+		old = html.match(/(Add|Show|Hide)/)[0];
+		new_ = (old == 'Hide') ? 'Show' : 'Hide';
+		replacement_html = html.replace(/Add|Show|Hide/, new_);
+		$(tar).html(replacement_html);
+	});
 
-function enableTrashButtons() {
-	document.querySelectorAll('button.remove').forEach(function(e){e.addEventListener('click',function(){this.parentNode.parentNode.remove();});});
-}
+	$('#type-notes').on('input', function(el){
+			let remaining = 4000 - el.target.value.length;
+			document.querySelector('#type-notes-holder .notes-length .count').innerText = remaining;
+			localStorage['notes_type'] = el.target.value;
+	});
 
-document.addEventListener('load',enableTrashButtons());
+	$('#flavor-notes').on('input', function(el){
+		let remaining = 4000 - el.target.value.length;
+		document.querySelector('#flavor-notes-holder .notes-length .count').innerText = remaining;
+		localStorage['notes_flavor'] = el.target.value;
+	});
 
-$(document).on('elementAdded.ic', function(){
-	updateFormWithPowerData();
-	enableTrashButtons();
+	$('#twist-notes').on('input', function(el){
+		let remaining = 4000 - el.target.value.length;
+		document.querySelector('#twist-notes-holder .notes-length .count').innerText = remaining;
+		localStorage['notes_twist'] = el.target.value;
+	});
+
+	$('.icon.remove').click(function(){
+		this.parentNode.remove();
+	});
+
+	$('#saveButton').click(function(){
+		prepareForSave();
+		$("#data").submit();
+	});
 });

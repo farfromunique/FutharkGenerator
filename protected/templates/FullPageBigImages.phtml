@@ -1,189 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title><?php echo $title ?></title>
 
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="/css/basic.css" type="text/css">
-		<link rel="stylesheet" href="/css/loader.css" type="text/css">
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-		<script>
-			!function(f,u,t,h,a,r,k){f.GoogleAnalyticsObject=t;f[t]||(f[t]=function(){
-			(f[t].q=f[t].q||[]).push(arguments)});f[t].l=+new Date;r=u.createElement(h);
-			k=u.getElementsByTagName(h)[0];r.src=a;k.parentNode.insertBefore(r,k)}
-			(window,document,'ga','script','//www.google-analytics.com/analytics.js');
-		</script>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?php echo $title ?></title>
 
-		<script src="/js/analytics.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/base.css" rel="stylesheet">
+	<link href="/css/images.css" rel="stylesheet">
+	<link href="/css/loader.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
-	</head>
-	<body>
-		<div class='headBar'>
-			<h1>Futhark Generator</h1>
-			<h2><?php echo $version; ?></h2>
-		</div>
-		<div class='navbar'>
-			<div class="navgroup">
-				<p><strong>Pages here</strong></p>
-				<ul>
-					<li>
-						<a href="/">
-							Roll them bones!
-						</a>
-					</li>
-					<li>
-						<a href="/list">
-							See all combinations
-						</a>
-					</li>
-					<li>
-						<a href="/donate">
-							Help keep the site going
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="navgroup">
-				<p><strong>Pages elsewhere</strong></p>
-				<ul>
-					<li>
-						<a href="http://www.reddit.com/r/FutharkGenerator/">
-							/r/FutharkGenerator
-						</a>
-					</li>
-					<li>
-						<a href="http://www.reddit.com/r/FutharkGenerator/comments/35fcg7/php_futhark_generator/">
-							Feedback on reddit
-						</a>
-					</li>
-					<li>
-						<a href="https://github.com/farfromunique/Generator-1.5/issues/new">
-							Feedback on GitHub
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="navgroup">
-				Have you heard of <a href="http://parahumans.wordpress.com/">Worm</a>?
-				<br />If not, please <a href="http://www.reddit.com/r/FutharkGenerator/comments/35kilh/if_you_havent_read_worm_read_me_first/">read me first!</a>
-			</div>
-			<div id='hist' class='hist'>
-				<span id='endOfHist'>&nbsp;</span>
-			</div>
-		</div>
-		<div class="content" id="content">
-			<p>Your Roll: <button href="#" id="reroll" ic-get-from="/a/roll/" ic-target="#content">Start Over</button></p>
-			<div id="bigImages" class="bigImages">
-<?php for ($i=0; $i < max(count($type),count($flavor),count($twist)); $i++): ?>
-				<div class="Type">
-					<div title="Type: <?= $type[$i]['name']; ?>" class="Image" style="background-image:url(/img/zodiac/<?= $type[$i]['image']; ?>);"></div>
-					<div class="Name"><?= $type[$i]['name']; ?></div>
-					<div class="Button">
-<?php if ($i == 0): ?>
-						<button
-						id="rollType" 
-						ic-get-from="/a/roll/type" 
-						ic-target="#bigImages" 
-						ic-swap-style="append" 
-						ic-indicator="#type-load" 
-						ic-src="/a/roll/type" 
-						ic-trigger-on="default" 
-						ic-deps="ignore">
-							Roll Another
-						</button>
-<?php endif; ?>
-						<i id="type-load" class="lds-dual-ring"></i>
+	<script>
+		! function(f, u, t, h, a, r, k) {
+			f.GoogleAnalyticsObject = t;
+			f[t] || (f[t] = function() {
+				(f[t].q = f[t].q || []).push(arguments)
+			});
+			f[t].l = +new Date;
+			r = u.createElement(h);
+			k = u.getElementsByTagName(h)[0];
+			r.src = a;
+			k.parentNode.insertBefore(r, k)
+		}
+		(window, document, 'ga', 'script', '//www.google-analytics.com/analytics.js');
+	</script>
+
+	<script src="/js/analytics.js"></script>
+</head>
+
+<body class="dark-background light-text">
+	<div class="hidden" id="svg_repository">
+		<svg id="icon-delete" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path fill="none" d="M0 0h24v24H0V0z" />
+			<path d="M14.12 10.47L12 12.59l-2.13-2.12-1.41 1.41L10.59 14l-2.12 2.12 1.41 1.41L12 15.41l2.12 2.12 1.41-1.41L13.41 14l2.12-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z" />
+		</svg>
+		<svg id="icon-add" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path fill="none" d="M0 0h24v24H0V0z" />
+			<path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zm-7-1h2v-4h4V9h-4V5h-2v4H9v2h4z" />
+		</svg>
+		<svg id="icon-notes" width="24" height="24" viewBox="0 0 24 24">
+			<path fill="none" d="M0 0h24v24H0V0z" />
+			<path d="M13 11h-2v3H8v2h3v3h2v-3h3v-2h-3zm1-9H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" />
+		</svg>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<h1 class="text-center">Futhark Generator</h1>
+				<h2 class="text-center subdued-text"><?php echo $version ?></h2>
+				<button type="button" class="btn btn-md btn-block btn-primary mt-3 mb-0 mx-0" type="button" data-toggle="collapse" data-target="#moreInfo" aria-expanded="false" aria-controls="#moreInfo" ic-action="toggle:collapse" ic-target="#moreInfo">
+					Information
+				</button>
+				<div class="mt-0 collapse" id="moreInfo">
+					<div class="card-group rounded-bottom">
+						<div class="card dark-text w-50">
+							<div class="card-body">
+								<h5 class="card-title">Pages Here</h5>
+								<ul class="card-text">
+									<li><a href="/list">See all combinations</a></li>
+									<li><a href="/donate">Help keep the site going</a></li>
+									<li><a href="/credits">Credits</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="card dark-text w-50">
+							<div class="card-body">
+								<h5 class="card-title">Pages Elsewhere</h5>
+								<ul class="card-text">
+									<li><a href="http://www.reddit.com/r/FutharkGenerator/">/r/FutharkGenerator</a></li>
+									<li><a href="https://github.com/farfromunique/Generator-1.5/issues/new">Feedback on GitHub</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
-					<input type="hidden" class="p_gen" name="type_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $type[$i]['short']; ?>" />
+					<div class="card dark-text w-100">
+						<div class="card-body">
+							<h5 class="card-title">Other</h5>
+							<p class="card-text">
+								Have you heard of <a href="http://parahumans.wordpress.com/">Worm</a>?
+								If not, please <a href="http://www.reddit.com/r/FutharkGenerator/comments/35kilh/if_you_havent_read_worm_read_me_first/">read me first!</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<a class="btn btn-md btn-block btn-primary mt-3 mb-0 mx-0" id="reroll" href="/">
+					New Power / Reroll
+				</a>
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-md-8 offset-md-2 my-0">
+				<div class="media mt-3 pt-2 px-2 pb-1 type dark-text">
+					<img class="mr-3 ml-1 <?= $type[0]['short']; ?>" />
+					<div class="media-body">
+						<h5 class="mt-0"><?= $type[0]['name']; ?></h5>
+						<p>You rolled the <strong><?= $type[0]['name']; ?></strong> sign!
+							This results in a <strong><?= $type[0]['class']; ?></strong>-class power.
+							<strong><?= $type[0]['class']; ?>s</strong> have <?= $type[0]['description']; ?>.
+						</p>
+						<?php if (count($type) > 1) : ?>
+							<?php for ($i = 1; $i < count($type) - 1; $i++) : ?>
+								<div class="media mt-1 pt-1">
+									<img class="mr-3 ml-1 my-1 <?= $type[$i]['short']; ?>" />
+									<div class="media-body">
+										<h5 class="mt-0"><?= $type[$i]['name']; ?></h5>
+										<p>
+											You rolled the <strong><?= $type[$i]['name']; ?></strong> sign!
+											This results in a <strong><?= $type[$i]['class']; ?></strong>-class power.
+											<strong><?= $type[$i]['class']; ?>s</strong> have <?= $type[$i]['description']; ?>.
+										</p>
+									</div>
+									<div class="icon remove" ic-action-target="closest .media" ic-action="remove">
+										<svg width="20" height="20">
+											<use href="#icon-delete" width="20" height="20" />
+										</svg>
+									</div>
+								</div>
+							<?php endfor; ?>
+						<?php endif; ?>
+						<div class="moreTypes"></div>
+						<button type="button" class="btn btn-md btn-primary ml-0 mr-1 mt-2 mb-1" id="rollType" ic-get-from="/a/roll/type" ic-target=".moreTypes" ic-swap-style="append" ic-src="/a/roll/type" ic-trigger-on="default" ic-deps="ignore">
+							<svg width="20" height="20">
+								<use href="#icon-add" width="20" height="20" />
+							</svg>
+							Add a Type (Zodiac)
+							<i id="type-load" class="lds-dual-ring"></i>
+						</button>
+
+						<button type="button" class="btn btn-md btn-primary mr-0 ml-1 mt-2 mb-1 toggler" ic-target="#type-notes-holder" ic-action="toggleClass:d-none">
+							<svg width="20" height="20">
+								<use href="#icon-notes" width="20" height="20" />
+							</svg>
+							Add Type Notes
+						</button>
+						<div id="type-notes-holder" class="notes d-none">
+							<textarea name="type-notes" rows=5 cols=40 form="data" maxlength=4000 id="type-notes" class="notes"></textarea>
+							<div class="notes-length">Characters remaining: <span class="count">4000</span></div>
+						</div>
+					</div>
 				</div>
 
-				<div class="Flavor">
-					<div title="Flavor: <?= $flavor[$i]['name']; ?>" class="Image" style="background-image:url(/img/runes/<?= $flavor[$i]['image']; ?>);"></div>
-					<div class="Name"><?= $flavor[$i]['name']; ?></div>
-					<div class="Button">
-<?php if ($i == 0): ?>
-						<button 
-						id="rollFlavor" 
-						ic-get-from="/a/roll/flavor" 
-						ic-target="#bigImages" 
-						ic-swap-style="append" 
-						ic-indicator="#flavor-load" 
-						ic-src="/a/roll/flavor" 
-						ic-trigger-on="default" 
-						ic-deps="ignore"> 
-							Roll Another
+				<div class="media mt-3 pt-2 px-2 pb-1 flavor dark-text">
+					<img class="mr-3 ml-1 <?= $flavor[0]['short']; ?>" />
+					<div class="media-body">
+						<h5 class="mt-0"><?= $flavor[0]['name']; ?></h5>
+						<p>
+							You threw the <strong><?= $flavor[0]['name']; ?></strong> rune!
+							This results in the flavor <strong><?= $flavor[0]['flavor']; ?></strong>, which gives a power that <?= $flavor[0]['description']; ?>
+							<br />
+							<br />
+							Optionally, if your power requires an element in order to manifest, the element associated with this rune is <strong><?= $flavor[0]['elementname']; ?></strong>, which roughly correlates to <?= $flavor[0]['element']; ?> (but you can ignore this if it doesn't fit!).
+						</p>
+						<?php if (count($flavor) > 1) : ?>
+							<?php for ($i = 1; $i < count($flavor) - 1; $i++) : ?>
+								<div class="media mt-1 pt-1">
+									<img class="mr-3 ml-1 my-1 <?= $flavor[$i]['short']; ?>" />
+									<div class="media-body">
+										<h5 class="mt-0"><?= $flavor[$i]['name']; ?></h5>
+										<p>
+											You threw the <strong><?= $flavor[$i]['name']; ?></strong> rune!
+											This results in the flavor <strong><?= $flavor[$i]['flavor']; ?></strong>, which gives a power that <?= $flavor[$i]['description']; ?>
+											<br />
+											<br />
+											Optionally, if your power requires an element in order to manifest, the element associated with this rune is <strong><?= $flavor[$i]['elementname']; ?></strong>, which roughly correlates to <?= $flavor[$i]['element']; ?> (but you can ignore this if it doesn't fit!).
+										</p>
+									</div>
+									<div class="icon remove" ic-action-target="closest .media" ic-action="remove">
+										<svg width="20" height="20">
+											<use href="#icon-delete" width="20" height="20" />
+										</svg>
+									</div>
+								</div>
+							<?php endfor; ?>
+						<?php endif; ?>
+						<div class="moreFlavors"></div>
+						<button type="button" class="btn btn-md btn-primary ml-0 mr-1 mt-2 mb-1" id="rollFlavors" ic-get-from="/a/roll/flavor" ic-target=".moreFlavors" ic-swap-style="append" ic-src="/a/roll/flavor" ic-trigger-on="default" ic-deps="ignore">
+							<svg width="20" height="20">
+								<use href="#icon-add" width="20" height="20" />
+							</svg>
+							Add a Flavor (Rune)
+							<i id="flavor-load" class="lds-dual-ring"></i>
 						</button>
-<?php endif; ?>
-						<i id="flavor-load" class="lds-dual-ring"></i>
-					</div>
-					<input type="hidden" class="p_gen" name="flavor_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $flavor[$i]['short']; ?>" />
-				</div>
-				
-				<div class="Twist">
-					<div  title="Twist: <?= $twist[$i]['cardname']; ?>" class="Image<?= ($twist[$i]['orientation'] == 'Merkstave') ? ' reversed' : '' ?>" style="background-image:url(/img/cards/<?= $twist[$i]['image']; ?>);"></div>
-					<div class="Name"><?= $twist[$i]['cardname']; ?></div>
-					<div class="Button">
-<?php if ($i == 0): ?>
-						<button 
-						id="rollTwist" 
-						ic-get-from="/a/roll/twist" 
-						ic-target="#bigImages" 
-						ic-swap-style="append" 
-						ic-indicator="#twist-load" 
-						ic-src="/a/roll/twist" 
-						ic-trigger-on="default" 
-						ic-deps="ignore">
-							Draw Again
+
+						<button type="button" class="btn btn-md btn-primary mr-0 ml-1 mt-2 mb-1 toggler" ic-target="#flavor-notes-holder" ic-action="toggleClass:d-none">
+							<svg width="20" height="20">
+								<use href="#icon-notes" width="20" height="20" />
+							</svg>
+							Add Flavor Notes
 						</button>
-<?php endif; ?>
-						<i id="twist-load" class="lds-dual-ring"></i>
+						<div id="flavor-notes-holder" class="notes d-none">
+							<textarea name="flavor-notes" rows=5 cols=40 form="data" maxlength=4000 id="flavor-notes" class="notes"></textarea>
+							<div class="notes-length">Characters remaining: <span class="count">4000</span></div>
+						</div>
 					</div>
-					<input type="hidden" class="p_gen" name="twist_<?= $_SERVER['REQUEST_TIME']; ?>_<?= $i; ?>" value="<?= $twist[$i]['short']; ?>" />
 				</div>
-<?php endfor; ?>
+
+				<div class="media mt-3 pt-2 px-2 pb-1 twist dark-text">
+					<img class="mr-3 ml-1 <?= $twist[0]['class']; ?>" />
+					<div class="media-body">
+						<h5 class="mt-0"><?= $twist[0]['cardname']; ?></h5>
+						<p>
+							<?= $twist[0]['description']; ?>
+						</p>
+						<?php if (count($twist) > 1) : ?>
+							<?php for ($i = 1; $i < count($twist) - 1; $i++) : ?>
+								<div class="media mt-1 pt-1">
+									<img class="mr-3 ml-1 my-1 <?= $twist[$i]['class']; ?>" />
+									<div class="media-body">
+										<h5 class="mt-0"><?= $twist[$i]['cardname']; ?></h5>
+										<p>
+											<?= $twist[$i]['description']; ?>
+										</p>
+									</div>
+									<div class="icon remove" ic-action-target="closest .media" ic-action="remove">
+										<svg width="20" height="20">
+											<use href="#icon-delete" width="20" height="20" />
+										</svg>
+									</div>
+								</div>
+							<?php endfor; ?>
+						<?php endif; ?>
+						<div class="moreTwists"></div>
+						<button type="button" class="btn btn-md btn-primary ml-0 mr-1 mt-2 mb-1" id="rollTwists" ic-get-from="/a/roll/twist" ic-target=".moreTwists" ic-swap-style="append" ic-src="/a/roll/twist" ic-trigger-on="default" ic-deps="ignore">
+							<svg width="20" height="20">
+								<use href="#icon-add" width="20" height="20" />
+							</svg>
+							Add a Twist (Tarot)
+							<i id="twist-load" class="lds-dual-ring"></i>
+						</button>
+
+						<button type="button" class="btn btn-md btn-primary mr-0 ml-1 mt-2 mb-1 toggler" ic-target="#twist-notes-holder" ic-action="toggleClass:d-none">
+							<svg width="20" height="20">
+								<use href="#icon-notes" width="20" height="20" />
+							</svg>
+							Add Twist Notes
+						</button>
+						<div id="twist-notes-holder" class="notes d-none">
+							<textarea name="twist-notes" rows=5 cols=40 form="data" maxlength=4000 id="twist-notes" class="notes"></textarea>
+							<div class="notes-length">Characters remaining: <span class="count">4000</span></div>
+						</div>
+					</div>
+				</div>
 			</div>
-
-
-			<div class="verboseDescription" id="Description">
-<?php for ($i=0; $i < max(count($type),count($flavor),count($twist)); $i++): ?>
-<?php if ($i > 0): ?>
-				<hr />
-<?php endif; ?>
-<?php if (isset($type[$i])): ?>
-				<p>You rolled the <strong><?= $type[$i]['name']; ?></strong> sign! This results in a <strong><?= $type[$i]['class']; ?></strong>-class power. <strong><?= $type[$i]['class']; ?>s</strong> have <?= $type[$i]['description']; ?></p>
-<?php endif; ?>
-<?php if (isset($flavor[$i])): ?>
-				<p>You also rolled the <strong><?= $flavor[$i]['name']; ?></strong> rune! This results in the flavor <strong><?= $flavor[$i]['flavor']; ?></strong>, which gives a power that <?= $flavor[$i]['description']; ?>. Optionally, if your power requires an element in order to manifest, the element associated with this rune is <strong><?= $flavor[$i]['element']; ?></strong>, which roughly correlates to <?= $flavor[$i]['elementname']; ?> (but you can ignore this if it doesn't fit!).</p>
-<?php endif; ?>
-<?php if (isset($twist[$i])): ?>
-				<p>Finally, you drew the <strong><?= $twist[$i]['cardname']; ?></strong>. <?= $twist[$i]['description']; ?></p>
-<?php endif; ?>
-<?php endfor; ?>
+		</div>
+		<div class="col-md-2 offset-md-10 sticky-bottom no-height">
+			<div class="no-height save-text">
+				After clicking the 'Save' button, the URL of this page will change to the perma-link for your power.
 			</div>
-			
-			<div class="spacer"></div>
+			<button id="saveButton" type="button" class="btn btn-md btn-block btn-primary mt-3 mb-0 mx-0" type="button">
+				Save
+			</button>
 		</div>
-		
-		<div class="footer">
-			<p>Legal Stuff:</p>
-			<p>The Futhark Generator is used to create powers that would be fitting to Wildbow's web serial Worm. Classifications, story, characters, and other elements are his by right, we're just playing in his sandbox. For more information, click <a href="/credits">here</a>.</p>
+	</div>
+	<footer class="footer">
+		<div class="card text-center">
+			<div class="card-footer text-muted small">
+				<strong>Legal Stuff</strong>:
+				<br />The Futhark Generator is used to create powers that would be fitting to Wildbow's web serial <a href="https://parahumans.wordpress.com/">Worm</a>.
+				<br />Classifications, story, characters, and other elements are his by right, we're just playing in his sandbox. For more information, <a href="/credits">click here</a>.
+				<br />This site uses tracking technologies to find out how many people have visited, and what they did, etc.
+				<br />It also saves what you input in the fields, when you hit save.
+			</div>
 		</div>
-		
-		<form id="keys" class="hidden">
-				<input type="hidden" class="p_gen" name="default" value="probably valid" />
-		</form>
+	</footer>
 
-	</body>
-    <script src="/js/jquery-3.2.0.js"></script>
-	<script src="/js/intercooler-1.1.1.min.js"></script>
-	<script src="/js/ajax.js"></script>
+	<form id="data" class="d-none" ic-post-to="/save" ic-target="#debug">
+		<input type="hidden" class="p_gen" name="default" value="probably valid" />
+	</form>
+</body>
+
+<script src="/js/jquery-3.2.0.js"></script>
+<script src="/js/intercooler-1.1.1.min.js"></script>
+<script src="/js/ajax.js"></script>
+<script>
+	/* Set up localstorage for initially generated power */
+	let store = window.localStorage;
+	store.clear();
+	<?php foreach ($localVars as $key => $value) : ?>
+		store.setItem('<?= $key ?>', '<?= $value ?>');
+	<?php endforeach; ?>
+</script>
+
 </html>

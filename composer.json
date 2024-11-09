@@ -6,7 +6,7 @@
     "minimum-stability": "stable",
     "require": {
         "PHP": "^7.0",
-        "kreait/firebase-php": "3.1",
+        "kreait/firebase-php": "^4.32",
         "slim/slim": "^3.12",
         "slim/php-view": "^2.2",
         "monolog/monolog": "^1.24"

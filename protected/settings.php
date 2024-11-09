@@ -8,7 +8,7 @@ return [
         'renderer' => [
             'template_path' => __DIR__ . '/templates/',
         ],
-        
+
         // Monolog settings
         'logger' => [
             'name' => 'futhark',
@@ -17,15 +17,15 @@ return [
         ],
 
         /**************************************************************************
-        * General App config.
-        **************************************************************************/
-        'APP_VERSION' => 'v1.7beta',
+         * General App config.
+         **************************************************************************/
+        'APP_VERSION' => 'v2.0beta',
         'APP_TITLE' => 'Futhark Power Generator ',
 
         /**************************************************************************
-        * Firebase database config.
-        * Firebase database connection provided in kreait/firebase-php
-        **************************************************************************/
+         * Firebase database config.
+         * Firebase database connection provided in kreait/firebase-php
+         **************************************************************************/
         'firebase' => [
             'DatabaseURL' => 'https://futharkgenerator.firebaseio.com',
             'ServiceAccountJSON' => __DIR__ . '/futharkGenerator.serviceAccount.json',

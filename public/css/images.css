@@ -1,0 +1,716 @@
+.icon.remove {
+	cursor: pointer;
+}
+
+.notes-length {
+	display: block;
+	font-style: italic;
+	color: grey;
+}
+
+/* General */
+
+.media img {
+	height: 100px;
+	width: 100px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	bottom: 0;
+	top: 11px;
+}
+
+.reversed {
+	transform: rotate(0.5turn);
+	transition-delay: 0;
+	transition-duration: .5s;
+	z-index: 12;
+}
+
+.reversed:hover {
+	transform: initial;
+	transform: scale(1.25);
+	z-index: 15;
+}
+
+/* Major Arcana */
+
+.the_fool_00 {
+	background-image: url("/img/cards/00-the-fool.png")
+}
+
+.the_magician_01 {
+	background-image: url("/img/cards/01-the-magician.png")
+}
+
+.the_high_priestess_02 {
+	background-image: url("/img/cards/02-the-high-priestess.png")
+}
+
+.the_empress_03 {
+	background-image: url("/img/cards/03-the-empress.png")
+}
+
+.the_emperor_04 {
+	background-image: url("/img/cards/04-the-emperor.png")
+}
+
+.the_hierophant_05 {
+	background-image: url("/img/cards/05-the-hierophant.png")
+}
+
+.the_lovers_06 {
+	background-image: url("/img/cards/06-the-lovers.png")
+}
+
+.the_chariot_07 {
+	background-image: url("/img/cards/07-the-chariot.png")
+}
+
+.strength_08 {
+	background-image: url("/img/cards/08-strength.png")
+}
+
+.the_hermit_09 {
+	background-image: url("/img/cards/09-the-hermit.png")
+}
+
+.wheel_of_fortune_10 {
+	background-image: url("/img/cards/10-wheel-of-fortune.png")
+}
+
+.justice_11 {
+	background-image: url("/img/cards/11-justice.png")
+}
+
+.the_hanged_man_12 {
+	background-image: url("/img/cards/12-the-hanged-man.png")
+}
+
+.death_13 {
+	background-image: url("/img/cards/13-death.png")
+}
+
+.temperance_14 {
+	background-image: url("/img/cards/14-temperance.png")
+}
+
+.the_devil_15 {
+	background-image: url("/img/cards/15-the-devil.png")
+}
+
+.the_tower_16 {
+	background-image: url("/img/cards/16-the-tower.png")
+}
+
+.the_star_17 {
+	background-image: url("/img/cards/17-the-star.png")
+}
+
+.the_moon_18 {
+	background-image: url("/img/cards/18-the-moon.png")
+}
+
+.the_sun_19 {
+	background-image: url("/img/cards/19-the-sun.png")
+}
+
+.judgement_20 {
+	background-image: url("/img/cards/20-judgement.png")
+}
+
+.the_world_21 {
+	background-image: url("/img/cards/21-the-world.png")
+}
+
+/* Minor Arcana */
+
+.cups_01 {
+	background-image: url("/img/cards/Cups01.png");
+}
+
+.cups_02 {
+	background-image: url("/img/cards/Cups02.png");
+}
+
+.cups_03 {
+	background-image: url("/img/cards/Cups03.png");
+}
+
+.cups_04 {
+	background-image: url("/img/cards/Cups04.png");
+}
+
+.cups_05 {
+	background-image: url("/img/cards/Cups05.png");
+}
+
+.cups_06 {
+	background-image: url("/img/cards/Cups06.png");
+}
+
+.cups_07 {
+	background-image: url("/img/cards/Cups07.png");
+}
+
+.cups_08 {
+	background-image: url("/img/cards/Cups08.png");
+}
+
+.cups_09 {
+	background-image: url("/img/cards/Cups09.png");
+}
+
+.cups_10 {
+	background-image: url("/img/cards/Cups10.png");
+}
+
+.cups_11 {
+	background-image: url("/img/cards/Cups11.png");
+}
+
+.cups_12 {
+	background-image: url("/img/cards/Cups12.png");
+}
+
+.cups_13 {
+	background-image: url("/img/cards/Cups13.png");
+}
+
+.cups_14 {
+	background-image: url("/img/cards/Cups14.png");
+}
+
+.pents_01 {
+	background-image: url("/img/cards/Pents01.png");
+}
+
+.pents_02 {
+	background-image: url("/img/cards/Pents02.png");
+}
+
+.pents_03 {
+	background-image: url("/img/cards/Pents03.png");
+}
+
+.pents_04 {
+	background-image: url("/img/cards/Pents04.png");
+}
+
+.pents_05 {
+	background-image: url("/img/cards/Pents05.png");
+}
+
+.pents_06 {
+	background-image: url("/img/cards/Pents06.png");
+}
+
+.pents_07 {
+	background-image: url("/img/cards/Pents07.png");
+}
+
+.pents_08 {
+	background-image: url("/img/cards/Pents08.png");
+}
+
+.pents_09 {
+	background-image: url("/img/cards/Pents09.png");
+}
+
+.pents_10 {
+	background-image: url("/img/cards/Pents10.png");
+}
+
+.pents_11 {
+	background-image: url("/img/cards/Pents11.png");
+}
+
+.pents_12 {
+	background-image: url("/img/cards/Pents12.png");
+}
+
+.pents_13 {
+	background-image: url("/img/cards/Pents13.png");
+}
+
+.pents_14 {
+	background-image: url("/img/cards/Pents14.png");
+}
+
+.swords_01 {
+	background-image: url("/img/cards/Swords01.png");
+}
+
+.swords_02 {
+	background-image: url("/img/cards/Swords02.png");
+}
+
+.swords_03 {
+	background-image: url("/img/cards/Swords03.png");
+}
+
+.swords_04 {
+	background-image: url("/img/cards/Swords04.png");
+}
+
+.swords_05 {
+	background-image: url("/img/cards/Swords05.png");
+}
+
+.swords_06 {
+	background-image: url("/img/cards/Swords06.png");
+}
+
+.swords_07 {
+	background-image: url("/img/cards/Swords07.png");
+}
+
+.swords_08 {
+	background-image: url("/img/cards/Swords08.png");
+}
+
+.swords_09 {
+	background-image: url("/img/cards/Swords09.png");
+}
+
+.swords_10 {
+	background-image: url("/img/cards/Swords10.png");
+}
+
+.swords_11 {
+	background-image: url("/img/cards/Swords11.png");
+}
+
+.swords_12 {
+	background-image: url("/img/cards/Swords12.png");
+}
+
+.swords_13 {
+	background-image: url("/img/cards/Swords13.png");
+}
+
+.swords_14 {
+	background-image: url("/img/cards/Swords14.png");
+}
+
+.wands_01 {
+	background-image: url("/img/cards/Wands01.png");
+}
+
+.wands_02 {
+	background-image: url("/img/cards/Wands02.png");
+}
+
+.wands_03 {
+	background-image: url("/img/cards/Wands03.png");
+}
+
+.wands_04 {
+	background-image: url("/img/cards/Wands04.png");
+}
+
+.wands_05 {
+	background-image: url("/img/cards/Wands05.png");
+}
+
+.wands_06 {
+	background-image: url("/img/cards/Wands06.png");
+}
+
+.wands_07 {
+	background-image: url("/img/cards/Wands07.png");
+}
+
+.wands_08 {
+	background-image: url("/img/cards/Wands08.png");
+}
+
+.wands_09 {
+	background-image: url("/img/cards/Wands09.png");
+}
+
+.wands_10 {
+	background-image: url("/img/cards/Wands10.png");
+}
+
+.wands_11 {
+	background-image: url("/img/cards/Wands11.png");
+}
+
+.wands_12 {
+	background-image: url("/img/cards/Wands12.png");
+}
+
+.wands_13 {
+	background-image: url("/img/cards/Wands13.png");
+}
+
+.wands_14 {
+	background-image: url("/img/cards/Wands14.png");
+}
+
+/* Poker Cards */
+
+.clubs_01 {
+	background-image: url("/img/cards/clubs01.png");
+}
+
+.clubs_02 {
+	background-image: url("/img/cards/clubs02.png");
+}
+
+.clubs_03 {
+	background-image: url("/img/cards/clubs03.png");
+}
+
+.clubs_04 {
+	background-image: url("/img/cards/clubs04.png");
+}
+
+.clubs_05 {
+	background-image: url("/img/cards/clubs05.png");
+}
+
+.clubs_06 {
+	background-image: url("/img/cards/clubs06.png");
+}
+
+.clubs_07 {
+	background-image: url("/img/cards/clubs07.png");
+}
+
+.clubs_08 {
+	background-image: url("/img/cards/clubs08.png");
+}
+
+.clubs_09 {
+	background-image: url("/img/cards/clubs09.png");
+}
+
+.clubs_10 {
+	background-image: url("/img/cards/clubs10.png");
+}
+
+.clubs_11 {
+	background-image: url("/img/cards/clubs11.png");
+}
+
+.clubs_12 {
+	background-image: url("/img/cards/clubs12.png");
+}
+
+.clubs_13 {
+	background-image: url("/img/cards/clubs13.png");
+}
+
+.diamonds_01 {
+	background-image: url("/img/cards/diamonds01.png");
+}
+
+.diamonds_02 {
+	background-image: url("/img/cards/diamonds02.png");
+}
+
+.diamonds_03 {
+	background-image: url("/img/cards/diamonds03.png");
+}
+
+.diamonds_04 {
+	background-image: url("/img/cards/diamonds04.png");
+}
+
+.diamonds_05 {
+	background-image: url("/img/cards/diamonds05.png");
+}
+
+.diamonds_06 {
+	background-image: url("/img/cards/diamonds06.png");
+}
+
+.diamonds_07 {
+	background-image: url("/img/cards/diamonds07.png");
+}
+
+.diamonds_08 {
+	background-image: url("/img/cards/diamonds08.png");
+}
+
+.diamonds_09 {
+	background-image: url("/img/cards/diamonds09.png");
+}
+
+.diamonds_10 {
+	background-image: url("/img/cards/diamonds10.png");
+}
+
+.diamonds_11 {
+	background-image: url("/img/cards/diamonds11.png");
+}
+
+.diamonds_12 {
+	background-image: url("/img/cards/diamonds12.png");
+}
+
+.diamonds_13 {
+	background-image: url("/img/cards/diamonds13.png");
+}
+
+.hearts_01 {
+	background-image: url("/img/cards/hearts01.png");
+}
+
+.hearts_02 {
+	background-image: url("/img/cards/hearts02.png");
+}
+
+.hearts_03 {
+	background-image: url("/img/cards/hearts03.png");
+}
+
+.hearts_04 {
+	background-image: url("/img/cards/hearts04.png");
+}
+
+.hearts_05 {
+	background-image: url("/img/cards/hearts05.png");
+}
+
+.hearts_06 {
+	background-image: url("/img/cards/hearts06.png");
+}
+
+.hearts_07 {
+	background-image: url("/img/cards/hearts07.png");
+}
+
+.hearts_08 {
+	background-image: url("/img/cards/hearts08.png");
+}
+
+.hearts_09 {
+	background-image: url("/img/cards/hearts09.png");
+}
+
+.hearts_10 {
+	background-image: url("/img/cards/hearts10.png");
+}
+
+.hearts_11 {
+	background-image: url("/img/cards/hearts11.png");
+}
+
+.hearts_12 {
+	background-image: url("/img/cards/hearts12.png");
+}
+
+.hearts_13 {
+	background-image: url("/img/cards/hearts13.png");
+}
+
+.jokerblack {
+	background-image: url("/img/cards/jokerblack.png");
+}
+
+.jokerred {
+	background-image: url("/img/cards/jokerred.png");
+}
+
+.spades_01 {
+	background-image: url("/img/cards/spades01.png");
+}
+
+.spades_02 {
+	background-image: url("/img/cards/spades02.png");
+}
+
+.spades_03 {
+	background-image: url("/img/cards/spades03.png");
+}
+
+.spades_04 {
+	background-image: url("/img/cards/spades04.png");
+}
+
+.spades_05 {
+	background-image: url("/img/cards/spades05.png");
+}
+
+.spades_06 {
+	background-image: url("/img/cards/spades06.png");
+}
+
+.spades_07 {
+	background-image: url("/img/cards/spades07.png");
+}
+
+.spades_08 {
+	background-image: url("/img/cards/spades08.png");
+}
+
+.spades_09 {
+	background-image: url("/img/cards/spades09.png");
+}
+
+.spades_10 {
+	background-image: url("/img/cards/spades10.png");
+}
+
+.spades_11 {
+	background-image: url("/img/cards/spades11.png");
+}
+
+.spades_12 {
+	background-image: url("/img/cards/spades12.png");
+}
+
+.spades_13 {
+	background-image: url("/img/cards/spades13.png");
+}
+
+/* Western Zodiac */
+
+.aquarius {
+	background-image: url("/img/zodiac/aquarius.png");
+}
+
+.aries {
+	background-image: url("/img/zodiac/aries.png");
+}
+
+.cancer {
+	background-image: url("/img/zodiac/cancer.png");
+}
+
+.capricorn {
+	background-image: url("/img/zodiac/capricorn.png");
+}
+
+.gemini {
+	background-image: url("/img/zodiac/gemini.png");
+}
+
+.leo {
+	background-image: url("/img/zodiac/leo.png");
+}
+
+.libra {
+	background-image: url("/img/zodiac/libra.png");
+}
+
+.taurus {
+	background-image: url("/img/zodiac/taurus.png");
+}
+
+.pisces {
+	background-image: url("/img/zodiac/pisces.png");
+}
+
+.sagittarius {
+	background-image: url("/img/zodiac/sagittarius.png");
+}
+
+.scorpio {
+	background-image: url("/img/zodiac/scorpio.png");
+}
+
+.virgo {
+	background-image: url("/img/zodiac/virgo.png");
+}
+
+/* Elder Futhark */
+
+.algiz {
+	background-image: url("/img/runes/algiz.png");
+}
+
+.ansuz {
+	background-image: url("/img/runes/ansuz.png");
+}
+
+.berkano {
+	background-image: url("/img/runes/berkano.png");
+}
+
+.dagaz {
+	background-image: url("/img/runes/dagaz.png");
+}
+
+.ehwaz {
+	background-image: url("/img/runes/ehwaz.png");
+}
+
+.fehu {
+	background-image: url("/img/runes/fehu.png");
+}
+
+.gebo {
+	background-image: url("/img/runes/gebo.png");
+}
+
+.hagalaz {
+	background-image: url("/img/runes/hagalaz.png");
+}
+
+.ihwaz {
+	background-image: url("/img/runes/ihwaz.png");
+}
+
+.inguz {
+	background-image: url("/img/runes/inguz.png");
+}
+
+.isa {
+	background-image: url("/img/runes/isa.png");
+}
+
+.jera {
+	background-image: url("/img/runes/jera.png");
+}
+
+.kauna {
+	background-image: url("/img/runes/kauna.png");
+}
+
+.laguz {
+	background-image: url("/img/runes/laguz.png");
+}
+
+.mannaz {
+	background-image: url("/img/runes/mannaz.png");
+}
+
+.naudiz {
+	background-image: url("/img/runes/naudiz.png");
+}
+
+.othala {
+	background-image: url("/img/runes/othala.png");
+}
+
+.perthro {
+	background-image: url("/img/runes/perthro.png");
+}
+
+.raido {
+	background-image: url("/img/runes/raido.png");
+}
+
+.sowilo {
+	background-image: url("/img/runes/sowilo.png");
+}
+
+.thurisaz {
+	background-image: url("/img/runes/thurisaz.png");
+}
+
+.tiwaz {
+	background-image: url("/img/runes/tiwaz.png");
+}
+
+.uruz {
+	background-image: url("/img/runes/uruz.png");
+}
+
+.wunjo {
+	background-image: url("/img/runes/wunjo.png");
+}

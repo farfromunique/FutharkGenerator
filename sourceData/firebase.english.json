@@ -195,1690 +195,2317 @@
     }
 ],
   "twist" : [
-	{
-      "cardname" : "Ace of Clubs",
-      "short" : "1_clubs",
-      "description" : "Your power bypasses some limit it might otherwise be bound by. Increase your choice of Control or Versatility, but decrease Potency.",
-      "image" : "clubs01.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 1
-    },{
-      "cardname" : "Ace of Coins",
-      "short" : "1_coins",
-      "description" : "This rank modifies your power so that your choice of Potency, Versatility, or Control is increased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents01.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 1
-    },{
-      "cardname" : "Ace of Cups",
-      "short" : "1_cups",
-      "description" : "This rank modifies your power so that your choice of Potency, Versatility, or Control is increased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups01.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 1
-    },{
-      "cardname" : "Ace of Diamonds",
-      "short" : "1_diamonds",
-      "description" : "Your power bypasses some limit it might otherwise be bound by. Increase your Potency, but decrease your choice of Control or Versatility.",
-      "image" : "diamonds01.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 1
-    },{
-      "cardname" : "Ace of Hearts",
-      "short" : "1_hearts",
-      "description" : "Your power bypasses some limit it might otherwise be bound by. Increase your Control, but decrease your choice of Potency or Versatility.",
-      "image" : "hearts01.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 1
-    },{
-      "cardname" : "Ace of Spades",
-      "short" : "1_spades",
-      "description" : "Your power bypasses some limit it might otherwise be bound by. Increase your choice of Potency or Versatility, but decrease Control.",
-      "image" : "spades01.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 1
-    },{
-      "cardname" : "Ace of Swords",
-      "short" : "1_swords",
-      "description" : "This rank modifies your power so that your choice of Potency, Versatility, or Control is increased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords01.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 1
-    },{
-      "cardname" : "Ace of Wands",
-      "short" : "1_wands",
-      "description" : "This rank modifies your power so that your choice of Potency, Versatility, or Control is increased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands01.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 1
-    },{
-      "cardname" : "Black Joker",
-      "short" : "black_joker",
-      "description" : "Your power will prevent your first death, instead providing a second trigger. Roll again and apply the Zodiac (flavor) to your second power.",
-      "image" : "jokerblack.png",
-      "orientation" : "Regular",
-      "suit" : "Black",
-      "value" : 1
-    },{
-      "cardname" : "Death - XIII",
-      "short" : "death_xiii",
-      "description" : "Finally, you drew <strong>Death - XIII</strong>. Something went wrong with your power, some safety mechanism wasn't included when you triggered, and now your power is slowly killing you.",
-      "extra_info" : "Maybe your power creates hard radiation each time you use it and you aren't immune, maybe it subjects your body to harmful g-forces without any sort of intervention, maybe it's just consuming your body or mind as fuel. Whatever it's doing it's not sustainable.",
-      "image" : "13-death.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 13
-    },{
-      "cardname" : "Eight of Clubs",
-      "short" : "8_clubs",
-      "description" : "You and your power are morally opposed. Increase your choice of Versatility or Control, but decrease Potency.",
-      "image" : "clubs08.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 8
-    },{
-      "cardname" : "Eight of Coins",
-      "short" : "8_coins",
-      "description" : "This rank modifies your power so that your Potency and Versatility are increased but your Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents08.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 8
-    },{
-      "cardname" : "Eight of Cups",
-      "short" : "8_cups",
-      "description" : "This rank modifies your power so that your Potency and Versatility are increased but your Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups08.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 8
-    },{
-      "cardname" : "Eight of Diamonds",
-      "short" : "8_diamonds",
-      "description" : "You and your power are morally opposed. Increase your Potency, but decrease your choice of Control or Versatility.",
-      "image" : "diamonds08.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 8
-    },{
-      "cardname" : "Eight of Hearts",
-      "short" : "8_hearts",
-      "description" : "You and your power are morally opposed. Increase your Control, but decrease your choice of Potency or Versatility.",
-      "image" : "hearts08.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 8
-    },{
-      "cardname" : "Eight of Spades",
-      "short" : "8_spades",
-      "description" : "You and your power are morally opposed. Increase your choice of Potency or Versatility, but decrease Control.",
-      "image" : "spades08.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 8
-    },{
-      "cardname" : "Eight of Swords",
-      "short" : "8_swords",
-      "description" : "This rank modifies your power so that your Potency and Versatility are increased but your Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords08.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 8
-    },{
-      "cardname" : "Eight of Wands",
-      "short" : "8_wands",
-      "description" : "This rank modifies your power so that your Potency and Versatility are increased but your Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands08.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 8
-    },{
-      "cardname" : "Five of Clubs",
-      "short" : "5_clubs",
-      "description" : "Increase your choice of Versatility or Control, but decrease Potency.",
-      "image" : "clubs05.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 5
-    },{
-      "cardname" : "Five of Coins",
-      "short" : "5_coins",
-      "description" : "This rank modifies your power so that your Potency is increased but your Versatility is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents05.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 5
-    },{
-      "cardname" : "Five of Cups",
-      "short" : "5_cups",
-      "description" : "This rank modifies your power so that your Potency is increased but your Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups05.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 5
-    },{
-      "cardname" : "Five of Diamonds",
-      "short" : "5_diamonds",
-      "description" : "Increase your Potency, but decrease your choice of Control or Versatility.",
-      "image" : "diamonds05.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 5
-    },{
-      "cardname" : "Five of Hearts",
-      "short" : "5_hearts",
-      "description" : "Increase your Control, but decrease your choice of Potency or Versatility.",
-      "image" : "hearts05.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 5
-    },{
-      "cardname" : "Five of Spades",
-      "short" : "5_spades",
-      "description" : "Increase your choice of Potency or Versatility, but decrease Control.",
-      "image" : "spades05.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 5
-    },{
-      "cardname" : "Five of Swords",
-      "short" : "5_swords",
-      "description" : "This rank modifies your power so that your Potency is increased but your Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords05.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 5
-    },{
-      "cardname" : "Five of Wands",
-      "short" : "5_wands",
-      "description" : "This rank modifies your power so that your Potency is increased but your Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands05.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 5
-    },{
-      "cardname" : "Four of Clubs",
-      "short" : "4_clubs",
-      "description" : "You don't get along with your power, making it harder to use. Decrease Potency and your choice of Versatility or Control.",
-      "image" : "clubs04.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 4
-    },{
-      "cardname" : "Four of Coins",
-      "short" : "4_coins",
-      "description" : "This rank modifies your power so that your Control is increased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents04.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 4
-    },{
-      "cardname" : "Four of Cups",
-      "short" : "4_cups",
-      "description" : "This rank modifies your power so that your choice of Control is increased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups04.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 4
-    },{
-      "cardname" : "Four of Diamonds",
-      "short" : "4_diamonds",
-      "description" : "You don't get along with your power, making it harder to use. Decrease Potency and your choice of Versatility or Control.",
-      "image" : "diamonds04.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 4
-    },{
-      "cardname" : "Four of Hearts",
-      "short" : "4_hearts",
-      "description" : "You don't get along with your power, making it harder to use. Decrease Control and your choice of Versatility or Potency.",
-      "image" : "hearts04.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 4
-    },{
-      "cardname" : "Four of Spades",
-      "short" : "4_spades",
-      "description" : "You don't get along with your power, making it harder to use. Decrease Control and your choice of Versatility or Potency.",
-      "image" : "spades04.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 4
-    },{
-      "cardname" : "Four of Swords",
-      "short" : "4_swords",
-      "description" : "This rank modifies your power so that your Control is increased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords04.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 4
-    },{
-      "cardname" : "Four of Wands",
-      "short" : "4_wands",
-      "description" : "This rank modifies your power so that your Control is increased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands04.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 4
-    },{
-      "cardname" : "Jack of Clubs",
-      "short" : "J_clubs",
-      "description" : "Your power is different than what others might think it to be, and may have subtle aspects unnoticed by others. Increase your choice of Versatility or Control, but decrease Potency.",
-      "image" : "clubs11.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 11
-    },{
-      "cardname" : "Jack of Diamonds",
-      "short" : "J_diamonds",
-      "description" : "Your power is different than what others might think it to be, and may have subtle aspects unnoticed by others. Increase your Potency, but decrease your choice of Control or Versatility.",
-      "image" : "diamonds11.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 11
-    },{
-      "cardname" : "Jack of Hearts",
-      "short" : "J_hearts",
-      "description" : "Your power is different than what others might think it to be, and may have subtle aspects unnoticed by others Increase your Control, but decrease your choice of Potency or Versatility.",
-      "image" : "hearts11.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 11
-    },{
-      "cardname" : "Jack of Spades",
-      "short" : "J_spades",
-      "description" : "Your power is different than what others might think it to be, and may have subtle aspects unnoticed by others. Increase your choice of Potency or Versatility, but decrease Control.",
-      "image" : "spades11.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 11
-    },{
-      "cardname" : "Judgement - XX",
-      "short" : "judgement_xx",
-      "description" : "Finally, you drew <strong>Judgement - XX</strong>. You are one of the rare few to have a second trigger event. Create your power from the sign and rune then roll again and modify your power with the new sign and rune.",
-      "image" : "20-judgement.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 20
-    },{
-      "cardname" : "Justice - XI",
-      "short" : "justice_xi",
-      "description" : "Finally, you drew <strong>Justice - XI</strong>. Your power requires specific external conditions (as opposed to internal mental/emotional conditions) to be met before you can use it.",
-      "extra_info" : "This could be anything from running in circles to feeding the dead to your skeletal minion but it's not a step you can skip.",
-      "image" : "11-justice.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 11
-    },{
-      "cardname" : "King of Clubs",
-      "short" : "K_clubs",
-      "description" : "Your power has strength but is incredibly unethical. Increase your choice of Versatility or Control, but decrease Potency.",
-      "image" : "clubs13.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 13
-    },{
-      "cardname" : "King of Coins",
-      "short" : "K_coins",
-      "description" : "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are increased but the remainder is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents14.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 14
-    },{
-      "cardname" : "King of Cups",
-      "short" : "K_cups",
-      "description" : "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are increased but the remainder is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups14.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 14
-    },{
-      "cardname" : "King of Diamonds",
-      "short" : "K_diamonds",
-      "description" : "Your power has strength but is incredibly unethical. Increase your Potency, but decrease your choice of Control or Versatility.",
-      "image" : "diamonds13.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 13
-    },{
-      "cardname" : "King of Hearts",
-      "short" : "K_hearts",
-      "description" : "Your power has strength but is incredibly unethical. Increase your Control, but decrease your choice of Potency or Versatility.",
-      "image" : "hearts13.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 13
-    },{
-      "cardname" : "King of Spades",
-      "short" : "K_spades",
-      "description" : "Your power has strength but is incredibly unethical. Increase your choice of Potency or Versatility, but decrease Control.",
-      "image" : "spades13.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 13
-    },{
-      "cardname" : "King of Swords",
-      "short" : "K_swords",
-      "description" : "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are increased but the remainder is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords14.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 14
-    },{
-      "cardname" : "King of Wands",
-      "short" : "K_wands",
-      "description" : "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are increased but the remainder is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands14.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 14
-    },{
-      "cardname" : "Knight of Coins",
-      "short" : "knight_coins",
-      "description" : "This rank modifies your power so that your Potency is increased but your choice of Versatility or Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents12.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 12
-    },{
-      "cardname" : "Knight of Cups",
-      "short" : "knight_cups",
-      "description" : "This rank modifies your power so that your Potency is increased but your choice of Versatility or Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups12.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 12
-    },{
-      "cardname" : "Knight of Swords",
-      "short" : "knight_swords",
-      "description" : "This rank modifies your power so that your Potency is increased but your choice of Versatility or Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords12.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 12
-    },{
-      "cardname" : "Knight of Wands",
-      "short" : "knight_wands",
-      "description" : "This rank modifies your power so that your Potency is increased but your choice of Versatility or Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands12.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 12
-    },{
-      "cardname" : "Nine of Clubs",
-      "short" : "9_clubs",
-      "description" : "Dramatically increase your Versatility or Control, but dramatically decrease Potency.",
-      "image" : "clubs09.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 9
-    },{
-      "cardname" : "Nine of Coins",
-      "short" : "9_coins",
-      "description" : "This rank modifies your power so that your Potency & Control are increased but your Versatility is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents09.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 9
-    },{
-      "cardname" : "Nine of Cups",
-      "short" : "9_cups",
-      "description" : "This rank modifies your power so that your Potency & Control are increased but your Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups09.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 9
-    },{
-      "cardname" : "Nine of Diamonds",
-      "short" : "9_diamonds",
-      "description" : "Dramatically ncrease your Potency, but dramatically decrease your choice of Control or Versatility.",
-      "image" : "diamonds09.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 9
-    },{
-      "cardname" : "Nine of Hearts",
-      "short" : "9_hearts",
-      "description" : "Dramatically increase your Control, but dramatically decrease your choice of Potency or Versatility.",
-      "image" : "hearts09.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 9
-    },{
-      "cardname" : "Nine of Spades",
-      "short" : "9_spades",
-      "description" : "Dramatically increase your choice of Potency or Versatility, but dramatically decrease Control.",
-      "image" : "spades09.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 9
-    },{
-      "cardname" : "Nine of Swords",
-      "short" : "9_swords",
-      "description" : "This rank modifies your power so that your Potency & Control are increased but your Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords09.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 9
-    },{
-      "cardname" : "Nine of Wands",
-      "short" : "9_wands",
-      "description" : "This rank modifies your power so that your Potency & Control are increased but your Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands09.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 9
-    },{
-      "cardname" : "Page of Coins",
-      "short" : "page_coins",
-      "description" : "This rank modifies your power so that your Control is increased but your choice of Potency or Versatility is decreased. his suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents11.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 11
-    },{
-      "cardname" : "Page of Cups",
-      "short" : "page_cups",
-      "description" : "This rank modifies your power so that your Control is increased but your choice of Potency or Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups11.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 11
-    },{
-      "cardname" : "Page of Swords",
-      "short" : "page_swords",
-      "description" : "This rank modifies your power so that your Control is increased but your choice of Potency or Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords11.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 11
-    },{
-      "cardname" : "Page of Wands",
-      "short" : "page_wands",
-      "description" : "This rank modifies your power so that your Control is increased but your choice of Potency or Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands11.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 11
-    },{
-      "cardname" : "Queen of Clubs",
-      "short" : "Q_clubs",
-      "description" : "Your power is less straight-up strong but lends itself towards teamwork and combos with other powers. Increase your choice of Versatility or Control, but decrease Potency.",
-      "image" : "clubs12.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 12
-    },{
-      "cardname" : "Queen of Coins",
-      "short" : "Q_coins",
-      "description" : "This rank modifies your power so that your Versatility is increased but your choice of Potency or Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents13.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 13
-    },{
-      "cardname" : "Queen of Cups",
-      "short" : "Q_cups",
-      "description" : "This rank modifies your power so that your Versatility is increased but your choice of Potency or Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups13.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 13
-    },{
-      "cardname" : "Queen of Diamonds",
-      "short" : "Q_diamonds",
-      "description" : "Your power is less straight-up strong but lends itself towards teamwork and combos with other powers. Increase your Potency, but decrease your choice of Control or Versatility.",
-      "image" : "diamonds12.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 12
-    },{
-      "cardname" : "Queen of Hearts",
-      "short" : "Q_hearts",
-      "description" : "Your power is less straight-up strong but lends itself towards teamwork and combos with other powers. Increase your Control, but decrease your choice of Potency or Versatility.",
-      "image" : "hearts12.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 12
-    },{
-      "cardname" : "Queen of Spades",
-      "short" : "Q_spades",
-      "description" : "Your power is less straight-up strong but lends itself towards teamwork and combos with other powers. Increase your choice of Potency or Versatility, but decrease Control.",
-      "image" : "spades12.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 12
-    },{
-      "cardname" : "Queen of Swords",
-      "short" : "Q_swords",
-      "description" : "This rank modifies your power so that your Versatility is increased but your choice of Potency or Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords13.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 13
-    },{
-      "cardname" : "Queen of Wands",
-      "short" : "Q_wands",
-      "description" : "This rank modifies your power so that your Versatility is increased but your choice of Potency or Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands13.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 13
-    },{
-      "cardname" : "Red Joker",
-      "short" : "red_joker",
-      "description" : "Your power prevents your first death, instead providing a second trigger. Roll another Rune / Flavor for your second trigger.",
-      "image" : "jokerred.png",
-      "orientation" : "Regular",
-      "suit" : "Red",
-      "value" : 1
-    },{
-      "cardname" : "Reversed Ace of Coins",
-      "short" : "reversed_1_coins",
-      "description" : "This rank modifies your power so that your choice of Potency, Versatility, or Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents01.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 1
-    },{
-      "cardname" : "Reversed Ace of Cups",
-      "short" : "reversed_1_cups",
-      "description" : "This rank modifies your power so that your choice of Potency, Versatility, or Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups01.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 1
-    },{
-      "cardname" : "Reversed Ace of Swords",
-      "short" : "reversed_1_swords",
-      "description" : "This rank modifies your power so that your choice of Potency, Versatility, or Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords01.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 1
-    },{
-      "cardname" : "Reversed Ace of Wands",
-      "short" : "reversed_1_wands",
-      "description" : "This rank modifies your power so that your choice of Potency, Versatility, or Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands01.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 1
-    },{
-      "cardname" : "Reversed Death - XIII",
-      "short" : "reversed_death_xiii",
-      "description" : "Finally, you drew <strong>Death - XIII, Reversed</strong>. Using your power leaves you vulnerable. Maybe you become narcoleptic or start hallucinating but either before, during, or after using your power you're effectively unable to act.",
-      "image" : "13-death.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 13
-    },{
-      "cardname" : "Reversed Eight of Coins",
-      "short" : "reversed_8_coins",
-      "description" : "This rank modifies your power so that your Control is increased but your Potency and Versatility are decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents08.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 8
-    },{
-      "cardname" : "Reversed Eight of Cups",
-      "short" : "reversed_8_cups",
-      "description" : "This rank modifies your power so that your Control is increased but your Potency and Versatility are decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups08.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 8
-    },{
-      "cardname" : "Reversed Eight of Swords",
-      "short" : "reversed_8_swords",
-      "description" : "This rank modifies your power so that your Control is increased but your Potency and Versatility are decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords08.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 8
-    },{
-      "cardname" : "Reversed Eight of Wands",
-      "short" : "reversed_8_wands",
-      "description" : "This rank modifies your power so that your Control is increased but your Potency and Versatility are decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands08.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 8
-    },{
-      "cardname" : "Reversed Five of Coins",
-      "short" : "reversed_5_coins",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Potency is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents05.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 5
-    },{
-      "cardname" : "Reversed Five of Cups",
-      "short" : "reversed_5_cups",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Potency is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups05.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 5
-    },{
-      "cardname" : "Reversed Five of Swords",
-      "short" : "reversed_5_swords",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Potency is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords05.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 5
-    },{
-      "cardname" : "Reversed Five of Wands",
-      "short" : "reversed_5_wands",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Potency is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands05.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 5
-    },{
-      "cardname" : "Reversed Four of Coins",
-      "short" : "reversed_4_coins",
-      "description" : "This rank modifies your power so that your Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents04.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 4
-    },{
-      "cardname" : "Reversed Four of Cups",
-      "short" : "reversed_4_cups",
-      "description" : "This rank modifies your power so that your Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups04.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 4
-    },{
-      "cardname" : "Reversed Four of Swords",
-      "short" : "reversed_4_swords",
-      "description" : "This rank modifies your power so that your Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords04.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 4
-    },{
-      "cardname" : "Reversed Four of Wands",
-      "short" : "reversed_4_wands",
-      "description" : "This rank modifies your power so that your Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands04.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 4
-    },{
-      "cardname" : "Reversed Judgement - XX",
-      "short" : "reversed_judgement_xx",
-      "description" : "Your power seems to to be deteriorating in some fashion. Maybe it's maximum intensity is decreasing or your Control over it is getting worse but either way it's not like it use to be.",
-      "image" : "20-judgement.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 20
-    },{
-      "cardname" : "Reversed Justice - XI",
-      "short" : "reversed_justice_xi",
-      "description" : "Finally, you drew <strong>Justice - XI, Reversed</strong>. Your power punishes you if you don't use it correctly. It may have barriers you can bypass at a cost or it may require certain actions after using it.",
-      "image" : "11-justice.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 11
-    },{
-      "cardname" : "Reversed King of Coins",
-      "short" : "reversed_K_coins",
-      "description" : "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are decreased but the remainder is increased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents14.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 14
-    },{
-      "cardname" : "Reversed King of Cups",
-      "short" : "reversed_K_cups",
-      "description" : "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are decreased but the remainder is increased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups14.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 14
-    },{
-      "cardname" : "Reversed King of Swords",
-      "short" : "reversed_K_swords",
-      "description" : "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are decreased but the remainder is increased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords14.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 14
-    },{
-      "cardname" : "Reversed King of Wands",
-      "short" : "reversed_K_wands",
-      "description" : "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are decreased but the remainder is increased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands14.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 14
-    },{
-      "cardname" : "Reversed Knight of Coins",
-      "short" : "reversed_knight_coins",
-      "description" : "This rank modifies your power so that your choice of Versatility or Control is increased but Potency is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents12.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 12
-    },{
-      "cardname" : "Reversed Knight of Cups",
-      "short" : "reversed_knight_cups",
-      "description" : "This rank modifies your power so that your choice of Versatility or Control is increased but Potency is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups12.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 12
-    },{
-      "cardname" : "Reversed Knight of Swords",
-      "short" : "reversed_knight_swords",
-      "description" : "This rank modifies your power so that your choice of Versatility or Control is increased but Potency is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords12.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 12
-    },{
-      "cardname" : "Reversed Knight of Wands",
-      "short" : "reversed_knight_wands",
-      "description" : "This rank modifies your power so that your choice of Versatility or Control is increased but Potency is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands12.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 12
-    },{
-      "cardname" : "Reversed Nine of Coins",
-      "short" : "reversed_9_coins",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Potency & Control are decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents09.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 9
-    },{
-      "cardname" : "Reversed Nine of Cups",
-      "short" : "reversed_9_cups",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Potency & Control are decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups09.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 9
-    },{
-      "cardname" : "Reversed Nine of Swords",
-      "short" : "reversed_9_swords",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Potency & Control are decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords09.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 9
-    },{
-      "cardname" : "Reversed Nine of Wands",
-      "short" : "reversed_9_wands",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Potency & Control are decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands09.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 9
-    },{
-      "cardname" : "Reversed Page of Coins",
-      "short" : "reversed_page_coins",
-      "description" : "This rank modifies your power so that your choice of Potency or Versatility is increased but your Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents11.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 11
-    },{
-      "cardname" : "Reversed Page of Cups",
-      "short" : "reversed_page_cups",
-      "description" : "This rank modifies your power so that your choice of Potency or Versatility is increased but your Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups11.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 11
-    },{
-      "cardname" : "Reversed Page of Swords",
-      "short" : "reversed_page_swords",
-      "description" : "This rank modifies your power so that your choice of Potency or Versatility is increased but your Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords11.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 11
-    },{
-      "cardname" : "Reversed Page of Wands",
-      "short" : "reversed_page_wands",
-      "description" : "Finally, you drew the <strong>reversed Page of Wands</strong>. This rank modifies your power so that your choice of Potency or Versatility is increased but your Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands11.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 11
-    },{
-      "cardname" : "Reversed Queen of Coins",
-      "short" : "reversed_Q_coins",
-      "description" : "This rank modifies your power so that your choice of Potency or Control is increased but your Versatility is decreased. This suit rounds out your ",
-      "image" : "Pents13.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 13
-    },{
-      "cardname" : "Reversed Queen of Cups",
-      "short" : "reversed_Q_cups",
-      "description" : "This rank modifies your power so that your choice of Potency or Control is increased but your Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups13.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 13
-    },{
-      "cardname" : "Reversed Queen of Swords",
-      "short" : "reversed_Q_swords",
-      "description" : "This rank modifies your power so that your choice of Potency or Control is increased but your Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords13.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 13
-    },{
-      "cardname" : "Reversed Queen of Wands",
-      "short" : "reversed_Q_wands",
-      "description" : "This rank modifies your power so that your choice of Potency or Control is increased but your Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands13.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 13
-    },{
-      "cardname" : "Reversed Seven of Coins",
-      "short" : "reversed_7_coins",
-      "description" : "This rank modifies your power so that your Potency is increased but your Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents07.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 7
-    },{
-      "cardname" : "Reversed Seven of Cups",
-      "short" : "reversed_7_cups",
-      "description" : "This rank modifies your power so that your Potency is increased but your Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups07.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 7
-    },{
-      "cardname" : "Reversed Seven of Swords",
-      "short" : "reversed_7_swords",
-      "description" : "This rank modifies your power so that your Potency is increased but your Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords07.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 7
-    },{
-      "cardname" : "Reversed Seven of Wands",
-      "short" : "reversed_7_wands",
-      "description" : "This rank modifies your power so that your Potency is increased but your Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands07.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 7
-    },{
-      "cardname" : "Reversed Six of Coins",
-      "short" : "reversed_6_coins",
-      "description" : "This rank modifies your power so that your Control is increased but your Versatility is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents06.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 6
-    },{
-      "cardname" : "Reversed Six of Cups",
-      "short" : "reversed_6_cups",
-      "description" : "This rank modifies your power so that your Control is increased but your Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups06.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 6
-    },{
-      "cardname" : "Reversed Six of Swords",
-      "short" : "reversed_6_swords",
-      "description" : "This rank modifies your power so that your Control is increased but your Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords06.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 6
-    },{
-      "cardname" : "Reversed Six of Wands",
-      "short" : "reversed_6_wands",
-      "description" : "This rank modifies your power so that your Control is increased but your Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands06.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 6
-    },{
-      "cardname" : "Reversed Strength - VIII",
-      "short" : "reversed_strength_viii",
-      "description" : "Finally, you drew <strong>Strength - VIII, Reversed</strong>. Your power is a source of constant paranoia. Fear of your power is as useful as the power itself.",
-      "image" : "08-strength.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 8
-    },{
-      "cardname" : "Reversed Temperance - XIV",
-      "short" : "reversed_temperance_xiv",
-      "description" : "Finally, you drew <strong>Temperance - XIV, Reversed</strong>. Your power has some minor trump aspect that seems kinda superfluous. Like, seriously, what's up with that?",
-      "image" : "14-temperance.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 14
-    },{
-      "cardname" : "Reversed Ten of Coins",
-      "short" : "reversed_10_coins",
-      "description" : "This rank modifies your power so that your Potency is increased but your Versatility and Control are decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents10.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 10
-    },{
-      "cardname" : "Reversed Ten of Cups",
-      "short" : "reversed_10_cups",
-      "description" : "This rank modifies your power so that your Potency is increased but your Versatility and Control are decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups10.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 10
-    },{
-      "cardname" : "Reversed Ten of Swords",
-      "short" : "reversed_10_swords",
-      "description" : "This rank modifies your power so that your Potency is increased but your Versatility and Control are decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords10.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 10
-    },{
-      "cardname" : "Reversed Ten of Wands",
-      "short" : "reversed_10_wands",
-      "description" : "This rank modifies your power so that your Potency is increased but your Versatility and Control are decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands10.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 10
-    },{
-      "cardname" : "Reversed The Chariot - VII",
-      "short" : "reversed_the_chariot_vii",
-      "description" : "Finally, you drew <strong>The Chariot - VII, Reversed</strong>. Your power is good for harassing and annoying other but lacks direct lethality.",
-      "image" : "07-the-chariot.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 7
-    },{
-      "cardname" : "Reversed The Devil - XV",
-      "short" : "reversed_the_devil_xv",
-      "description" : "Finally, you drew <strong>The Devil - XV, Reversed</strong>. Your power changed your form in a significant enough fashion that you can't hide it, you are a case 53 or mutant. ",
-      "image" : "15-the-devil.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 15
-    },{
-      "cardname" : "Reversed The Emperor - IV",
-      "short" : "reversed_the_emperor_iv",
-      "description" : "Finally, you drew <strong>The Emperor - IV, Reversed</strong>. Your power is good at running interference, harassing foes and protecting allies.",
-      "image" : "04-the-emperor.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 4
-    },{
-      "cardname" : "Reversed The Empress - III",
-      "short" : "reversed_the_empress_iii",
-      "description" : "Finally, you drew <strong>The Empress - III, Reversed</strong>. Your power works best on or in large groups and suffers when you are alone.",
-      "image" : "03-the-empress.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 3
-    },{
-      "cardname" : "Reversed The Fool - 0",
-      "short" : "reversed_the_fool_0",
-      "description" : "Finally, you drew <strong>The Fool - 0, Reversed</strong>. Your power requires a specific mental or emotional state to reach it's full potential. This can be anything from calm to rage but with out it your power is a shadow of what you could be.",
-      "image" : "00-the-fool.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 0
-    },{
-      "cardname" : "Reversed The Hanged Man - XII",
-      "short" : "reversed_the_hanged_man_xii",
-      "description" : "Finally, you drew <strong>The Hanged Man - XII, Reversed</strong>. Your power molds your thoughts and feeling in a fashion that allows you to use it better. You are more effective because of this but ... is it really you at all?",
-      "image" : "12-the-hanged-man.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 12
-    },{
-      "cardname" : "Reversed The Hermit - IX",
-      "short" : "reversed_the_hermit_ix",
-      "description" : "Finally, you drew <strong>The Hermit - IX, Reversed</strong>. Your power makes it dangerous for others to be around you, either when you're actively using it or just in general.",
-      "image" : "09-the-hermit.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 9
-    },{
-      "cardname" : "Reversed The Hierophant - V",
-      "short" : "reversed_the_hierophant_v",
-      "description" : "Finally, you drew <strong>The Hierophant - V, Reversed</strong>. Your power makes you a desirable teammate. Perhaps you're a healer, a useful Trump, or just plain powerful, but you won't have trouble finding people who want to work with you ... whether you really want that or not.",
-      "image" : "05-the-hierophant.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 5
-    },{
-      "cardname" : "Reversed The High Priestess - II",
-      "short" : "reversed_the_high_priestess_ii",
-      "description" : "Finally, you drew <strong>The High Priestess - II, Reversed</strong>. Your power acts on your behalf apart from your conscious direction. This can be an automatic response to circumstance or in response to mental or emotional states and can work for or against you dependent on the power.",
-      "image" : "02-the-high-priestess.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 2
-    },{
-      "cardname" : "Reversed The Lovers - VI",
-      "short" : "reversed_the_lovers_vi",
-      "description" : "Finally, you drew <strong>The Lovers - VI, Reversed</strong>. Your power includes a feature that seems to work against the rest of it.",
-      "image" : "06-the-lovers.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 6
-    },{
-      "cardname" : "Reversed The Magician - I",
-      "short" : "reversed_the_magician_i",
-      "description" : "Finally, you drew <strong>The Magician - I, Reversed</strong>. Your power has or had a permanent effect on your heart or mind. It may have been a one off change or it my be something that gets a bit worse with each use of the power.",
-      "image" : "01-the-magician.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 1
-    },{
-      "cardname" : "Reversed The Moon - XVIII",
-      "short" : "reversed_the_moon_xviii",
-      "description" : "Finally, you drew <strong>The Moon - XVIII, Reversed</strong>. Your power's Potency and Versatility are decreased.",
-      "image" : "18-the-moon.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 18
-    },{
-      "cardname" : "Reversed The Star - XVII",
-      "short" : "reversed_the_star_xvii",
-      "description" : "Finally, you drew <strong>The Star - XVII, Reversed</strong>. Your power's Versatility and Control are decreased.",
-      "image" : "17-the-star.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 17
-    },{
-      "cardname" : "Reversed The Sun - XIX",
-      "short" : "reversed_the_sun_xix",
-      "description" : "Finally, you drew <strong>The Sun - XIX, Reversed</strong>. Your power's Potency and Control are increased.",
-      "image" : "19-the-sun.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 19
-    },{
-      "cardname" : "Reversed The Tower - XVI",
-      "short" : "reversed_the_tower_xvi",
-      "description" : "Finally, you drew <strong>The Tower - XVI, Reversed</strong>. Your power's Potency and Control are decreased.",
-      "image" : "16-the-tower.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 16
-    },{
-      "cardname" : "Reversed The World - XXI",
-      "short" : "reversed_the_world_xxi",
-      "description" : "Finally, you drew <strong>The World - XXI, Reversed</strong>. Your power turned you into a monster. You are a walking natural disaster, a waking nightmare, and/or a probable threat to nearly everyone. This isn't something you can stop or Control, your power Controls you.",
-      "image" : "21-the-world.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 21
-    },{
-      "cardname" : "Reversed Three of Coins",
-      "short" : "reversed_3_coins",
-      "description" : "This rank modifies your power so that your Versatility is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents03.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 3
-    },{
-      "cardname" : "Reversed Three of Cups",
-      "short" : "reversed_3_cups",
-      "description" : "This rank modifies your power so that your Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups03.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 3
-    },{
-      "cardname" : "Reversed Three of Swords",
-      "short" : "reversed_3_swords",
-      "description" : "This rank modifies your power so that your Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords03.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 3
-    },{
-      "cardname" : "Reversed Three of Wands",
-      "short" : "reversed_3_wands",
-      "description" : "This rank modifies your power so that your Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands03.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 3
-    },{
-      "cardname" : "Reversed Two of Coins",
-      "short" : "reversed_2_coins",
-      "description" : "This rank modifies your power so that your Potency is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents02.png",
-      "orientation" : "Merkstave",
-      "suit" : "Coins",
-      "value" : 2
-    },{
-      "cardname" : "Reversed Two of Cups",
-      "short" : "reversed_2_cups",
-      "description" : "This rank modifies your power so that your Potency is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups02.png",
-      "orientation" : "Merkstave",
-      "suit" : "Cups",
-      "value" : 2
-    },{
-      "cardname" : "Reversed Two of Swords",
-      "short" : "reversed_2_swords",
-      "description" : "This rank modifies your power so that your Potency is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords02.png",
-      "orientation" : "Merkstave",
-      "suit" : "Swords",
-      "value" : 2
-    },{
-      "cardname" : "Reversed Two of Wands",
-      "short" : "reversed_2_wands",
-      "description" : "This rank modifies your power so that your Potency is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands02.png",
-      "orientation" : "Merkstave",
-      "suit" : "Wands",
-      "value" : 2
-    },{
-      "cardname" : "Reversed Wheel of Fortune - X",
-      "short" : "reversed_wheel_fortune_x",
-      "description" : "Finally, you drew <strong>The Wheel of Fortune - X, Reversed</strong>. Your power is a grab bag of smaller separate powers built around a certain theme. Roll two more signs and runes and create separate but thematically connected powers with them.",
-      "image" : "10-wheel-of-fortune.png",
-      "orientation" : "Merkstave",
-      "suit" : "Major Arcana",
-      "value" : 10
-    },{
-      "cardname" : "Seven of Clubs",
-      "short" : "7_clubs",
-      "description" : "You understand your power, making it easier to use. Increase Potency and your choice of Versatility or Control.",
-      "image" : "clubs07.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 7
-    },{
-      "cardname" : "Seven of Coins",
-      "short" : "7_coins",
-      "description" : "This rank modifies your power so that your Control is increased but your Potency is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents07.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 7
-    },{
-      "cardname" : "Seven of Cups",
-      "short" : "7_cups",
-      "description" : "This rank modifies your power so that your Control is increased but your Potency is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups07.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 7
-    },{
-      "cardname" : "Seven of Diamonds",
-      "short" : "7_diamonds",
-      "description" : "You understand your power, making it easier to use. Increase Potency and your choice of Versatility or Control.",
-      "image" : "diamonds07.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 7
-    },{
-      "cardname" : "Seven of Hearts",
-      "short" : "7_hearts",
-      "description" : "You understand your power, making it easier to use. Increase Control and your choice of Versatility or Potency.",
-      "image" : "hearts07.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 7
-    },{
-      "cardname" : "Seven of Spades",
-      "short" : "7_spades",
-      "description" : "You understand your power, making it easier to use. Increase Control and your choice of Versatility or Potency.",
-      "image" : "spades07.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 7
-    },{
-      "cardname" : "Seven of Swords",
-      "short" : "7_swords",
-      "description" : "This rank modifies your power so that your Control is increased but your Potency is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords07.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 7
-    },{
-      "cardname" : "Seven of Wands",
-      "short" : "7_wands",
-      "description" : "This rank modifies your power so that your Control is increased but your Potency is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands07.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 7
-    },{
-      "cardname" : "Six of Clubs",
-      "short" : "6_clubs",
-      "description" : "You and your power are relatively in sync. Increase your choice of Versatility or Control, but Decrease Potency.",
-      "image" : "clubs06.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 6
-    },{
-      "cardname" : "Six of Coins",
-      "short" : "6_coins",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents06.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 6
-    },{
-      "cardname" : "Six of Cups",
-      "short" : "6_cups",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups06.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 6
-    },{
-      "cardname" : "Six of Diamonds",
-      "short" : "6_diamonds",
-      "description" : "You and your power are relatively in sync. Increase your Potency, but decrease your choice of Control or Versatility.",
-      "image" : "diamonds06.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 6
-    },{
-      "cardname" : "Six of Hearts",
-      "short" : "6_hearts",
-      "description" : "You and your power are relatively in sync. Increase your Control, but decrease your choice of Potency or Versatility.",
-      "image" : "hearts06.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 6
-    },{
-      "cardname" : "Six of Spades",
-      "short" : "6_spades",
-      "description" : "You and your power are relatively in sync. Increase your choice of Potency or Versatility, but decrease Control.",
-      "image" : "spades06.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 6
-    },{
-      "cardname" : "Six of Swords",
-      "short" : "6_swords",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords06.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 6
-    },{
-      "cardname" : "Six of Wands",
-      "short" : "6_wands",
-      "description" : "This rank modifies your power so that your Versatility is increased but your Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands06.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 6
-    },{
-      "cardname" : "Strength - VIII",
-      "short" : "strength_viii",
-      "description" : "Finally, you drew <strong>Strength - VIII</strong>. Your power grants you protection in some fashion allowing you to leap into the fray with little concern that you'll be harmed in any meaningful way.",
-      "image" : "08-strength.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 8
-    },{
-      "cardname" : "Temperance - XIV",
-      "short" : "temperance_xiv",
-      "description" : "Finally, you drew <strong>Temperance - XIV</strong>. Your power is Manton limited. It affects either living or nonliving things, but not both.",
-      "image" : "14-temperance.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 14
-    },{
-      "cardname" : "Ten of Clubs",
-      "short" : "10_clubs",
-      "description" : "Your power has a significant secondary usage in another class. Increase your choice of Versatility or Control, but decrease Potency.",
-      "image" : "clubs10.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 10
-    },{
-      "cardname" : "Ten of Coins",
-      "short" : "10_coins",
-      "description" : "This rank modifies your power so that your Versatility and Control are increased but your Potency is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents10.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 10
-    },{
-      "cardname" : "Ten of Cups",
-      "short" : "10_cups",
-      "description" : "This rank modifies your power so that your Versatility and Control are increased but your Potency is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups10.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 10
-    },{
-      "cardname" : "Ten of Diamonds",
-      "short" : "10_diamonds",
-      "description" : "Your power has a significant secondary usage in another class. Increase your Potency, but decrease your choice of Control or Versatility.",
-      "image" : "diamonds10.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 10
-    },{
-      "cardname" : "Ten of Hearts",
-      "short" : "10_hearts",
-      "description" : "Your power has a significant secondary usage in another class. Increase your Control, but decrease your choice of Potency or Versatility.",
-      "image" : "hearts10.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 10
-    },{
-      "cardname" : "Ten of Spades",
-      "short" : "10_spades",
-      "description" : "Your power has a significant secondary usage in another class. Increase your choice of Potency or Versatility, but decrease Control.",
-      "image" : "spades10.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 10
-    },{
-      "cardname" : "Ten of Swords",
-      "short" : "10_swords",
-      "description" : "This rank modifies your power so that your Versatility and Control are increased but your Potency is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords10.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 10
-    },{
-      "cardname" : "Ten of Wands",
-      "short" : "10_wands",
-      "description" : "This rank modifies your power so that your Versatility and Control are increased but your Potency is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands10.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 10
-    },{
-      "cardname" : "The Chariot - VII",
-      "short" : "the_chariot_vii",
-      "description" : "Finally, you drew <strong>The Chariot - VII</strong>. Your power is typically lethal with little you can do to mitigate this.",
-      "image" : "07-the-chariot.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 7
-    },{
-      "cardname" : "The Devil - XV",
-      "short" : "the_devil_xv",
-      "description" : "Finally, you drew <strong>The Devil - XV</strong>. Your power is fundamentally immoral to use and probably illegal to boot.",
-      "image" : "15-the-devil.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 15
-    },{
-      "cardname" : "The Emperor - IV",
-      "short" : "the_emperor_iv",
-      "description" : "Finally, you drew <strong>The Emperor - IV</strong>. While most powers promote chaos and destruction your power is a force for order. It protects, preserves, organizes, or the like.",
-      "image" : "04-the-emperor.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 4
-    },{
-      "cardname" : "The Empress - III",
-      "short" : "the_empress_iii",
-      "description" : "Finally, you drew <strong>The Empress - III</strong>. You have a secondary or tertiary power that is next to impossible to detect and that takes a long time to use but can be a real game changer when leveraged intelligently.",
-      "image" : "03-the-empress.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 3
-    },{
-      "cardname" : "The Fool - 0",
-      "short" : "the_fool_0",
-      "description" : "Finally, you drew <strong>The Fool - 0</strong>. Your power alters your personality in some way when you use it most likely in the direction of mania.",
-      "image" : "00-the-fool.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 0
-    },{
-      "cardname" : "The Hanged Man - XII",
-      "short" : "the_hanged_man_xii",
-      "description" : "Finally, you drew <strong>The Hanged Man - XII</strong>. our power provides you with some deep insight about the world that separates you from those around you. Appearing normal will require effort on your part.",
-      "image" : "12-the-hanged-man.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 12
-    },{
-      "cardname" : "The Hermit - IX",
-      "short" : "the_hermit_ix",
-      "description" : "Finally, you drew <strong>The Hermit - IX</strong>. Your power is fragile in some fashion, making it easy to disrupt.",
-      "image" : "09-the-hermit.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 9
-    },{
-      "cardname" : "The Hierophant - V",
-      "short" : "the_hierophant_v",
-      "description" : "Finally, you drew <strong>The Hierophant - V</strong>. Your power either makes you reliant on others or it makes other subservient to you. Either way it enforces hierarchy and interdependence, willing or not.",
-      "image" : "05-the-hierophant.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 5
-    },{
-      "cardname" : "The High Priestess - II",
-      "short" : "the_high_priestess_ii",
-      "description" : "Finally, you drew <strong>The High Priestess - II</strong>. Your power has an element that is hard to understand which is tripping you up. Careful study may allow you to figure it out but it will remain an impediment.",
-      "image" : "02-the-high-priestess.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 2
-    },{
-      "cardname" : "The Lovers - VI",
-      "short" : "the_lovers_vi",
-      "description" : "Finally, you drew <strong>The Lovers - VI</strong>. Your power is beautiful and/or iconic in a way that lets you leverage your image. People instantly recognize it.",
-      "image" : "06-the-lovers.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 6
-    },{
-      "cardname" : "The Magician - I",
-      "short" : "the_magician_i",
-      "description" : "Finally, you drew <strong>The Magician - I</strong>. You received some sort of boost (mental or physical) to a normal human attribute that complements your existing power. The boost is significant but definitely not super human in scale.",
-      "image" : "01-the-magician.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 1
-    },{
-      "cardname" : "The Moon - XVIII",
-      "short" : "the_moon_xviii",
-      "description" : "Finally, you drew <strong>The Moon - XVIII</strong>. Your power's Potency and Versatility are increased.",
-      "image" : "18-the-moon.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 18
-    },{
-      "cardname" : "The Star - XVII",
-      "short" : "the_star_xvii",
-      "description" : "Finally, you drew <strong>The Star - XVII</strong>. Your power's Versatility and Control are increased.",
-      "image" : "17-the-star.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 17
-    },{
-      "cardname" : "The Sun - XIX",
-      "short" : "the_sun_xix",
-      "description" : "Finally, you drew <strong>The Sun - XIX</strong>. Your power's Potency, Versatility, and Control are all increased. You received a truly superb power.",
-      "image" : "19-the-sun.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 19
-    },{
-      "cardname" : "The Tower - XVI",
-      "short" : "the_tower_xvi",
-      "description" : "Finally, you drew <strong>The Tower - XVI</strong>. Your power's Potency, Versatility and Control are all decreased. You received a genuinely weak power. It happens, sorry.",
-      "image" : "16-the-tower.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 16
-    },{
-      "cardname" : "The World - XXI",
-      "short" : "the_world_xxi",
-      "description" : "Finally, you drew <strong>The World - XXI</strong>. Your power is exceptional in some fashion. It could break some rule about what powers can and can't do, violate some common sense notion about reality, or just seriously out class other similar powers. Regardless of the particulars you have the potential to become a very important/powerful player in the cape scene.",
-      "image" : "21-the-world.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 21
-    },{
-      "cardname" : "Three of Clubs",
-      "short" : "3_clubs",
-      "description" : "You have a wide array of minor powers rather than one single power; roll Sign and Rune again, twice each. Increase your choice of Control or Versatility, but decrease Potency (applied to all powers).",
-      "image" : "clubs03.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 3
-    },{
-      "cardname" : "Three of Coins",
-      "short" : "3_coins",
-      "description" : "This rank modifies your power so that your Versatility is increased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents03.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 3
-    },{
-      "cardname" : "Three of Cups",
-      "short" : "3_cups",
-      "description" : "This rank modifies your power so that your choice of Versatility is increased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups03.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 3
-    },{
-      "cardname" : "Three of Diamonds",
-      "short" : "3_diamonds",
-      "description" : "You have a wide array of minor powers rather than one single power; roll Sign and Rune again, twice each. Increase your Potency, but decrease your choice of Control or Versatility. (applied to all powers).",
-      "image" : "diamonds03.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 3
-    },{
-      "cardname" : "Three of Hearts",
-      "short" : "3_hearts",
-      "description" : "You have a wide array of minor powers rather than one single power; roll Sign and Rune again, twice each. Increase your Control, but decrease your choice of Potency or Versatility (applied to all powers).",
-      "image" : "hearts03.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 3
-    },{
-      "cardname" : "Three of Spades",
-      "short" : "3_spades",
-      "description" : "You have a wide array of minor powers rather than one single power; roll Sign and Rune again, twice each. Increase your choice of Potency or Versatility, but decrease Control. (applied to all powers).",
-      "image" : "spades03.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 3
-    },{
-      "cardname" : "Three of Swords",
-      "short" : "3_swords",
-      "description" : "This rank modifies your power so that your Versatility is increased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords03.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 3
-    },{
-      "cardname" : "Three of Wands",
-      "short" : "3_wands",
-      "description" : "This rank modifies your power so that your Versatility is increased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands03.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 3
-    },{
-      "cardname" : "Two of Clubs",
-      "short" : "2_clubs",
-      "description" : "Your power has a drawback. Increase Control and Versatility, but decrease Potency.",
-      "image" : "clubs02.png",
-      "orientation" : "Regular",
-      "suit" : "Clubs",
-      "value" : 2
-    },{
-      "cardname" : "Two of Coins",
-      "short" : "2_coins",
-      "description" : "This rank modifies your power so that your Potency is increased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
-      "image" : "Pents02.png",
-      "orientation" : "Regular",
-      "suit" : "Coins",
-      "value" : 2
-    },{
-      "cardname" : "Two of Cups",
-      "short" : "2_cups",
-      "description" : "This rank modifies your power so that your choice of Potency is increased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
-      "image" : "Cups02.png",
-      "orientation" : "Regular",
-      "suit" : "Cups",
-      "value" : 2
-    },{
-      "cardname" : "Two of Diamonds",
-      "short" : "2_diamonds",
-      "description" : "Your power has a drawback. Increase your Potency, but decrease your choice of Control or Versatility.",
-      "image" : "diamonds02.png",
-      "orientation" : "Regular",
-      "suit" : "Diamonds",
-      "value" : 2
-    },{
-      "cardname" : "Two of Hearts",
-      "short" : "2_hearts",
-      "description" : "Your power has a drawback. Increase your Control, but decrease your choice of Potency or Versatility.",
-      "image" : "hearts02.png",
-      "orientation" : "Regular",
-      "suit" : "Hearts",
-      "value" : 2
-    },{
-      "cardname" : "Two of Spades",
-      "short" : "2_spades",
-      "description" : "Your power has a drawback. Increase your choice of Potency or Versatility, but decrease Control.",
-      "image" : "spades02.png",
-      "orientation" : "Regular",
-      "suit" : "Spades",
-      "value" : 2
-    },{
-      "cardname" : "Two of Swords",
-      "short" : "2_swords",
-      "description" : "This rank modifies your power so that your Potency is increased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
-      "image" : "Swords02.png",
-      "orientation" : "Regular",
-      "suit" : "Swords",
-      "value" : 2
-    },{
-      "cardname" : "Two of Wands",
-      "short" : "2_wands",
-      "description" : "This rank modifies your power so that your Potency is increased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
-      "image" : "Wands02.png",
-      "orientation" : "Regular",
-      "suit" : "Wands",
-      "value" : 2
-    },{
-      "cardname" : "Wheel of Fortune - X",
-      "short" : "wheel_fortune_x",
-      "description" : "Your power isn't the strongest but has a habit of coming through in a pinch, hinting at a hidden factor. Roll for your choice of either an extra sign or rune and use it to create the hidden feature.",
-      "image" : "10-wheel-of-fortune.png",
-      "orientation" : "Regular",
-      "suit" : "Major Arcana",
-      "value" : 10
-    }
-],
+  {
+    "cardname": "Black Joker",
+    "short": "black_joker",
+    "description": "Your power will prevent your first death, instead providing a second trigger. Roll again and apply the Zodiac (flavor) to your second power.",
+    "image": "jokerblack.png",
+    "orientation": "Regular",
+    "suit": "Black",
+    "value": 1,
+    "class": "black_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ace of Clubs",
+    "short": "1_clubs",
+    "description": "Your power bypasses some limit it might otherwise be bound by. Increase your choice of Control or Versatility, but decrease Potency.",
+    "image": "clubs01.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 1,
+    "class": "clubs_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Two of Clubs",
+    "short": "2_clubs",
+    "description": "Your power has a drawback. Increase Control and Versatility, but decrease Potency.",
+    "image": "clubs02.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 2,
+    "class": "clubs_02",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Three of Clubs",
+    "short": "3_clubs",
+    "description": "You have a wide array of minor powers rather than one single power; roll Sign and Rune again, twice each. Increase your choice of Control or Versatility, but decrease Potency (applied to all powers).",
+    "image": "clubs03.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 3,
+    "class": "clubs_03",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Four of Clubs",
+    "short": "4_clubs",
+    "description": "You don't get along with your power, making it harder to use. Decrease Potency and your choice of Versatility or Control.",
+    "image": "clubs04.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 4,
+    "class": "clubs_04",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Five of Clubs",
+    "short": "5_clubs",
+    "description": "Increase your choice of Versatility or Control, but decrease Potency.",
+    "image": "clubs05.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 5,
+    "class": "clubs_05",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Six of Clubs",
+    "short": "6_clubs",
+    "description": "You and your power are relatively in sync. Increase your choice of Versatility or Control, but Decrease Potency.",
+    "image": "clubs06.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 6,
+    "class": "clubs_06",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Seven of Clubs",
+    "short": "7_clubs",
+    "description": "You understand your power, making it easier to use. Increase Potency and your choice of Versatility or Control.",
+    "image": "clubs07.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 7,
+    "class": "clubs_07",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Eight of Clubs",
+    "short": "8_clubs",
+    "description": "You and your power are morally opposed. Increase your choice of Versatility or Control, but decrease Potency.",
+    "image": "clubs08.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 8,
+    "class": "clubs_08",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Nine of Clubs",
+    "short": "9_clubs",
+    "description": "Dramatically increase your Versatility or Control, but dramatically decrease Potency.",
+    "image": "clubs09.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 9,
+    "class": "clubs_09",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ten of Clubs",
+    "short": "10_clubs",
+    "description": "Your power has a significant secondary usage in another class. Increase your choice of Versatility or Control, but decrease Potency.",
+    "image": "clubs10.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 10,
+    "class": "clubs_10",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Jack of Clubs",
+    "short": "J_clubs",
+    "description": "Your power is different than what others might think it to be, and may have subtle aspects unnoticed by others. Increase your choice of Versatility or Control, but decrease Potency.",
+    "image": "clubs11.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 11,
+    "class": "clubs_11",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Queen of Clubs",
+    "short": "Q_clubs",
+    "description": "Your power is less straight-up strong but lends itself towards teamwork and combos with other powers. Increase your choice of Versatility or Control, but decrease Potency.",
+    "image": "clubs12.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 12,
+    "class": "clubs_12",
+    "extra_info": ""
+  },
+  {
+    "cardname": "King of Clubs",
+    "short": "K_clubs",
+    "description": "Your power has strength but is incredibly unethical. Increase your choice of Versatility or Control, but decrease Potency.",
+    "image": "clubs13.png",
+    "orientation": "Regular",
+    "suit": "Clubs",
+    "value": 13,
+    "class": "clubs_13",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Ace of Coins",
+    "short": "reversed_1_coins",
+    "description": "This rank modifies your power so that your choice of Potency, Versatility, or Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents01.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 1,
+    "class": "pents_01 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ace of Coins",
+    "short": "1_coins",
+    "description": "This rank modifies your power so that your choice of Potency, Versatility, or Control is increased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents01.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 1,
+    "class": "pents_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Two of Coins",
+    "short": "reversed_2_coins",
+    "description": "This rank modifies your power so that your Potency is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents02.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 2,
+    "class": "pents_02 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Two of Coins",
+    "short": "2_coins",
+    "description": "This rank modifies your power so that your Potency is increased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents02.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 2,
+    "class": "pents_02",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Three of Coins",
+    "short": "reversed_3_coins",
+    "description": "This rank modifies your power so that your Versatility is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents03.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 3,
+    "class": "pents_03 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Three of Coins",
+    "short": "3_coins",
+    "description": "This rank modifies your power so that your Versatility is increased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents03.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 3,
+    "class": "pents_03",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Four of Coins",
+    "short": "reversed_4_coins",
+    "description": "This rank modifies your power so that your Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents04.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 4,
+    "class": "pents_04 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Four of Coins",
+    "short": "4_coins",
+    "description": "This rank modifies your power so that your Control is increased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents04.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 4,
+    "class": "pents_04",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Five of Coins",
+    "short": "reversed_5_coins",
+    "description": "This rank modifies your power so that your Versatility is increased but your Potency is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents05.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 5,
+    "class": "pents_05 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Five of Coins",
+    "short": "5_coins",
+    "description": "This rank modifies your power so that your Potency is increased but your Versatility is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents05.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 5,
+    "class": "pents_05",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Six of Coins",
+    "short": "reversed_6_coins",
+    "description": "This rank modifies your power so that your Control is increased but your Versatility is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents06.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 6,
+    "class": "pents_06 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Six of Coins",
+    "short": "6_coins",
+    "description": "This rank modifies your power so that your Versatility is increased but your Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents06.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 6,
+    "class": "pents_06",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Seven of Coins",
+    "short": "reversed_7_coins",
+    "description": "This rank modifies your power so that your Potency is increased but your Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents07.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 7,
+    "class": "pents_07 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Seven of Coins",
+    "short": "7_coins",
+    "description": "This rank modifies your power so that your Control is increased but your Potency is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents07.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 7,
+    "class": "pents_07",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Eight of Coins",
+    "short": "reversed_8_coins",
+    "description": "This rank modifies your power so that your Control is increased but your Potency and Versatility are decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents08.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 8,
+    "class": "pents_08 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Eight of Coins",
+    "short": "8_coins",
+    "description": "This rank modifies your power so that your Potency and Versatility are increased but your Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents08.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 8,
+    "class": "pents_08",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Nine of Coins",
+    "short": "reversed_9_coins",
+    "description": "This rank modifies your power so that your Versatility is increased but your Potency & Control are decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents09.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 9,
+    "class": "pents_09 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Nine of Coins",
+    "short": "9_coins",
+    "description": "This rank modifies your power so that your Potency & Control are increased but your Versatility is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents09.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 9,
+    "class": "pents_09",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Ten of Coins",
+    "short": "reversed_10_coins",
+    "description": "This rank modifies your power so that your Potency is increased but your Versatility and Control are decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents10.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 10,
+    "class": "pents_10 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ten of Coins",
+    "short": "10_coins",
+    "description": "This rank modifies your power so that your Versatility and Control are increased but your Potency is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents10.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 10,
+    "class": "pents_10",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Page of Coins",
+    "short": "reversed_page_coins",
+    "description": "This rank modifies your power so that your choice of Potency or Versatility is increased but your Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents11.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 11,
+    "class": "pents_11 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Page of Coins",
+    "short": "page_coins",
+    "description": "This rank modifies your power so that your Control is increased but your choice of Potency or Versatility is decreased. his suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents11.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 11,
+    "class": "pents_11",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Knight of Coins",
+    "short": "reversed_knight_coins",
+    "description": "This rank modifies your power so that your choice of Versatility or Control is increased but Potency is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents12.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 12,
+    "class": "pents_12 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Knight of Coins",
+    "short": "knight_coins",
+    "description": "This rank modifies your power so that your Potency is increased but your choice of Versatility or Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents12.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 12,
+    "class": "pents_12",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Queen of Coins",
+    "short": "reversed_Q_coins",
+    "description": "This rank modifies your power so that your choice of Potency or Control is increased but your Versatility is decreased. This suit rounds out your ",
+    "image": "Pents13.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 13,
+    "class": "pents_13 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Queen of Coins",
+    "short": "Q_coins",
+    "description": "This rank modifies your power so that your Versatility is increased but your choice of Potency or Control is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents13.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 13,
+    "class": "pents_13",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed King of Coins",
+    "short": "reversed_K_coins",
+    "description": "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are decreased but the remainder is increased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents14.png",
+    "orientation": "Merkstave",
+    "suit": "Coins",
+    "value": 14,
+    "class": "pents_14 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "King of Coins",
+    "short": "K_coins",
+    "description": "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are increased but the remainder is decreased. This suit rounds out your power, roll for a second sign/category and apply it along with the first.",
+    "image": "Pents14.png",
+    "orientation": "Regular",
+    "suit": "Coins",
+    "value": 14,
+    "class": "pents_14",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Ace of Cups",
+    "short": "reversed_1_cups",
+    "description": "This rank modifies your power so that your choice of Potency, Versatility, or Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups01.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 1,
+    "class": "cups_01 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ace of Cups",
+    "short": "1_cups",
+    "description": "This rank modifies your power so that your choice of Potency, Versatility, or Control is increased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups01.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 1,
+    "class": "cups_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Two of Cups",
+    "short": "reversed_2_cups",
+    "description": "This rank modifies your power so that your Potency is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups02.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 2,
+    "class": "cups_02 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Two of Cups",
+    "short": "2_cups",
+    "description": "This rank modifies your power so that your choice of Potency is increased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups02.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 2,
+    "class": "cups_02",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Three of Cups",
+    "short": "reversed_3_cups",
+    "description": "This rank modifies your power so that your Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups03.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 3,
+    "class": "cups_03 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Three of Cups",
+    "short": "3_cups",
+    "description": "This rank modifies your power so that your choice of Versatility is increased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups03.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 3,
+    "class": "cups_03",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Four of Cups",
+    "short": "reversed_4_cups",
+    "description": "This rank modifies your power so that your Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups04.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 4,
+    "class": "cups_04 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Four of Cups",
+    "short": "4_cups",
+    "description": "This rank modifies your power so that your choice of Control is increased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups04.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 4,
+    "class": "cups_04",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Five of Cups",
+    "short": "reversed_5_cups",
+    "description": "This rank modifies your power so that your Versatility is increased but your Potency is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups05.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 5,
+    "class": "cups_05 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Five of Cups",
+    "short": "5_cups",
+    "description": "This rank modifies your power so that your Potency is increased but your Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups05.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 5,
+    "class": "cups_05",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Six of Cups",
+    "short": "reversed_6_cups",
+    "description": "This rank modifies your power so that your Control is increased but your Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups06.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 6,
+    "class": "cups_06 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Six of Cups",
+    "short": "6_cups",
+    "description": "This rank modifies your power so that your Versatility is increased but your Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups06.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 6,
+    "class": "cups_06",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Seven of Cups",
+    "short": "reversed_7_cups",
+    "description": "This rank modifies your power so that your Potency is increased but your Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups07.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 7,
+    "class": "cups_07 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Seven of Cups",
+    "short": "7_cups",
+    "description": "This rank modifies your power so that your Control is increased but your Potency is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups07.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 7,
+    "class": "cups_07",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Eight of Cups",
+    "short": "reversed_8_cups",
+    "description": "This rank modifies your power so that your Control is increased but your Potency and Versatility are decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups08.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 8,
+    "class": "cups_08 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Eight of Cups",
+    "short": "8_cups",
+    "description": "This rank modifies your power so that your Potency and Versatility are increased but your Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups08.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 8,
+    "class": "cups_08",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Nine of Cups",
+    "short": "reversed_9_cups",
+    "description": "This rank modifies your power so that your Versatility is increased but your Potency & Control are decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups09.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 9,
+    "class": "cups_09 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Nine of Cups",
+    "short": "9_cups",
+    "description": "This rank modifies your power so that your Potency & Control are increased but your Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups09.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 9,
+    "class": "cups_09",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Ten of Cups",
+    "short": "reversed_10_cups",
+    "description": "This rank modifies your power so that your Potency is increased but your Versatility and Control are decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups10.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 10,
+    "class": "cups_10 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ten of Cups",
+    "short": "10_cups",
+    "description": "This rank modifies your power so that your Versatility and Control are increased but your Potency is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups10.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 10,
+    "class": "cups_10",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Page of Cups",
+    "short": "reversed_page_cups",
+    "description": "This rank modifies your power so that your choice of Potency or Versatility is increased but your Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups11.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 11,
+    "class": "cups_11 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Page of Cups",
+    "short": "page_cups",
+    "description": "This rank modifies your power so that your Control is increased but your choice of Potency or Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups11.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 11,
+    "class": "cups_11",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Knight of Cups",
+    "short": "reversed_knight_cups",
+    "description": "This rank modifies your power so that your choice of Versatility or Control is increased but Potency is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups12.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 12,
+    "class": "cups_12 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Knight of Cups",
+    "short": "knight_cups",
+    "description": "This rank modifies your power so that your Potency is increased but your choice of Versatility or Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups12.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 12,
+    "class": "cups_12",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Queen of Cups",
+    "short": "reversed_Q_cups",
+    "description": "This rank modifies your power so that your choice of Potency or Control is increased but your Versatility is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups13.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 13,
+    "class": "cups_13 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Queen of Cups",
+    "short": "Q_cups",
+    "description": "This rank modifies your power so that your Versatility is increased but your choice of Potency or Control is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups13.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 13,
+    "class": "cups_13",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed King of Cups",
+    "short": "reversed_K_cups",
+    "description": "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are decreased but the remainder is increased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups14.png",
+    "orientation": "Merkstave",
+    "suit": "Cups",
+    "value": 14,
+    "class": "cups_14 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "King of Cups",
+    "short": "K_cups",
+    "description": "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are increased but the remainder is decreased. This suit provides breadth and depth. You were molded to be more in sync with your power. This made you stronger, but at a personal cost.",
+    "image": "Cups14.png",
+    "orientation": "Regular",
+    "suit": "Cups",
+    "value": 14,
+    "class": "cups_14",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ace of Diamonds",
+    "short": "1_diamonds",
+    "description": "Your power bypasses some limit it might otherwise be bound by. Increase your Potency, but decrease your choice of Control or Versatility.",
+    "image": "diamonds01.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 1,
+    "class": "diamonds_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Two of Diamonds",
+    "short": "2_diamonds",
+    "description": "Your power has a drawback. Increase your Potency, but decrease your choice of Control or Versatility.",
+    "image": "diamonds02.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 2,
+    "class": "diamonds_02",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Three of Diamonds",
+    "short": "3_diamonds",
+    "description": "You have a wide array of minor powers rather than one single power; roll Sign and Rune again, twice each. Increase your Potency, but decrease your choice of Control or Versatility. (applied to all powers).",
+    "image": "diamonds03.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 3,
+    "class": "diamonds_03",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Four of Diamonds",
+    "short": "4_diamonds",
+    "description": "You don't get along with your power, making it harder to use. Decrease Potency and your choice of Versatility or Control.",
+    "image": "diamonds04.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 4,
+    "class": "diamonds_04",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Five of Diamonds",
+    "short": "5_diamonds",
+    "description": "Increase your Potency, but decrease your choice of Control or Versatility.",
+    "image": "diamonds05.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 5,
+    "class": "diamonds_05",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Six of Diamonds",
+    "short": "6_diamonds",
+    "description": "You and your power are relatively in sync. Increase your Potency, but decrease your choice of Control or Versatility.",
+    "image": "diamonds06.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 6,
+    "class": "diamonds_06",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Seven of Diamonds",
+    "short": "7_diamonds",
+    "description": "You understand your power, making it easier to use. Increase Potency and your choice of Versatility or Control.",
+    "image": "diamonds07.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 7,
+    "class": "diamonds_07",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Eight of Diamonds",
+    "short": "8_diamonds",
+    "description": "You and your power are morally opposed. Increase your Potency, but decrease your choice of Control or Versatility.",
+    "image": "diamonds08.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 8,
+    "class": "diamonds_08",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Nine of Diamonds",
+    "short": "9_diamonds",
+    "description": "Dramatically ncrease your Potency, but dramatically decrease your choice of Control or Versatility.",
+    "image": "diamonds09.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 9,
+    "class": "diamonds_09",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ten of Diamonds",
+    "short": "10_diamonds",
+    "description": "Your power has a significant secondary usage in another class. Increase your Potency, but decrease your choice of Control or Versatility.",
+    "image": "diamonds10.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 10,
+    "class": "diamonds_10",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Jack of Diamonds",
+    "short": "J_diamonds",
+    "description": "Your power is different than what others might think it to be, and may have subtle aspects unnoticed by others. Increase your Potency, but decrease your choice of Control or Versatility.",
+    "image": "diamonds11.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 11,
+    "class": "diamonds_11",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Queen of Diamonds",
+    "short": "Q_diamonds",
+    "description": "Your power is less straight-up strong but lends itself towards teamwork and combos with other powers. Increase your Potency, but decrease your choice of Control or Versatility.",
+    "image": "diamonds12.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 12,
+    "class": "diamonds_12",
+    "extra_info": ""
+  },
+  {
+    "cardname": "King of Diamonds",
+    "short": "K_diamonds",
+    "description": "Your power has strength but is incredibly unethical. Increase your Potency, but decrease your choice of Control or Versatility.",
+    "image": "diamonds13.png",
+    "orientation": "Regular",
+    "suit": "Diamonds",
+    "value": 13,
+    "class": "diamonds_13",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ace of Hearts",
+    "short": "1_hearts",
+    "description": "Your power bypasses some limit it might otherwise be bound by. Increase your Control, but decrease your choice of Potency or Versatility.",
+    "image": "hearts01.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 1,
+    "class": "hearts_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Two of Hearts",
+    "short": "2_hearts",
+    "description": "Your power has a drawback. Increase your Control, but decrease your choice of Potency or Versatility.",
+    "image": "hearts02.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 2,
+    "class": "hearts_02",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Three of Hearts",
+    "short": "3_hearts",
+    "description": "You have a wide array of minor powers rather than one single power; roll Sign and Rune again, twice each. Increase your Control, but decrease your choice of Potency or Versatility (applied to all powers).",
+    "image": "hearts03.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 3,
+    "class": "hearts_03",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Four of Hearts",
+    "short": "4_hearts",
+    "description": "You don't get along with your power, making it harder to use. Decrease Control and your choice of Versatility or Potency.",
+    "image": "hearts04.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 4,
+    "class": "hearts_04",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Five of Hearts",
+    "short": "5_hearts",
+    "description": "Increase your Control, but decrease your choice of Potency or Versatility.",
+    "image": "hearts05.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 5,
+    "class": "hearts_05",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Six of Hearts",
+    "short": "6_hearts",
+    "description": "You and your power are relatively in sync. Increase your Control, but decrease your choice of Potency or Versatility.",
+    "image": "hearts06.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 6,
+    "class": "hearts_06",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Seven of Hearts",
+    "short": "7_hearts",
+    "description": "You understand your power, making it easier to use. Increase Control and your choice of Versatility or Potency.",
+    "image": "hearts07.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 7,
+    "class": "hearts_07",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Eight of Hearts",
+    "short": "8_hearts",
+    "description": "You and your power are morally opposed. Increase your Control, but decrease your choice of Potency or Versatility.",
+    "image": "hearts08.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 8,
+    "class": "hearts_08",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Nine of Hearts",
+    "short": "9_hearts",
+    "description": "Dramatically increase your Control, but dramatically decrease your choice of Potency or Versatility.",
+    "image": "hearts09.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 9,
+    "class": "hearts_09",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ten of Hearts",
+    "short": "10_hearts",
+    "description": "Your power has a significant secondary usage in another class. Increase your Control, but decrease your choice of Potency or Versatility.",
+    "image": "hearts10.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 10,
+    "class": "hearts_10",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Jack of Hearts",
+    "short": "J_hearts",
+    "description": "Your power is different than what others might think it to be, and may have subtle aspects unnoticed by others Increase your Control, but decrease your choice of Potency or Versatility.",
+    "image": "hearts11.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 11,
+    "class": "hearts_11",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Queen of Hearts",
+    "short": "Q_hearts",
+    "description": "Your power is less straight-up strong but lends itself towards teamwork and combos with other powers. Increase your Control, but decrease your choice of Potency or Versatility.",
+    "image": "hearts12.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 12,
+    "class": "hearts_12",
+    "extra_info": ""
+  },
+  {
+    "cardname": "King of Hearts",
+    "short": "K_hearts",
+    "description": "Your power has strength but is incredibly unethical. Increase your Control, but decrease your choice of Potency or Versatility.",
+    "image": "hearts13.png",
+    "orientation": "Regular",
+    "suit": "Hearts",
+    "value": 13,
+    "class": "hearts_13",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Fool - 0",
+    "short": "reversed_the_fool_0",
+    "description": "Finally, you drew <strong>The Fool - 0, Reversed</strong>. Your power requires a specific mental or emotional state to reach it's full potential. This can be anything from calm to rage but with out it your power is a shadow of what you could be.",
+    "image": "00-the-fool.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 0,
+    "class": "the_fool_00 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Fool - 0",
+    "short": "the_fool_0",
+    "description": "Finally, you drew <strong>The Fool - 0</strong>. Your power alters your personality in some way when you use it most likely in the direction of mania.",
+    "image": "00-the-fool.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 0,
+    "class": "the_fool_00",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Magician - I",
+    "short": "reversed_the_magician_i",
+    "description": "Finally, you drew <strong>The Magician - I, Reversed</strong>. Your power has or had a permanent effect on your heart or mind. It may have been a one off change or it my be something that gets a bit worse with each use of the power.",
+    "image": "01-the-magician.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 1,
+    "class": "the_magician_01 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Magician - I",
+    "short": "the_magician_i",
+    "description": "Finally, you drew <strong>The Magician - I</strong>. You received some sort of boost (mental or physical) to a normal human attribute that complements your existing power. The boost is significant but definitely not super human in scale.",
+    "image": "01-the-magician.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 1,
+    "class": "the_magician_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The High Priestess - II",
+    "short": "reversed_the_high_priestess_ii",
+    "description": "Finally, you drew <strong>The High Priestess - II, Reversed</strong>. Your power acts on your behalf apart from your conscious direction. This can be an automatic response to circumstance or in response to mental or emotional states and can work for or against you dependent on the power.",
+    "image": "02-the-high-priestess.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 2,
+    "class": "the_high_priestess_02 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The High Priestess - II",
+    "short": "the_high_priestess_ii",
+    "description": "Finally, you drew <strong>The High Priestess - II</strong>. Your power has an element that is hard to understand which is tripping you up. Careful study may allow you to figure it out but it will remain an impediment.",
+    "image": "02-the-high-priestess.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 2,
+    "class": "the_high_priestess_02",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Empress - III",
+    "short": "reversed_the_empress_iii",
+    "description": "Finally, you drew <strong>The Empress - III, Reversed</strong>. Your power works best on or in large groups and suffers when you are alone.",
+    "image": "03-the-empress.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 3,
+    "class": "the_empress_03 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Empress - III",
+    "short": "the_empress_iii",
+    "description": "Finally, you drew <strong>The Empress - III</strong>. You have a secondary or tertiary power that is next to impossible to detect and that takes a long time to use but can be a real game changer when leveraged intelligently.",
+    "image": "03-the-empress.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 3,
+    "class": "the_empress_03",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Emperor - IV",
+    "short": "reversed_the_emperor_iv",
+    "description": "Finally, you drew <strong>The Emperor - IV, Reversed</strong>. Your power is good at running interference, harassing foes and protecting allies.",
+    "image": "04-the-emperor.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 4,
+    "class": "the_emperor_04 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Emperor - IV",
+    "short": "the_emperor_iv",
+    "description": "Finally, you drew <strong>The Emperor - IV</strong>. While most powers promote chaos and destruction your power is a force for order. It protects, preserves, organizes, or the like.",
+    "image": "04-the-emperor.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 4,
+    "class": "the_emperor_04",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Hierophant - V",
+    "short": "reversed_the_hierophant_v",
+    "description": "Finally, you drew <strong>The Hierophant - V, Reversed</strong>. Your power makes you a desirable teammate. Perhaps you're a healer, a useful Trump, or just plain powerful, but you won't have trouble finding people who want to work with you ... whether you really want that or not.",
+    "image": "05-the-hierophant.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 5,
+    "class": "the_hierophant_05 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Hierophant - V",
+    "short": "the_hierophant_v",
+    "description": "Finally, you drew <strong>The Hierophant - V</strong>. Your power either makes you reliant on others or it makes other subservient to you. Either way it enforces hierarchy and interdependence, willing or not.",
+    "image": "05-the-hierophant.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 5,
+    "class": "the_hierophant_05",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Lovers - VI",
+    "short": "reversed_the_lovers_vi",
+    "description": "Finally, you drew <strong>The Lovers - VI, Reversed</strong>. Your power includes a feature that seems to work against the rest of it.",
+    "image": "06-the-lovers.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 6,
+    "class": "the_lovers_06 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Lovers - VI",
+    "short": "the_lovers_vi",
+    "description": "Finally, you drew <strong>The Lovers - VI</strong>. Your power is beautiful and/or iconic in a way that lets you leverage your image. People instantly recognize it.",
+    "image": "06-the-lovers.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 6,
+    "class": "the_lovers_06",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Chariot - VII",
+    "short": "reversed_the_chariot_vii",
+    "description": "Finally, you drew <strong>The Chariot - VII, Reversed</strong>. Your power is good for harassing and annoying other but lacks direct lethality.",
+    "image": "07-the-chariot.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 7,
+    "class": "the_chariot_07 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Chariot - VII",
+    "short": "the_chariot_vii",
+    "description": "Finally, you drew <strong>The Chariot - VII</strong>. Your power is typically lethal with little you can do to mitigate this.",
+    "image": "07-the-chariot.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 7,
+    "class": "the_chariot_07",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Strength - VIII",
+    "short": "reversed_strength_viii",
+    "description": "Finally, you drew <strong>Strength - VIII, Reversed</strong>. Your power is a source of constant paranoia. Fear of your power is as useful as the power itself.",
+    "image": "08-strength.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 8,
+    "class": "strength_08 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Strength - VIII",
+    "short": "strength_viii",
+    "description": "Finally, you drew <strong>Strength - VIII</strong>. Your power grants you protection in some fashion allowing you to leap into the fray with little concern that you'll be harmed in any meaningful way.",
+    "image": "08-strength.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 8,
+    "class": "strength_08",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Hermit - IX",
+    "short": "reversed_the_hermit_ix",
+    "description": "Finally, you drew <strong>The Hermit - IX, Reversed</strong>. Your power makes it dangerous for others to be around you, either when you're actively using it or just in general.",
+    "image": "09-the-hermit.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 9,
+    "class": "the_hermit_09 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Hermit - IX",
+    "short": "the_hermit_ix",
+    "description": "Finally, you drew <strong>The Hermit - IX</strong>. Your power is fragile in some fashion, making it easy to disrupt.",
+    "image": "09-the-hermit.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 9,
+    "class": "the_hermit_09",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Wheel of Fortune - X",
+    "short": "reversed_wheel_fortune_x",
+    "description": "Finally, you drew <strong>The Wheel of Fortune - X, Reversed</strong>. Your power is a grab bag of smaller separate powers built around a certain theme. Roll two more signs and runes and create separate but thematically connected powers with them.",
+    "image": "10-wheel-of-fortune.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 10,
+    "class": "wheel_of_fortune_10 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Wheel of Fortune - X",
+    "short": "wheel_fortune_x",
+    "description": "Your power isn't the strongest but has a habit of coming through in a pinch, hinting at a hidden factor. Roll for your choice of either an extra sign or rune and use it to create the hidden feature.",
+    "image": "10-wheel-of-fortune.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 10,
+    "class": "wheel_of_fortune_10",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Justice - XI",
+    "short": "reversed_justice_xi",
+    "description": "Finally, you drew <strong>Justice - XI, Reversed</strong>. Your power punishes you if you don't use it correctly. It may have barriers you can bypass at a cost or it may require certain actions after using it.",
+    "image": "11-justice.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 11,
+    "class": "justice_11 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Justice - XI",
+    "short": "justice_xi",
+    "description": "Finally, you drew <strong>Justice - XI</strong>. Your power requires specific external conditions (as opposed to internal mental/emotional conditions) to be met before you can use it.",
+    "image": "11-justice.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 11,
+    "class": "justice_11",
+    "extra_info": "This could be anything from running in circles to feeding the dead to your skeletal minion but it's not a step you can skip."
+  },
+  {
+    "cardname": "Reversed The Hanged Man - XII",
+    "short": "reversed_the_hanged_man_xii",
+    "description": "Finally, you drew <strong>The Hanged Man - XII, Reversed</strong>. Your power molds your thoughts and feeling in a fashion that allows you to use it better. You are more effective because of this but ... is it really you at all?",
+    "image": "12-the-hanged-man.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 12,
+    "class": "the_hanged_man_12 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Hanged Man - XII",
+    "short": "the_hanged_man_xii",
+    "description": "Finally, you drew <strong>The Hanged Man - XII</strong>. our power provides you with some deep insight about the world that separates you from those around you. Appearing normal will require effort on your part.",
+    "image": "12-the-hanged-man.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 12,
+    "class": "the_hanged_man_12",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Death - XIII",
+    "short": "reversed_death_xiii",
+    "description": "Finally, you drew <strong>Death - XIII, Reversed</strong>. Using your power leaves you vulnerable. Maybe you become narcoleptic or start hallucinating but either before, during, or after using your power you're effectively unable to act.",
+    "image": "13-death.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 13,
+    "class": "death_13 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Death - XIII",
+    "short": "death_xiii",
+    "description": "Finally, you drew <strong>Death - XIII</strong>. Something went wrong with your power, some safety mechanism wasn't included when you triggered, and now your power is slowly killing you.",
+    "image": "13-death.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 13,
+    "class": "death_13",
+    "extra_info": "Maybe your power creates hard radiation each time you use it and you aren't immune, maybe it subjects your body to harmful g-forces without any sort of intervention, maybe it's just consuming your body or mind as fuel. Whatever it's doing it's not sustainable."
+  },
+  {
+    "cardname": "Reversed Temperance - XIV",
+    "short": "reversed_temperance_xiv",
+    "description": "Finally, you drew <strong>Temperance - XIV, Reversed</strong>. Your power has some minor trump aspect that seems kinda superfluous. Like, seriously, what's up with that?",
+    "image": "14-temperance.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 14,
+    "class": "temperance_14 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Temperance - XIV",
+    "short": "temperance_xiv",
+    "description": "Finally, you drew <strong>Temperance - XIV</strong>. Your power is Manton limited. It affects either living or nonliving things, but not both.",
+    "image": "14-temperance.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 14,
+    "class": "temperance_14",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Devil - XV",
+    "short": "reversed_the_devil_xv",
+    "description": "Finally, you drew <strong>The Devil - XV, Reversed</strong>. Your power changed your form in a significant enough fashion that you can't hide it, you are a case 53 or mutant. ",
+    "image": "15-the-devil.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 15,
+    "class": "the_devil_15 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Devil - XV",
+    "short": "the_devil_xv",
+    "description": "Finally, you drew <strong>The Devil - XV</strong>. Your power is fundamentally immoral to use and probably illegal to boot.",
+    "image": "15-the-devil.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 15,
+    "class": "the_devil_15",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Tower - XVI",
+    "short": "reversed_the_tower_xvi",
+    "description": "Finally, you drew <strong>The Tower - XVI, Reversed</strong>. Your power's Potency and Control are decreased.",
+    "image": "16-the-tower.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 16,
+    "class": "the_tower_16 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Tower - XVI",
+    "short": "the_tower_xvi",
+    "description": "Finally, you drew <strong>The Tower - XVI</strong>. Your power's Potency, Versatility and Control are all decreased. You received a genuinely weak power. It happens, sorry.",
+    "image": "16-the-tower.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 16,
+    "class": "the_tower_16",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Star - XVII",
+    "short": "reversed_the_star_xvii",
+    "description": "Finally, you drew <strong>The Star - XVII, Reversed</strong>. Your power's Versatility and Control are decreased.",
+    "image": "17-the-star.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 17,
+    "class": "the_star_17 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Star - XVII",
+    "short": "the_star_xvii",
+    "description": "Finally, you drew <strong>The Star - XVII</strong>. Your power's Versatility and Control are increased.",
+    "image": "17-the-star.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 17,
+    "class": "the_star_17",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Moon - XVIII",
+    "short": "reversed_the_moon_xviii",
+    "description": "Finally, you drew <strong>The Moon - XVIII, Reversed</strong>. Your power's Potency and Versatility are decreased.",
+    "image": "18-the-moon.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 18,
+    "class": "the_moon_18 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Moon - XVIII",
+    "short": "the_moon_xviii",
+    "description": "Finally, you drew <strong>The Moon - XVIII</strong>. Your power's Potency and Versatility are increased.",
+    "image": "18-the-moon.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 18,
+    "class": "the_moon_18",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The Sun - XIX",
+    "short": "reversed_the_sun_xix",
+    "description": "Finally, you drew <strong>The Sun - XIX, Reversed</strong>. Your power's Potency and Control are increased.",
+    "image": "19-the-sun.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 19,
+    "class": "the_sun_19 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The Sun - XIX",
+    "short": "the_sun_xix",
+    "description": "Finally, you drew <strong>The Sun - XIX</strong>. Your power's Potency, Versatility, and Control are all increased. You received a truly superb power.",
+    "image": "19-the-sun.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 19,
+    "class": "the_sun_19",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Judgement - XX",
+    "short": "reversed_judgement_xx",
+    "description": "Your power seems to to be deteriorating in some fashion. Maybe it's maximum intensity is decreasing or your Control over it is getting worse but either way it's not like it use to be.",
+    "image": "20-judgement.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 20,
+    "class": "judgement_20 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Judgement - XX",
+    "short": "judgement_xx",
+    "description": "Finally, you drew <strong>Judgement - XX</strong>. You are one of the rare few to have a second trigger event. Create your power from the sign and rune then roll again and modify your power with the new sign and rune.",
+    "image": "20-judgement.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 20,
+    "class": "judgement_20",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed The World - XXI",
+    "short": "reversed_the_world_xxi",
+    "description": "Finally, you drew <strong>The World - XXI, Reversed</strong>. Your power turned you into a monster. You are a walking natural disaster, a waking nightmare, and/or a probable threat to nearly everyone. This isn't something you can stop or Control, your power Controls you.",
+    "image": "21-the-world.png",
+    "orientation": "Merkstave",
+    "suit": "Major Arcana",
+    "value": 21,
+    "class": "the_world_21 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "The World - XXI",
+    "short": "the_world_xxi",
+    "description": "Finally, you drew <strong>The World - XXI</strong>. Your power is exceptional in some fashion. It could break some rule about what powers can and can't do, violate some common sense notion about reality, or just seriously out class other similar powers. Regardless of the particulars you have the potential to become a very important/powerful player in the cape scene.",
+    "image": "21-the-world.png",
+    "orientation": "Regular",
+    "suit": "Major Arcana",
+    "value": 21,
+    "class": "the_world_21",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Red Joker",
+    "short": "red_joker",
+    "description": "Your power prevents your first death, instead providing a second trigger. Roll another Rune / Flavor for your second trigger.",
+    "image": "jokerred.png",
+    "orientation": "Regular",
+    "suit": "Red",
+    "value": 1,
+    "class": "red_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ace of Spades",
+    "short": "1_spades",
+    "description": "Your power bypasses some limit it might otherwise be bound by. Increase your choice of Potency or Versatility, but decrease Control.",
+    "image": "spades01.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 1,
+    "class": "spades_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Two of Spades",
+    "short": "2_spades",
+    "description": "Your power has a drawback. Increase your choice of Potency or Versatility, but decrease Control.",
+    "image": "spades02.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 2,
+    "class": "spades_02",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Three of Spades",
+    "short": "3_spades",
+    "description": "You have a wide array of minor powers rather than one single power; roll Sign and Rune again, twice each. Increase your choice of Potency or Versatility, but decrease Control. (applied to all powers).",
+    "image": "spades03.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 3,
+    "class": "spades_03",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Four of Spades",
+    "short": "4_spades",
+    "description": "You don't get along with your power, making it harder to use. Decrease Control and your choice of Versatility or Potency.",
+    "image": "spades04.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 4,
+    "class": "spades_04",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Five of Spades",
+    "short": "5_spades",
+    "description": "Increase your choice of Potency or Versatility, but decrease Control.",
+    "image": "spades05.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 5,
+    "class": "spades_05",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Six of Spades",
+    "short": "6_spades",
+    "description": "You and your power are relatively in sync. Increase your choice of Potency or Versatility, but decrease Control.",
+    "image": "spades06.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 6,
+    "class": "spades_06",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Seven of Spades",
+    "short": "7_spades",
+    "description": "You understand your power, making it easier to use. Increase Control and your choice of Versatility or Potency.",
+    "image": "spades07.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 7,
+    "class": "spades_07",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Eight of Spades",
+    "short": "8_spades",
+    "description": "You and your power are morally opposed. Increase your choice of Potency or Versatility, but decrease Control.",
+    "image": "spades08.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 8,
+    "class": "spades_08",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Nine of Spades",
+    "short": "9_spades",
+    "description": "Dramatically increase your choice of Potency or Versatility, but dramatically decrease Control.",
+    "image": "spades09.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 9,
+    "class": "spades_09",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ten of Spades",
+    "short": "10_spades",
+    "description": "Your power has a significant secondary usage in another class. Increase your choice of Potency or Versatility, but decrease Control.",
+    "image": "spades10.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 10,
+    "class": "spades_10",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Jack of Spades",
+    "short": "J_spades",
+    "description": "Your power is different than what others might think it to be, and may have subtle aspects unnoticed by others. Increase your choice of Potency or Versatility, but decrease Control.",
+    "image": "spades11.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 11,
+    "class": "spades_11",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Queen of Spades",
+    "short": "Q_spades",
+    "description": "Your power is less straight-up strong but lends itself towards teamwork and combos with other powers. Increase your choice of Potency or Versatility, but decrease Control.",
+    "image": "spades12.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 12,
+    "class": "spades_12",
+    "extra_info": ""
+  },
+  {
+    "cardname": "King of Spades",
+    "short": "K_spades",
+    "description": "Your power has strength but is incredibly unethical. Increase your choice of Potency or Versatility, but decrease Control.",
+    "image": "spades13.png",
+    "orientation": "Regular",
+    "suit": "Spades",
+    "value": 13,
+    "class": "spades_13",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Ace of Swords",
+    "short": "reversed_1_swords",
+    "description": "This rank modifies your power so that your choice of Potency, Versatility, or Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords01.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 1,
+    "class": "swords_01 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ace of Swords",
+    "short": "1_swords",
+    "description": "This rank modifies your power so that your choice of Potency, Versatility, or Control is increased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords01.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 1,
+    "class": "swords_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Two of Swords",
+    "short": "reversed_2_swords",
+    "description": "This rank modifies your power so that your Potency is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords02.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 2,
+    "class": "swords_02 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Two of Swords",
+    "short": "2_swords",
+    "description": "This rank modifies your power so that your Potency is increased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords02.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 2,
+    "class": "swords_02",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Three of Swords",
+    "short": "reversed_3_swords",
+    "description": "This rank modifies your power so that your Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords03.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 3,
+    "class": "swords_03 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Three of Swords",
+    "short": "3_swords",
+    "description": "This rank modifies your power so that your Versatility is increased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords03.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 3,
+    "class": "swords_03",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Four of Swords",
+    "short": "reversed_4_swords",
+    "description": "This rank modifies your power so that your Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords04.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 4,
+    "class": "swords_04 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Four of Swords",
+    "short": "4_swords",
+    "description": "This rank modifies your power so that your Control is increased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords04.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 4,
+    "class": "swords_04",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Five of Swords",
+    "short": "reversed_5_swords",
+    "description": "This rank modifies your power so that your Versatility is increased but your Potency is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords05.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 5,
+    "class": "swords_05 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Five of Swords",
+    "short": "5_swords",
+    "description": "This rank modifies your power so that your Potency is increased but your Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords05.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 5,
+    "class": "swords_05",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Six of Swords",
+    "short": "reversed_6_swords",
+    "description": "This rank modifies your power so that your Control is increased but your Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords06.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 6,
+    "class": "swords_06 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Six of Swords",
+    "short": "6_swords",
+    "description": "This rank modifies your power so that your Versatility is increased but your Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords06.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 6,
+    "class": "swords_06",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Seven of Swords",
+    "short": "reversed_7_swords",
+    "description": "This rank modifies your power so that your Potency is increased but your Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords07.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 7,
+    "class": "swords_07 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Seven of Swords",
+    "short": "7_swords",
+    "description": "This rank modifies your power so that your Control is increased but your Potency is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords07.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 7,
+    "class": "swords_07",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Eight of Swords",
+    "short": "reversed_8_swords",
+    "description": "This rank modifies your power so that your Control is increased but your Potency and Versatility are decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords08.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 8,
+    "class": "swords_08 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Eight of Swords",
+    "short": "8_swords",
+    "description": "This rank modifies your power so that your Potency and Versatility are increased but your Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords08.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 8,
+    "class": "swords_08",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Nine of Swords",
+    "short": "reversed_9_swords",
+    "description": "This rank modifies your power so that your Versatility is increased but your Potency & Control are decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords09.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 9,
+    "class": "swords_09 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Nine of Swords",
+    "short": "9_swords",
+    "description": "This rank modifies your power so that your Potency & Control are increased but your Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords09.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 9,
+    "class": "swords_09",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Ten of Swords",
+    "short": "reversed_10_swords",
+    "description": "This rank modifies your power so that your Potency is increased but your Versatility and Control are decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords10.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 10,
+    "class": "swords_10 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ten of Swords",
+    "short": "10_swords",
+    "description": "This rank modifies your power so that your Versatility and Control are increased but your Potency is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords10.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 10,
+    "class": "swords_10",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Page of Swords",
+    "short": "reversed_page_swords",
+    "description": "This rank modifies your power so that your choice of Potency or Versatility is increased but your Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords11.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 11,
+    "class": "swords_11 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Page of Swords",
+    "short": "page_swords",
+    "description": "This rank modifies your power so that your Control is increased but your choice of Potency or Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords11.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 11,
+    "class": "swords_11",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Knight of Swords",
+    "short": "reversed_knight_swords",
+    "description": "This rank modifies your power so that your choice of Versatility or Control is increased but Potency is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords12.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 12,
+    "class": "swords_12 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Knight of Swords",
+    "short": "knight_swords",
+    "description": "This rank modifies your power so that your Potency is increased but your choice of Versatility or Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords12.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 12,
+    "class": "swords_12",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Queen of Swords",
+    "short": "reversed_Q_swords",
+    "description": "This rank modifies your power so that your choice of Potency or Control is increased but your Versatility is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords13.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 13,
+    "class": "swords_13 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Queen of Swords",
+    "short": "Q_swords",
+    "description": "This rank modifies your power so that your Versatility is increased but your choice of Potency or Control is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords13.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 13,
+    "class": "swords_13",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed King of Swords",
+    "short": "reversed_K_swords",
+    "description": "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are decreased but the remainder is increased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords14.png",
+    "orientation": "Merkstave",
+    "suit": "Swords",
+    "value": 14,
+    "class": "swords_14 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "King of Swords",
+    "short": "K_swords",
+    "description": "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are increased but the remainder is decreased. This very pointed suit takes the rank's effect to an extreme, for better or worse.",
+    "image": "Swords14.png",
+    "orientation": "Regular",
+    "suit": "Swords",
+    "value": 14,
+    "class": "swords_14",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Ace of Wands",
+    "short": "reversed_1_wands",
+    "description": "This rank modifies your power so that your choice of Potency, Versatility, or Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands01.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 1,
+    "class": "wands_01 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ace of Wands",
+    "short": "1_wands",
+    "description": "This rank modifies your power so that your choice of Potency, Versatility, or Control is increased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands01.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 1,
+    "class": "wands_01",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Two of Wands",
+    "short": "reversed_2_wands",
+    "description": "This rank modifies your power so that your Potency is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands02.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 2,
+    "class": "wands_02 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Two of Wands",
+    "short": "2_wands",
+    "description": "This rank modifies your power so that your Potency is increased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands02.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 2,
+    "class": "wands_02",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Three of Wands",
+    "short": "reversed_3_wands",
+    "description": "This rank modifies your power so that your Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands03.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 3,
+    "class": "wands_03 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Three of Wands",
+    "short": "3_wands",
+    "description": "This rank modifies your power so that your Versatility is increased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands03.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 3,
+    "class": "wands_03",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Four of Wands",
+    "short": "reversed_4_wands",
+    "description": "This rank modifies your power so that your Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands04.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 4,
+    "class": "wands_04 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Four of Wands",
+    "short": "4_wands",
+    "description": "This rank modifies your power so that your Control is increased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands04.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 4,
+    "class": "wands_04",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Five of Wands",
+    "short": "reversed_5_wands",
+    "description": "This rank modifies your power so that your Versatility is increased but your Potency is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands05.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 5,
+    "class": "wands_05 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Five of Wands",
+    "short": "5_wands",
+    "description": "This rank modifies your power so that your Potency is increased but your Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands05.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 5,
+    "class": "wands_05",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Six of Wands",
+    "short": "reversed_6_wands",
+    "description": "This rank modifies your power so that your Control is increased but your Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands06.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 6,
+    "class": "wands_06 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Six of Wands",
+    "short": "6_wands",
+    "description": "This rank modifies your power so that your Versatility is increased but your Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands06.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 6,
+    "class": "wands_06",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Seven of Wands",
+    "short": "reversed_7_wands",
+    "description": "This rank modifies your power so that your Potency is increased but your Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands07.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 7,
+    "class": "wands_07 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Seven of Wands",
+    "short": "7_wands",
+    "description": "This rank modifies your power so that your Control is increased but your Potency is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands07.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 7,
+    "class": "wands_07",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Eight of Wands",
+    "short": "reversed_8_wands",
+    "description": "This rank modifies your power so that your Control is increased but your Potency and Versatility are decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands08.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 8,
+    "class": "wands_08 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Eight of Wands",
+    "short": "8_wands",
+    "description": "This rank modifies your power so that your Potency and Versatility are increased but your Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands08.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 8,
+    "class": "wands_08",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Nine of Wands",
+    "short": "reversed_9_wands",
+    "description": "This rank modifies your power so that your Versatility is increased but your Potency & Control are decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands09.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 9,
+    "class": "wands_09 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Nine of Wands",
+    "short": "9_wands",
+    "description": "This rank modifies your power so that your Potency & Control are increased but your Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands09.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 9,
+    "class": "wands_09",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Ten of Wands",
+    "short": "reversed_10_wands",
+    "description": "This rank modifies your power so that your Potency is increased but your Versatility and Control are decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands10.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 10,
+    "class": "wands_10 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Ten of Wands",
+    "short": "10_wands",
+    "description": "This rank modifies your power so that your Versatility and Control are increased but your Potency is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands10.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 10,
+    "class": "wands_10",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Page of Wands",
+    "short": "reversed_page_wands",
+    "description": "Finally, you drew theÂ <strong>reversed Page of Wands</strong>. This rank modifies your power so that your choice of Potency or Versatility is increased but your Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands11.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 11,
+    "class": "wands_11 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Page of Wands",
+    "short": "page_wands",
+    "description": "This rank modifies your power so that your Control is increased but your choice of Potency or Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands11.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 11,
+    "class": "wands_11",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Knight of Wands",
+    "short": "reversed_knight_wands",
+    "description": "This rank modifies your power so that your choice of Versatility or Control is increased but Potency is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands12.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 12,
+    "class": "wands_12 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Knight of Wands",
+    "short": "knight_wands",
+    "description": "This rank modifies your power so that your Potency is increased but your choice of Versatility or Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands12.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 12,
+    "class": "wands_12",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed Queen of Wands",
+    "short": "reversed_Q_wands",
+    "description": "This rank modifies your power so that your choice of Potency or Control is increased but your Versatility is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands13.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 13,
+    "class": "wands_13 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Queen of Wands",
+    "short": "Q_wands",
+    "description": "This rank modifies your power so that your Versatility is increased but your choice of Potency or Control is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands13.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 13,
+    "class": "wands_13",
+    "extra_info": ""
+  },
+  {
+    "cardname": "Reversed King of Wands",
+    "short": "reversed_K_wands",
+    "description": "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are decreased but the remainder is increased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands14.png",
+    "orientation": "Merkstave",
+    "suit": "Wands",
+    "value": 14,
+    "class": "wands_14 reversed",
+    "extra_info": ""
+  },
+  {
+    "cardname": "King of Wands",
+    "short": "K_wands",
+    "description": "This rank modifies your power so that your choice of any two of Potency, Versatility, and Control are increased but the remainder is decreased. This suit is mystical, roll for a second rune/flavor and apply it along with the first.",
+    "image": "Wands14.png",
+    "orientation": "Regular",
+    "suit": "Wands",
+    "value": 14,
+    "class": "wands_14",
+    "extra_info": ""
+  }
+ ],
   "type" : [
 	  {
       "class" : "Thinker",

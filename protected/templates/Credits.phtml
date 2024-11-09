@@ -1,168 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title><?php echo $title ?></title>
 
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="/css/basic.css" type="text/css">
-		<link rel="stylesheet" href="/css/loader.css" type="text/css">
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-		<script>
-			!function(f,u,t,h,a,r,k){f.GoogleAnalyticsObject=t;f[t]||(f[t]=function(){
-			(f[t].q=f[t].q||[]).push(arguments)});f[t].l=+new Date;r=u.createElement(h);
-			k=u.getElementsByTagName(h)[0];r.src=a;k.parentNode.insertBefore(r,k)}
-			(window,document,'ga','script','//www.google-analytics.com/analytics.js');
-		</script>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?php echo $title ?></title>
 
-		<script src="/js/analytics.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/base.css" rel="stylesheet">
+	<link href="/css/images.css" rel="stylesheet">
+	<link href="/css/loader.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
-	</head>
-	<body>
-		<div class='headBar'>
-			<h1>Futhark Generator</h1>
-			<h2><?php echo $version; ?></h2>
-		</div>
-		<div class='navbar'>
-			<div class="navgroup">
-				<p><strong>Pages here</strong></p>
-				<ul>
-					<li>
-						<a href="/">
-							Roll them bones!
-						</a>
-					</li>
-					<li>
-						<a href="/list">
-							See all combinations
-						</a>
-					</li>
-					<li>
-						<a href="/donate">
-							Help keep the site going
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="navgroup">
-				<p><strong>Pages elsewhere</strong></p>
-				<ul>
-					<li>
-						<a href="http://www.reddit.com/r/FutharkGenerator/">
-							/r/FutharkGenerator
-						</a>
-					</li>
-					<li>
-						<a href="http://www.reddit.com/r/FutharkGenerator/comments/35fcg7/php_futhark_generator/">
-							Feedback on reddit
-						</a>
-					</li>
-					<li>
-						<a href="https://github.com/farfromunique/Generator-1.5/issues/new">
-							Feedback on GitHub
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="navgroup">
-				Have you heard of <a href="http://parahumans.wordpress.com/">Worm</a>?
-				<br />If not, please <a href="http://www.reddit.com/r/FutharkGenerator/comments/35kilh/if_you_havent_read_worm_read_me_first/">read me first!</a>
-			</div>
-			<div id='hist' class='hist'>
-				<span id='endOfHist'>&nbsp;</span>
+	<script>
+		! function(f, u, t, h, a, r, k) {
+			f.GoogleAnalyticsObject = t;
+			f[t] || (f[t] = function() {
+				(f[t].q = f[t].q || []).push(arguments)
+			});
+			f[t].l = +new Date;
+			r = u.createElement(h);
+			k = u.getElementsByTagName(h)[0];
+			r.src = a;
+			k.parentNode.insertBefore(r, k)
+		}
+		(window, document, 'ga', 'script', '//www.google-analytics.com/analytics.js');
+	</script>
+
+	<script src="/js/analytics.js"></script>
+</head>
+
+<body class="dark-background light-text">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<h1 class="text-center">Futhark Generator</h1>
+				<h2 class="text-center subdued-text"><?php echo $version ?></h2>
+				<a class="btn btn-md btn-block btn-primary mt-3 mb-0 mx-0" id="reroll" href="/">
+					New Power / Reroll
+				</a>
 			</div>
 		</div>
-		<div class="content" id="content">
-			<?php
-				$contributors = [
-					[
-						'name' => 'Wildbow',
-						'for' => 'tons of amazing stuff, including but not limited to being the creative mastermind behind Worm, everything Parahumans, and the power classification system used by this generator. Classifications, story, characters, and other elements are his by right, we\'re just playing in his sandbox',
-						'link' => ''
-					],
-					[
-						'name' => '/u/ughzubat',
-						'for' => 'coordination, images, descriptions, and mechanics and so much more',
-						'link' => ''
-					],
-					[
-						'name' => '/u/TELL_ME_TO_CALM_DOWN',
-						'for' => 'unflipping tables',
-						'link' => ''
-					],
-					[
-						'name' => '/u/DrOlot',
-						'for' => 'Tarot Card usage and concepts',
-						'link' => ''
-					],
-					[
-						'name' => 'Aaron C (/u/farfromunique)',
-						'for' => 'backend code',
-						'link' => ''
-					],
-					[
-						'name' => '/u/Brutusness',
-						'for' => 'looking at stuff and saying "neat"',
-						'link' => ''
-					],
-					[
-						'name' => '/u/misterspokes',
-						'for' => 'merkstave rune information. Also stuff and/or junk',
-						'link' => ''
-					],
-					[
-						'name' => '/u/GreatWyrmGold',
-						'for' => 'various ideas for cards, runes, etc',
-						'link' => ''
-					],
-					[
-						'name' => '/u/Lapisdust',
-						'for' => 'making sure we included the Minor Arcana',
-						'link' => ''
-					]
-				]
-			?>
-			<h2>Credits</h2>
-			<p>This is a creative work with many contributors. Special thanks go out to the following (in no particular order), for their efforts:</p>
-			<ul>
-				<?php
-					foreach ($contributors as $key) {
-						if($key['link'] !== '') {
-							$displayname = '<a href="' . $key['link'] . '" target="_blank">' . $key['name'] . '</a>';
-						} else {
-							$displayname = $key['name'];
-						}
+		<div class="row mb-3">
+			<div class="col-md-8 offset-md-2 my-0">
+				<div class="media mt-3 pt-2 px-2 pb-1 type dark-text">
+					<div class="media-body">
+						<?php
+						$contributors = [
+							[
+								'name' => 'Wildbow',
+								'for' => 'tons of amazing stuff, including but not limited to being the creative mastermind behind Worm, everything Parahumans, and the power classification system used by this generator. Classifications, story, characters, and other elements are his by right, we\'re just playing in his sandbox',
+								'link' => ''
+							],
+							[
+								'name' => '/u/ughzubat',
+								'for' => 'coordination, images, descriptions, and mechanics and so much more',
+								'link' => ''
+							],
+							[
+								'name' => '/u/TELL_ME_TO_CALM_DOWN',
+								'for' => 'unflipping tables',
+								'link' => ''
+							],
+							[
+								'name' => '/u/DrOlot',
+								'for' => 'Tarot Card usage and concepts',
+								'link' => ''
+							],
+							[
+								'name' => 'Aaron C (/u/farfromunique)',
+								'for' => 'backend code',
+								'link' => ''
+							],
+							[
+								'name' => '/u/Brutusness',
+								'for' => 'looking at stuff and saying "neat"',
+								'link' => ''
+							],
+							[
+								'name' => '/u/misterspokes',
+								'for' => 'merkstave rune information. Also stuff and/or junk',
+								'link' => ''
+							],
+							[
+								'name' => '/u/GreatWyrmGold',
+								'for' => 'various ideas for cards, runes, etc',
+								'link' => ''
+							],
+							[
+								'name' => '/u/Lapisdust',
+								'for' => 'making sure we included the Minor Arcana',
+								'link' => ''
+							]
+						]
+						?>
+						<h2>Credits</h2>
+						<p>This is a creative work with many contributors. Special thanks go out to the following (in no particular order), for their efforts:</p>
+						<ul>
+							<?php
+							foreach ($contributors as $key) {
+								if ($key['link'] !== '') {
+									$displayname = '<a href="' . $key['link'] . '" target="_blank">' . $key['name'] . '</a>';
+								} else {
+									$displayname = $key['name'];
+								}
 
-						echo '<li>' . $displayname . ' for ' . $key['for'] . '</td>';
-					}
-				?>
-			</ul>
+								echo '<li>' . $displayname . ' for ' . $key['for'] . '</td>';
+							}
+							?>
+						</ul>
 
-			<p>Poker card images were generated by Aaron Coquet from a standard font and images found online, except for Jokers. If you are the creator, please contact me!</p>
-			<p>Joker images are adapted from the Joker emoji, copyright Mozilla [<a href="http://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3AFxemoji_u1F0CF.svg">via Wikimedia Commons</a>
-			<p>Major and Minor Arcana images are pulled from Wikipedia, and are part of the <a href="https://en.wikipedia.org/wiki/Rider-Waite_tarot_deck">Rider-Waite tarot deck</a>. Per the Wikipedia page, this work is Copyright &copy; 1910 in the United kingdom and European Union, but is Public Domain in the United States.</p>
+						<p>Poker card images were generated by Aaron Coquet from a standard font and images found online, except for Jokers. If you are the creator, please contact me!</p>
+						<p>Joker images are adapted from the Joker emoji, copyright Mozilla [<a href="http://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3AFxemoji_u1F0CF.svg">via Wikimedia Commons</a></p>
+						<p>Major and Minor Arcana images are pulled from Wikipedia, and are part of the <a href="https://en.wikipedia.org/wiki/Rider-Waite_tarot_deck">Rider-Waite tarot deck</a>. Per the Wikipedia page, this work is Copyright &copy; 1910 in the United kingdom and European Union, but is Public Domain in the United States.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="card text-center">
+			<div class="card-footer text-muted small">
+				<strong>Legal Stuff</strong>:
+				<br />The Futhark Generator is used to create powers that would be fitting to Wildbow's web serial <a href="https://parahumans.wordpress.com/">Worm</a>.
+				<br />Classifications, story, characters, and other elements are his by right, we're just playing in his sandbox. For more information, <a href="/credits">click here</a>.
+				<br />This site uses tracking technologies to find out how many people have visited, and what they did, etc.
+				<br />It also saves what you input in the fields, when you hit save.
+			</div>
+		</div>
+	</footer>
 
-		</div>
-		<div id="addedData" style="display: none;"></div>
-		<div class="footer">
-			<p>Legal Stuff:</p>
-			<p>The Futhark Generator is used to create powers that would be fitting to Wildbow's web serial Worm. Classifications, story, characters, and other elements are his by right, we're just playing in his sandbox. For more information, click <a href="/credits">here</a>.</p>
-		</div>
-		<div id="loader" class="fullscreen" style="display:none;">
-			<svg class="circular">
-				<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="20"/>
-			</svg>
-		</div>
-	</body>
-    <script src="/js/jquery-3.2.0.js"></script>
-	<script src="/js/intercooler-1.1.1.min.js"></script>
-	<script src="/js/ajax.js"></script>
+</body>
+<script src="/js/jquery-3.2.0.js"></script>
+<script src="/js/intercooler-1.1.1.min.js"></script>
+<script src="/js/ajax.js"></script>
+
 </html>
